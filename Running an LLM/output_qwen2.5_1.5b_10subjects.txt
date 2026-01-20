@@ -1,0 +1,132 @@
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ Quantization disabled - full precision path
+✓ Hugging Face authenticated
+======================================================================
+Model: Qwen/Qwen2.5-1.5B-Instruct
+Device: cuda
+Quantization: None (full precision)
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+✓ Model loaded. CUDA mem: 3.09 GB allocated, 3.29 GB reserved
+
+======================================================================
+Starting evaluation
+======================================================================
+Subjects: ['astronomy', 'business_ethics', 'abstract_algebra', 'anatomy', 'computer_security', 'econometrics', 'electrical_engineering', 'high_school_physics', 'machine_learning', 'professional_law']
+
+Progress: 1/10 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+✓ Result: 101/152 correct = 66.45%
+
+Progress: 2/10 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+✓ Result: 65/100 correct = 65.00%
+
+Progress: 3/10 subjects
+
+======================================================================
+Evaluating subject: abstract_algebra
+======================================================================
+✓ Result: 34/100 correct = 34.00%
+
+Progress: 4/10 subjects
+
+======================================================================
+Evaluating subject: anatomy
+======================================================================
+✓ Result: 71/135 correct = 52.59%
+
+Progress: 5/10 subjects
+
+======================================================================
+Evaluating subject: computer_security
+======================================================================
+✓ Result: 72/100 correct = 72.00%
+
+Progress: 6/10 subjects
+
+======================================================================
+Evaluating subject: econometrics
+======================================================================
+✓ Result: 52/114 correct = 45.61%
+
+Progress: 7/10 subjects
+
+======================================================================
+Evaluating subject: electrical_engineering
+======================================================================
+✓ Result: 77/145 correct = 53.10%
+
+Progress: 8/10 subjects
+
+======================================================================
+Evaluating subject: high_school_physics
+======================================================================
+✓ Result: 57/151 correct = 37.75%
+
+Progress: 9/10 subjects
+
+======================================================================
+Evaluating subject: machine_learning
+======================================================================
+✓ Result: 52/112 correct = 46.43%
+
+Progress: 10/10 subjects
+
+======================================================================
+Evaluating subject: professional_law
+======================================================================
+✓ Result: 648/1534 correct = 42.24%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: Qwen/Qwen2.5-1.5B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Subjects: 10
+Questions: 2643
+Correct: 1229
+Accuracy: 46.50%
+
+Timing (this run)
+  Load wall time: 29.484 s
+  Load CPU time:  51.531 s
+  Eval wall time: 88.387 s (1.47 min)
+  Eval CPU time:  86.266 s
+  Eval GPU time:  88.387 s (CUDA events)
+======================================================================
+
+✓ Results saved to: ./mmlu_results_Qwen__Qwen2.5-1.5B-Instruct_full_cuda_20260119_221153.json
+✓ Question-level data saved to: ./mmlu_results_Qwen__Qwen2.5-1.5B-Instruct_full_cuda_20260119_221153_questions.json
+
+Top subjects:
+  computer_security: 72.00%
+  astronomy: 66.45%
+  business_ethics: 65.00%
+  electrical_engineering: 53.10%
+  anatomy: 52.59%
+
+Bottom subjects:
+  machine_learning: 46.43%
+  econometrics: 45.61%
+  professional_law: 42.24%
+  high_school_physics: 37.75%
+  abstract_algebra: 34.00%
+
+✅ Done.

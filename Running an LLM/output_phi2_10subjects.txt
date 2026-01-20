@@ -1,0 +1,132 @@
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ Quantization disabled - full precision path
+✓ Hugging Face authenticated
+======================================================================
+Model: microsoft/phi-2
+Device: cuda
+Quantization: None (full precision)
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+✓ Model loaded. CUDA mem: 5.56 GB allocated, 5.76 GB reserved
+
+======================================================================
+Starting evaluation
+======================================================================
+Subjects: ['astronomy', 'business_ethics', 'abstract_algebra', 'anatomy', 'computer_security', 'econometrics', 'electrical_engineering', 'high_school_physics', 'machine_learning', 'professional_law']
+
+Progress: 1/10 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+✓ Result: 88/152 correct = 57.89%
+
+Progress: 2/10 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+✓ Result: 55/100 correct = 55.00%
+
+Progress: 3/10 subjects
+
+======================================================================
+Evaluating subject: abstract_algebra
+======================================================================
+✓ Result: 35/100 correct = 35.00%
+
+Progress: 4/10 subjects
+
+======================================================================
+Evaluating subject: anatomy
+======================================================================
+✓ Result: 68/135 correct = 50.37%
+
+Progress: 5/10 subjects
+
+======================================================================
+Evaluating subject: computer_security
+======================================================================
+✓ Result: 64/100 correct = 64.00%
+
+Progress: 6/10 subjects
+
+======================================================================
+Evaluating subject: econometrics
+======================================================================
+✓ Result: 36/114 correct = 31.58%
+
+Progress: 7/10 subjects
+
+======================================================================
+Evaluating subject: electrical_engineering
+======================================================================
+✓ Result: 69/145 correct = 47.59%
+
+Progress: 8/10 subjects
+
+======================================================================
+Evaluating subject: high_school_physics
+======================================================================
+✓ Result: 53/151 correct = 35.10%
+
+Progress: 9/10 subjects
+
+======================================================================
+Evaluating subject: machine_learning
+======================================================================
+✓ Result: 52/112 correct = 46.43%
+
+Progress: 10/10 subjects
+
+======================================================================
+Evaluating subject: professional_law
+======================================================================
+✓ Result: 620/1534 correct = 40.42%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: microsoft/phi-2
+Device: cuda
+Quantization: None (full precision)
+Subjects: 10
+Questions: 2643
+Correct: 1140
+Accuracy: 43.13%
+
+Timing (this run)
+  Load wall time: 54.269 s
+  Load CPU time:  48.804 s
+  Eval wall time: 91.147 s (1.52 min)
+  Eval CPU time:  88.985 s
+  Eval GPU time:  91.146 s (CUDA events)
+======================================================================
+
+✓ Results saved to: ./mmlu_results_microsoft__phi-2_full_cuda_20260119_220929.json
+✓ Question-level data saved to: ./mmlu_results_microsoft__phi-2_full_cuda_20260119_220929_questions.json
+
+Top subjects:
+  computer_security: 64.00%
+  astronomy: 57.89%
+  business_ethics: 55.00%
+  anatomy: 50.37%
+  electrical_engineering: 47.59%
+
+Bottom subjects:
+  machine_learning: 46.43%
+  professional_law: 40.42%
+  high_school_physics: 35.10%
+  abstract_algebra: 35.00%
+  econometrics: 31.58%
+
+✅ Done.

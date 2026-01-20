@@ -1,0 +1,132 @@
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ Quantization disabled - full precision path
+✓ Hugging Face authenticated
+======================================================================
+Model: allenai/OLMo-2-0425-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+✓ Model loaded. CUDA mem: 2.97 GB allocated, 3.11 GB reserved
+
+======================================================================
+Starting evaluation
+======================================================================
+Subjects: ['astronomy', 'business_ethics', 'abstract_algebra', 'anatomy', 'computer_security', 'econometrics', 'electrical_engineering', 'high_school_physics', 'machine_learning', 'professional_law']
+
+Progress: 1/10 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+✓ Result: 47/152 correct = 30.92%
+
+Progress: 2/10 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+✓ Result: 45/100 correct = 45.00%
+
+Progress: 3/10 subjects
+
+======================================================================
+Evaluating subject: abstract_algebra
+======================================================================
+✓ Result: 28/100 correct = 28.00%
+
+Progress: 4/10 subjects
+
+======================================================================
+Evaluating subject: anatomy
+======================================================================
+✓ Result: 51/135 correct = 37.78%
+
+Progress: 5/10 subjects
+
+======================================================================
+Evaluating subject: computer_security
+======================================================================
+✓ Result: 40/100 correct = 40.00%
+
+Progress: 6/10 subjects
+
+======================================================================
+Evaluating subject: econometrics
+======================================================================
+✓ Result: 25/114 correct = 21.93%
+
+Progress: 7/10 subjects
+
+======================================================================
+Evaluating subject: electrical_engineering
+======================================================================
+✓ Result: 63/145 correct = 43.45%
+
+Progress: 8/10 subjects
+
+======================================================================
+Evaluating subject: high_school_physics
+======================================================================
+✓ Result: 30/151 correct = 19.87%
+
+Progress: 9/10 subjects
+
+======================================================================
+Evaluating subject: machine_learning
+======================================================================
+✓ Result: 38/112 correct = 33.93%
+
+Progress: 10/10 subjects
+
+======================================================================
+Evaluating subject: professional_law
+======================================================================
+✓ Result: 474/1534 correct = 30.90%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: allenai/OLMo-2-0425-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Subjects: 10
+Questions: 2643
+Correct: 841
+Accuracy: 31.82%
+
+Timing (this run)
+  Load wall time: 3.471 s
+  Load CPU time:  10.494 s
+  Eval wall time: 62.453 s (1.04 min)
+  Eval CPU time:  60.330 s
+  Eval GPU time:  62.453 s (CUDA events)
+======================================================================
+
+✓ Results saved to: ./mmlu_results_allenai__OLMo-2-0425-1B-Instruct_full_cuda_20260119_210936.json
+✓ Question-level data saved to: ./mmlu_results_allenai__OLMo-2-0425-1B-Instruct_full_cuda_20260119_210936_questions.json
+
+Top subjects:
+  business_ethics: 45.00%
+  electrical_engineering: 43.45%
+  computer_security: 40.00%
+  anatomy: 37.78%
+  machine_learning: 33.93%
+
+Bottom subjects:
+  astronomy: 30.92%
+  professional_law: 30.90%
+  abstract_algebra: 28.00%
+  econometrics: 21.93%
+  high_school_physics: 19.87%
+
+✅ Done.

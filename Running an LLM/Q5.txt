@@ -1,0 +1,108 @@
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Subjects: 10
+Questions: 2643
+Correct: 986
+Accuracy: 37.31%
+
+Timing (this run)
+  Load wall time: 3.292 s
+  Load CPU time:  8.525 s
+  Eval wall time: 53.839 s (0.90 min)
+  Eval CPU time:  51.668 s
+  Eval GPU time:  53.839 s (CUDA events)
+======================================================================
+
+✓ Results saved to: ./mmlu_results_meta-llama__Llama-3.2-1B-Instruct_full_cuda_20260119_201556.json
+
+Top subjects:
+  computer_security: 58.00%
+  electrical_engineering: 50.34%
+  astronomy: 50.00%
+  anatomy: 48.15%
+  business_ethics: 46.00%
+
+Bottom subjects:
+  professional_law: 35.46%
+  machine_learning: 31.25%
+  econometrics: 26.32%
+  high_school_physics: 23.84%
+  abstract_algebra: 23.00%
+  
+  
+  
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: allenai/OLMo-2-0425-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Subjects: 10
+Questions: 2643
+Correct: 841
+Accuracy: 31.82%
+
+Timing (this run)
+  Load wall time: 38.052 s
+  Load CPU time:  37.743 s
+  Eval wall time: 60.517 s (1.01 min)
+  Eval CPU time:  58.433 s
+  Eval GPU time:  60.517 s (CUDA events)
+======================================================================
+
+✓ Results saved to: ./mmlu_results_allenai__OLMo-2-0425-1B-Instruct_full_cuda_20260119_201739.json
+
+Top subjects:
+  business_ethics: 45.00%
+  electrical_engineering: 43.45%
+  computer_security: 40.00%
+  anatomy: 37.78%
+  machine_learning: 33.93%
+
+Bottom subjects:
+  astronomy: 30.92%
+  professional_law: 30.90%
+  abstract_algebra: 28.00%
+  econometrics: 21.93%
+  high_school_physics: 19.87%
+  
+  
+  
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: Qwen/Qwen2.5-0.5B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Subjects: 10
+Questions: 2643
+Correct: 982
+Accuracy: 37.15%
+
+Timing (this run)
+  Load wall time: 2.723 s
+  Load CPU time:  6.263 s
+  Eval wall time: 78.619 s (1.31 min)
+  Eval CPU time:  76.055 s
+  Eval GPU time:  78.619 s (CUDA events)
+======================================================================
+
+✓ Results saved to: ./mmlu_results_Qwen__Qwen2.5-0.5B-Instruct_full_cuda_20260119_201906.json
+
+Top subjects:
+  computer_security: 58.00%
+  business_ethics: 52.00%
+  electrical_engineering: 48.97%
+  anatomy: 44.44%
+  astronomy: 44.08%
+
+Bottom subjects:
+  machine_learning: 38.39%
+  professional_law: 34.22%
+  abstract_algebra: 30.00%
+  high_school_physics: 29.80%
+  econometrics: 27.19%

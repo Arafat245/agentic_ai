@@ -1,0 +1,38 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "cuda",
+  "quantization_bits": null,
+  "timestamp": "20260119_210334",
+  "seed": 0,
+  "subjects": [
+    "astronomy",
+    "business_ethics"
+  ],
+  "max_examples": null,
+  "model_load_seconds": 2.535783,
+  "eval_seconds": 7.871472545899451,
+  "timing": {
+    "load_wall_s": 2.5358254150487483,
+    "load_cpu_s": 5.665299621999999,
+    "eval_wall_s": 7.871472545899451,
+    "eval_cpu_s": 7.182116620999999,
+    "eval_gpu_s": 7.8712900390625
+  },
+  "overall_accuracy": 47.22222222222222,
+  "total_correct": 119,
+  "total_questions": 252,
+  "subject_results": [
+    {
+      "subject": "astronomy",
+      "correct": 67,
+      "total": 152,
+      "accuracy": 44.07894736842105
+    },
+    {
+      "subject": "business_ethics",
+      "correct": 52,
+      "total": 100,
+      "accuracy": 52.0
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+GPU, no quantization
+
+CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_new.py --device cuda --quant none
+
+
+GPU, 4-bit quantization
+
+CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_new.py --device cuda --quant 4bit
+
+
+GPU, 8-bit quantization
+
+CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_new.py --device cuda --quant 8bit
+
+
+CPU, no quantization
+
+CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_new.py --device cpu --quant none
+
+
+CPU, 4-bit quantization
+
+If your script uses bitsandbytes quantization, this is usually unsupported on CPU. Run it anyway to confirm and capture the error/time:
+
+CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_new.py --device cpu --quant 4bit
+
+
+
+CUDA_VISIBLE_DEVICES=0 python3 three_model.py --model Qwen/Qwen2.5-0.5B-Instruct --device cuda --quant none --save_question_data --subjects astronomy business_ethics abstract_algebra anatomy computer_security econometrics electrical_engineering high_school_physics machine_learning professional_law | tee output_qwen_10subjects.txt
+
+
+python3 create_graphs.py   --result_dir .   --question_data_dir .   --output_dir graphs/

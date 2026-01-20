@@ -1,0 +1,87 @@
+{
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "device": "cuda",
+  "quantization_bits": null,
+  "timestamp": "20260115_145916",
+  "seed": 0,
+  "subjects": [
+    "astronomy",
+    "business_ethics",
+    "abstract_algebra",
+    "anatomy",
+    "computer_security",
+    "econometrics",
+    "electrical_engineering",
+    "high_school_physics",
+    "machine_learning",
+    "professional_law"
+  ],
+  "max_examples": null,
+  "model_load_seconds": 3.640993,
+  "eval_seconds": 90.21092,
+  "overall_accuracy": 37.306091562618235,
+  "total_correct": 986,
+  "total_questions": 2643,
+  "subject_results": [
+    {
+      "subject": "astronomy",
+      "correct": 76,
+      "total": 152,
+      "accuracy": 50.0
+    },
+    {
+      "subject": "business_ethics",
+      "correct": 46,
+      "total": 100,
+      "accuracy": 46.0
+    },
+    {
+      "subject": "abstract_algebra",
+      "correct": 23,
+      "total": 100,
+      "accuracy": 23.0
+    },
+    {
+      "subject": "anatomy",
+      "correct": 65,
+      "total": 135,
+      "accuracy": 48.148148148148145
+    },
+    {
+      "subject": "computer_security",
+      "correct": 58,
+      "total": 100,
+      "accuracy": 57.99999999999999
+    },
+    {
+      "subject": "econometrics",
+      "correct": 30,
+      "total": 114,
+      "accuracy": 26.31578947368421
+    },
+    {
+      "subject": "electrical_engineering",
+      "correct": 73,
+      "total": 145,
+      "accuracy": 50.3448275862069
+    },
+    {
+      "subject": "high_school_physics",
+      "correct": 36,
+      "total": 151,
+      "accuracy": 23.841059602649008
+    },
+    {
+      "subject": "machine_learning",
+      "correct": 35,
+      "total": 112,
+      "accuracy": 31.25
+    },
+    {
+      "subject": "professional_law",
+      "correct": 544,
+      "total": 1534,
+      "accuracy": 35.462842242503264
+    }
+  ]
+}

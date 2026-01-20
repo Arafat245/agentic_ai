@@ -1,0 +1,94 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "cuda",
+  "quantization_bits": null,
+  "timestamp": "20260119_201906",
+  "seed": 0,
+  "subjects": [
+    "astronomy",
+    "business_ethics",
+    "abstract_algebra",
+    "anatomy",
+    "computer_security",
+    "econometrics",
+    "electrical_engineering",
+    "high_school_physics",
+    "machine_learning",
+    "professional_law"
+  ],
+  "max_examples": null,
+  "model_load_seconds": 2.722761,
+  "eval_seconds": 78.61896739294752,
+  "timing": {
+    "load_wall_s": 2.7228132858872414,
+    "load_cpu_s": 6.263364359,
+    "eval_wall_s": 78.61896739294752,
+    "eval_cpu_s": 76.05549984000001,
+    "eval_gpu_s": 78.61871875
+  },
+  "overall_accuracy": 37.15474839197881,
+  "total_correct": 982,
+  "total_questions": 2643,
+  "subject_results": [
+    {
+      "subject": "astronomy",
+      "correct": 67,
+      "total": 152,
+      "accuracy": 44.07894736842105
+    },
+    {
+      "subject": "business_ethics",
+      "correct": 52,
+      "total": 100,
+      "accuracy": 52.0
+    },
+    {
+      "subject": "abstract_algebra",
+      "correct": 30,
+      "total": 100,
+      "accuracy": 30.0
+    },
+    {
+      "subject": "anatomy",
+      "correct": 60,
+      "total": 135,
+      "accuracy": 44.44444444444444
+    },
+    {
+      "subject": "computer_security",
+      "correct": 58,
+      "total": 100,
+      "accuracy": 57.99999999999999
+    },
+    {
+      "subject": "econometrics",
+      "correct": 31,
+      "total": 114,
+      "accuracy": 27.192982456140353
+    },
+    {
+      "subject": "electrical_engineering",
+      "correct": 71,
+      "total": 145,
+      "accuracy": 48.96551724137931
+    },
+    {
+      "subject": "high_school_physics",
+      "correct": 45,
+      "total": 151,
+      "accuracy": 29.80132450331126
+    },
+    {
+      "subject": "machine_learning",
+      "correct": 43,
+      "total": 112,
+      "accuracy": 38.392857142857146
+    },
+    {
+      "subject": "professional_law",
+      "correct": 525,
+      "total": 1534,
+      "accuracy": 34.22425032594524
+    }
+  ]
+}

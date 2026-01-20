@@ -1,0 +1,3794 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "cuda",
+  "quantization_bits": null,
+  "timestamp": "20260119_210334",
+  "seed": 0,
+  "subjects": [
+    "astronomy",
+    "business_ethics"
+  ],
+  "max_examples": null,
+  "questions": [
+    {
+      "subject": "astronomy",
+      "question_index": 0,
+      "question": "What is true for a type-Ia (\"type one-a\") supernova?",
+      "choices": [
+        "This type occurs in binary systems.",
+        "This type occurs in young galaxies.",
+        "This type produces gamma-ray bursts.",
+        "This type produces high amounts of X-rays."
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "a3468b04888ea84f4063d391517ba609"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 1,
+      "question": "If you know both the actual brightness of an object and its apparent brightness from your location then with no other information you can estimate:",
+      "choices": [
+        "Its speed relative to you",
+        "Its composition",
+        "Its size",
+        "Its distance from you"
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "8607750cf9791f5ed268b4c87342b2b2"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 2,
+      "question": "Why is the sky blue?",
+      "choices": [
+        "Because the molecules that compose the Earth's atmosphere have a blue-ish color.",
+        "Because the sky reflects the color of the Earth's oceans.",
+        "Because the atmosphere preferentially scatters short wavelengths.",
+        "Because the Earth's atmosphere preferentially absorbs all other colors."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "d13712d5c0f868c709ea92fa28e01144"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 3,
+      "question": "You\u2019ve made a scientific theory that there is an attractive force between all objects. When will your theory be proven to be correct?",
+      "choices": [
+        "The first time you drop a bowling ball and it falls to the ground proving your hypothesis.",
+        "After you\u2019ve repeated your experiment many times.",
+        "You can never prove your theory to be correct only \u201cyet to be proven wrong\u201d.",
+        "When you and many others have tested the hypothesis."
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "402f6dbcbece99dedba1e05c9db61cd9"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 4,
+      "question": "Which of the following is/are true?",
+      "choices": [
+        "Titan is the only outer solar system moon with a thick atmosphere",
+        "Titan is the only outer solar system moon with evidence for recent geologic activity",
+        "Titan's atmosphere is composed mostly of hydrocarbons",
+        "A and D"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "4476492fd2dfc7f4134f826a212f527e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 5,
+      "question": "A comet of mass m impacts the earth (mass M radius R) at the minimum impact speed. What is the expression for the total energy released in the impact?",
+      "choices": [
+        "m*v",
+        "0.5*m/(R^3)",
+        "0.5*m*(2GM/R)",
+        "0.6*G(M^2)/R"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "2247810059b9022363dc877aa0a5d25f"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 6,
+      "question": "Some of Mars'water is frozen in the soil and the ice caps and some was lost due to solar wind stripping but much of the original water is thought to have been lost through another mechanism. What happened to this \"lost\"water?",
+      "choices": [
+        "it was stripped away by the magnetic field when it rapidly decreased in strength",
+        "it was broken into hydrogen and oxygen by ultraviolet light and the hydrogen was lost through thermal escape",
+        "it was consumed by a civilization of thirsty Martians",
+        "it was vaporized during a period of intense volcanism and was lost to space through thermal escape"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "07d2c1007ee7a46a5711bbbe555de1e9"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 7,
+      "question": "Most rocks on the Moon's surface are older than those on the Earth's surface. The best evidence for this is:",
+      "choices": [
+        "Lunar rocks are composed of fragments pulverized by many impacts.",
+        "Radioactive dating of lunar samples shows that they are older.",
+        "The Moon's surface is more heavily eroded than the Earth's surface.",
+        "The Moon's surface has more impact craters than the Earth's surface."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "e8b006833bd7b0ccb350daa0ad18857f"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 8,
+      "question": "What is the second most common element in the solar system?",
+      "choices": [
+        "Iron",
+        "Hydrogen",
+        "Methane",
+        "Helium"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "345f47406d3855a8888b4c9cfa9eee0b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 9,
+      "question": "What is the source of the material that causes meteor showers?",
+      "choices": [
+        "Near-Earth asteroids gradually disintegrate and spread out along their orbital path. When the Earth passes through the orbit of an asteroid we are bombarded by sand-sized particles which cause a meteor shower.",
+        "Near-Earth asteroids disintegrate as they enter Earth's atmosphere creating hundreds of bright meteors that appear to radiate from a single location in the sky.",
+        "The nuclei of comets disintigrate as they enter Earth's atmosphere creating hundreds of bright meteors that appear to radiate from a central location in the sky.",
+        "The nuclei of comets gradually disintegrate and spread out along the comet's orbital path. When the Earth passes through the orbit of a comet we are bombarded by sand-sized particles which cause a meteor shower."
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "ab97cd079328495534044c8395cb7e5f"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 10,
+      "question": "Why does the plasma (ion) tail of a comet always point away from the Sun?",
+      "choices": [
+        "Radiation pressure from the Sun's light pushes the ions away.",
+        "The conservation of the angular momentum in the tail keeps it always pointing away from the Sun.",
+        "The ions are following Keplerian orbits that lead away from the Sun.",
+        "The solar wind electromagnetically \"blows\" the ions directly away from the Sun."
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "bd5cfd7e54537a5e4d3637c946207df0"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 11,
+      "question": "How did Eratosthenes estimate the size of Earth in 240 B.C.?",
+      "choices": [
+        "By observing the duration of a solar eclipse.",
+        "By measuring the size of Earth's shadow on the Moon in a lunar eclipse.",
+        "By comparing the maximum altitude of the Sun in two cities at different latitudes at the same time on the same day.",
+        "By sending fleets of ships around Earth."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "2f697b120768153a897364df367a99c1"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 12,
+      "question": "The Large Magellanic Cloud is ...",
+      "choices": [
+        "a dwarf galaxy orbiting the Milky Way.",
+        "the closest planetary nebula to the Earth.",
+        "a bright star cluster discovered by Magellan.",
+        "the outer arm of the Milky Way named after Magellan."
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "9ace20a422103505c8ee029053b263ed"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 13,
+      "question": "Why do we look for water-ice in craters at Mercury's pole?",
+      "choices": [
+        "Actually water-ice is all over Mercury and not just at the poles.",
+        "The pole is the only place fortunate enough to have had comet impacts",
+        "Radar from the earth can only see Mercury's poles.",
+        "These craters contain the only permanently shadowed regions on Mercury"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "efe2953f4271d677dd1396794ec38f8c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 14,
+      "question": "The Milky Way is part of a giant supercluster with a diameter of 160 Mpc. What is the name of this supercluster?",
+      "choices": [
+        "Virgo",
+        "Laniakea",
+        "Sculptor",
+        "Bo\u00f6tes"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "978517d62c37d6f84beec79c84b72dcd"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 15,
+      "question": "On which planet in our solar system can you find the Great Red Spot?",
+      "choices": [
+        "Venus",
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "573d58e89cca832df2b492cc11646b77"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 16,
+      "question": "Why does Earth have the strongest magnetic field among the terrestrial worlds?",
+      "choices": [
+        "It is by far the largest terrestrial world.",
+        "It is the most volcanically active world.",
+        "It is the only one that has both a partially molten metallic core and reasonably rapid rotation.",
+        "It rotates much faster than any other terrestrial world."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "c332a5f8cecf9b1c93ff66ebeb7e387b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 17,
+      "question": "Which of the following is not true?",
+      "choices": [
+        "The Earth and Venus are in a 1:1 orbital resonance (for every 1 Earth orbit there is exactly 1 Venus orbit)",
+        "Neptune and Pluto are in a 3:2 orbital resonance (for every 3 Neptune orbits there are exactly 2 Pluto orbits)",
+        "The Kirkwood Gaps in the asteroid belt are due to resonances with Jupiter",
+        "Neptune and Pluto won't collide because of their orbital resonance"
+      ],
+      "correct_answer": "A",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "21394bd83c9be251b150fd42729606b4"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 18,
+      "question": "Which of the following is/are common feature(s) of all fresh (i.e. not eroded) impact craters formed on solid surfaces:",
+      "choices": [
+        "ejecta",
+        "raised rims",
+        "central peaks",
+        "A and B only"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "34263444b9240eb9bfefb8bc3b6723b0"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 19,
+      "question": "From laboratory measurements we know that a particular spectral line formed by hydrogen appears at a wavelength of 486.1 nanometers (nm). The spectrum of a particular star shows the same hydrogen line appearing at a wavelength of 485.9 nm. What can we conclude?",
+      "choices": [
+        "The star is getting hotter.",
+        "The star is getting colder.",
+        "The star is moving toward us.",
+        "The star is moving away from us."
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "cd1c6ad4144de088551d48f19e262e7a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 20,
+      "question": "The lithosphere of a planet is the layer that consists of",
+      "choices": [
+        "the softer rocky material of the mantle.",
+        "the lava that comes out of volcanoes.",
+        "material between the crust and the mantle.",
+        "the rigid rocky material of the crust and uppermost portion of the mantle."
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "ee12aed7069bc2961c23887778c5750c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 21,
+      "question": "What is the Cassini division of Saturn's rings?",
+      "choices": [
+        "a dark ring visible from Earth composed of dark dusty particles",
+        "the most opaque ring of Saturn made of highly reflective ice particles",
+        "the widest ring of Saturn located between two large ring gaps",
+        "a large gap visible from Earth produced by an orbital resonance with the moon Mimas"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "647d96d100eb756bfeb91884ea2b04a5"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 22,
+      "question": "Which of the following statements about sidereal and solar days is not true?",
+      "choices": [
+        "The time it takes for the Sun to make one circuit of our sky is one solar day.",
+        "A solar day is 4 minutes longer than a sidereal day.",
+        "A solar day represents more than 360\u00b0 of rotation for the earth.",
+        "The time it takes for the Moon to make one circuit of our sky is one solar day."
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "1144f61945a827b2354f9d39925aeb6c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 23,
+      "question": "Meteorites with high metal content probably are",
+      "choices": [
+        "pieces of comets rather than of asteroids.",
+        "chunks of large differentiated asteroids that were shattered by collisions.",
+        "chunks of rock chipped off the planet Mars.",
+        "leftover chunks of rock from the earliest period in the formation of the solar system."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "ee5f6e792a949efe0df9a268715080cd"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 24,
+      "question": "Most people use C\u00b0(degree Celsius) to measure everyday temperatures. Astronomers prefer to use K (Kelvin) to measure temperatures. Approximately how many Kelvin are 25 C\u00b0?",
+      "choices": [
+        "200 Kelvin",
+        "250 Kelvin",
+        "300 Kelvin",
+        "350 Kelvin"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "9c13f8242c4ff74cd8945c905ef64be7"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 25,
+      "question": "The four big moons of Jupiter are Callisto Europa Ganymede and Io. Which one of them has the smallest distance to Jupiter?",
+      "choices": [
+        "Callisto",
+        "Europa",
+        "Ganymede",
+        "Io"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "b9671330802452fdf41d7f04f8e9b891"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 26,
+      "question": "Why are the season's in Mars' southern hemisphere so extreme?",
+      "choices": [
+        "because Mars is farther from the sun than the Earth",
+        "because Mars has more carbon dioxide in its atmosphere than the Earth",
+        "because Mars has a more eccentric orbit than the Earth",
+        "because Mars' axis is more tilted than the Earth's"
+      ],
+      "correct_answer": "C",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "5863cf74d62208ee308bd321e3307fe5"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 27,
+      "question": "What Mars mission will be landing on May 25 2008 and will dig a trench into (hopefully) ice-rich soil?",
+      "choices": [
+        "ExoMars",
+        "Mars Exploration Rovers",
+        "Mars Science Laboratory",
+        "Phoenix Mars Lander"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "d6352d31f7a56b4e83d51e4ac0faac68"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 28,
+      "question": "What is the significance of the 1:2:4 resonance in the Jupiter's moons system?",
+      "choices": [
+        "The resonance pulls Io in different directions and generates heat.",
+        "It makes the orbit of Io slightly elliptical.",
+        "It creates a gap with no asteriods between the orbits.",
+        "It prevents formation of the ring material into other moons."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "bc08f10ebf2fc3844a79e7c5f1fe0d0b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 29,
+      "question": "The terrestrial planet cores contain mostly metal because",
+      "choices": [
+        "the entire planets are made mostly of metal.",
+        "metals condensed first in the solar nebula and the rocks then accreted around them.",
+        "metals sank to the center during a time when the interiors were molten throughout.",
+        "radioactivity created metals in the core from the decay of uranium."
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "a3bb440eba194cc983dfcc8f2e5daea4"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 30,
+      "question": "Why are the inner planets made of denser materials than the outer planets?",
+      "choices": [
+        "In the beginning when the protoplanetary disk was spinning faster centrifugal forces flung the lighter materials toward the outer parts of the solar nebula.",
+        "In the inner part of the nebula only metals and rocks were able to condense because of the high temperatures whereas hydrogen compounds although more abundant were only able to condense in the cooler outer regions.",
+        "Denser materials were heavier and sank to the center of the nebula.",
+        "When the solar nebula formed a disk materials naturally segregated into bands and in our particular solar system the denser materials settled nearer the Sun while lighter materials are found in the outer part."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "219fc4700d61b893759787ac9ce42d55"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 31,
+      "question": "What do meteorites reveal about the solar system?",
+      "choices": [
+        "They reveal that the early solar system consisted mostly of hydrogen and helium gas.",
+        "They reveal that meteorites are much older than the comets and planets.",
+        "They reveal that the age of the solar system is approximately 4.6 billion years.",
+        "They reveal that the solar system once contained 10 planets."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "aa129b9344cc2d042601095d43631988"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 32,
+      "question": "Venus shows evidence of which of the following surface processes?",
+      "choices": [
+        "Impacts",
+        "Erosion",
+        "Volcanism",
+        "A B and C"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "f5fcaab14c7289c7319e38246eb4f29f"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 33,
+      "question": "Planetary rings are",
+      "choices": [
+        "known to exist for all of the jovian planets.",
+        "composed of a large number of individual particles that orbit their planet in accord with Kepler's third law.",
+        "nearer to their planet than any of the planet's large moons.",
+        "all of the above"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "d055e3799972f92421690283ddcd1929"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 34,
+      "question": "Suppose the angular separation of two stars is smaller than the angular resolution of your eyes. How will the stars appear to your eyes?",
+      "choices": [
+        "You will not be able to see these two stars at all.",
+        "You will see two distinct stars.",
+        "The two stars will look like a single point of light.",
+        "The two stars will appear to be touching looking rather like a small dumbbell."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "f820a552a681cc5d5dd48c948ef2fb2e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 35,
+      "question": "What is not true of Jupiter's magnetic field?",
+      "choices": [
+        "it is about 20000 times stronger than Earth's magnetic field",
+        "it traps charged particles from Io's volcanoes in a \"plasma torus\" around the planet",
+        "it causes spectacular auroral displays at Jupiter's north and south poles",
+        "it switches polarity every 11 years"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "8a75b72ded1face16332400bf2c93434"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 36,
+      "question": "What does the astronomical term ecliptic describe?",
+      "choices": [
+        "The path of the Sun in the sky throughout a year.",
+        "The axial tilt of the Earth throughout a year.",
+        "The movement of the stars due to Earth\u2019s rotation.",
+        "The central line through the axis of rotation."
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "ca5819cfe5fe3b993cd4d5f57183fe4d"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 37,
+      "question": "The so-called dark energy is a model to explain ...",
+      "choices": [
+        "the radiation of black holes.",
+        "the mass distribution of galaxies.",
+        "the acceleration of the universe.",
+        "the microwave background of the universe."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "dd3b6c06bc1ee25e4ca0cfdcd3c76c6c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 38,
+      "question": "How do scientists know that the majority of meteorites come from the asteroid belt?",
+      "choices": [
+        "Bubbles of gas trapped in the crystals within meteorites are identical to the gases trapped in asteroids.",
+        "The spectra of some meteorites are similar to the spectra of asteroids in the asteroid belt.",
+        "Collisions are common in the asteroid belt and we can track the fragments from their source asteroid to the Earth where they become meteorites.",
+        "The asteroid belt is the only possible source of meteorites therefore they must originate there."
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "a53a83ca65c3dc32141d583e7d4d4e2f"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 39,
+      "question": "Jupiter and the other jovian planets are sometimes called \"gas giants.\" In what sense is this term misleading?",
+      "choices": [
+        "The materials they are made of are not normally gaseous in everyday experience.",
+        "They actually contain a significant fraction of non-gaseous matter.",
+        "The materials that make up these planets are primarily in the form of a plasma not a gas.",
+        "Actually it's a great description because these worlds are big and gaseous throughout."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "d532dfefb0e415d96d5d2b40ff653d96"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 40,
+      "question": "Which of the following is not one of nor follows directly from Kepler's laws?",
+      "choices": [
+        "As a planet moves around its orbit it sweeps out equal areas in equal times.",
+        "The orbit of each planet about the Sun is an ellipse with the Sun at one focus.",
+        "The force of attraction between any two objects decreases with the square of the distance between their centers.",
+        "A planet travels faster when it is nearer to the Sun and slower when it is farther from the Sun."
+      ],
+      "correct_answer": "C",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "a125d68a76c0747c9113265e319aee1a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 41,
+      "question": "The name of the black hole in the center of our Milky Way is ...",
+      "choices": [
+        "Altair A*",
+        "Alsephina A*",
+        "Fomalhaut A*",
+        "Sagittarius A*"
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "168cec9d7fd7800cb1da5b902df579c7"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 42,
+      "question": "Why is Saturn almost as big as Jupiter despite its smaller mass?",
+      "choices": [
+        "Jupiter's greater mass compresses it more thus increasing its density.",
+        "Saturn has a larger proportion of hydrogen and helium than Jupiter and is therefore less dense.",
+        "Jupiter's strong magnetic field constrains its size.",
+        "Saturn is further from the Sun thus cooler and therefore less compact."
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "22d8fc07d5847c35482cbb71af22d902"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 43,
+      "question": "Which of these has NOT been one of the main hypotheses considered for the origin of the Moon?",
+      "choices": [
+        "The Moon split from the Earth due to tidal forces.",
+        "The Moon was captured into Earth orbit.",
+        "The Earth and Moon co-accreted in the solar nebula.",
+        "Earth was rotating so rapidly that the Moon split from it."
+      ],
+      "correct_answer": "A",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "9c2ed67e3e7bd238f60b4c1802ab877b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 44,
+      "question": "We were first able to accurately measure the diameter of Pluto from:",
+      "choices": [
+        "a New Horizons flyby in the 1990s",
+        "Hubble Space Telescope images that resolved Pluto's disk",
+        "brightness measurements made during mutual eclipses of Pluto and Charon",
+        "radar observations made by the Arecibo telescope"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "5e32d8f76c1481b40eb1a94f8ee0fc2e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 45,
+      "question": "According to the Solar Nebular theory what are asteroids and comets?",
+      "choices": [
+        "They are the shattered remains of collisions between planets.",
+        "They are chunks of rock or ice that condensed long after the planets and moons had formed.",
+        "They are chunks of rock or ice that were expelled from planets by volcanoes.",
+        "They are leftover planetesimals that never accreted into planets."
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "56466fef481797ced8e530c7e4a1defa"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 46,
+      "question": "How do we know how old the Earth is?",
+      "choices": [
+        "From the layering of materials within the Earth.",
+        "From fossils of ancient life.",
+        "From the cratering history of Earth\u2019s surface.",
+        "From radioactive dating of rocks and meteorites."
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "ef1321e1564daf0b844c76dae1f19117"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 47,
+      "question": "Life on Earth originated from",
+      "choices": [
+        "We don't know for sure.",
+        "aliens (panspermia).",
+        "comets.",
+        "the Earth's oceans."
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "a97255a0ea4c9cd0f1338faf317d9696"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 48,
+      "question": "By locating the north celestial pole (NCP) in the sky how can you determine your latitude?",
+      "choices": [
+        "The azimuth of the NCP is the angular distance from the North Pole.",
+        "The azimuth of the NCP is the same as your latitude.",
+        "The altitude of the NCP is the same as your latitude.",
+        "The altitude of the NCP is your angular distance from the North Pole."
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "09f17c2f3d50e75e70b5a4740d66fbf5"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 49,
+      "question": "How does the greenhouse effect work?",
+      "choices": [
+        "Ozone transmits visible light allowing it to heat the surface but then absorbs most of the infrared heat trapping the heat near the surface.",
+        "Greenhouse gases transmit visible light allowing it to heat the surface but then absorb infrared light from Earth trapping the heat near the surface.",
+        "Greenhouse gases absorb infrared light from the Sun which then heats the atmosphere and the surface.",
+        "Greenhouse gases absorb X-rays and ultraviolet light from the Sun which then heat the atmosphere and the surface."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "02a0a84366043eaa0ce36322664fab52"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 50,
+      "question": "Why is Saturn almost as big as Jupiter despite its smaller mass?",
+      "choices": [
+        "Jupiter's greater mass compresses it more thus increasing its density.",
+        "Saturn has a larger proportion of hydrogen and helium than Jupiter and is therefore less dense.",
+        "Saturn is further from the Sun thus cooler and therefore less compact.",
+        "Saturn's rings make the planet look bigger."
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "dc87584b8d07614f4cb7c30ccac43c4b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 51,
+      "question": "Calculate the ratio of the solar radiation flux on Mercury's surface for perihelion (0.304 AU) versus aphelion (0.456 AU).",
+      "choices": [
+        "4:1",
+        "1:2",
+        "6:5",
+        "9:4"
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "8b22f54b8ae48eb8625533f74728be89"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 52,
+      "question": "The terrestrial planet cores contain mostly metal because",
+      "choices": [
+        "the entire planets are made mostly of metal.",
+        "radioactivity created metals in the core from the decay of uranium.",
+        "metals condensed first in the solar nebula and the rocks then accreted around them.",
+        "metals differentiated to the center during a time when the interiors were molten throughout."
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "610b6288e64d995e128229af2cb9bd73"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 53,
+      "question": "Which of the following countries has sent landers to Venus?",
+      "choices": [
+        "The U.S.S.R.",
+        "The U.S.",
+        "France",
+        "A and B"
+      ],
+      "correct_answer": "A",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "3f3aad6653e20a48b8be1d498812e552"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 54,
+      "question": "Which of the following is/are NOT caused by orbital resonance?",
+      "choices": [
+        "2:3 periodic ratio of Neptune:Pluto",
+        "Kirkwood Gaps.",
+        "Gaps in Saturn's rings.",
+        "Breaking of small Jovian moons to form ring materials."
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "70ac02a54551b9cd506e05ad911a149e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 55,
+      "question": "Why is it thought that the climate on Mars changed when the planet lost its strong magnetic field?",
+      "choices": [
+        "without a strong magnetic field the ozone layer was destroyed by the solar wind which stopped the greenhouse effect and cooled Mars down.",
+        "without a strong magnetic field which enhances the greenhouse effect Mars cooled down.",
+        "without a strong magnetic field the solar wind stripped away most of the atmosphere significantly reducing the greenhouse effect and cooling Mars down",
+        "without a strong magnetic field the planet recieves fewer charged particles from the solar wind and therefore is not heated as much"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "fdad3fcf083275f769434824d396127d"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 56,
+      "question": "Which of the following moons is NOT one of the Galilean moons?",
+      "choices": [
+        "Ganymede",
+        "Callisto",
+        "Europa",
+        "Dione"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "b5175e1c40eb40ff68c989e53bf5d8a3"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 57,
+      "question": "Planet X orbits its sun once every 100 Earth days and rotates in the prograde direction around its axis with a sidereal day of 100 Earth days. How long is a solar day on Planet X?",
+      "choices": [
+        "About 10 earth days",
+        "About 100 earth days",
+        "About 200 earth days",
+        "There is no solar day Planet X is tidally locked"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "489dd237d38edcd704565bf36e1e6a0a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 58,
+      "question": "When traveling north from the United States into Canada you\u2019ll see the North Star (Polaris) getting _________.",
+      "choices": [
+        "Brighter",
+        "Dimmer",
+        "Higher in the sky",
+        "Lower in the sky"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "48d4d5ed363eb6103ba7dec67417e17c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 59,
+      "question": "When will the next major impact occur on Earth?",
+      "choices": [
+        "Hundreds of millennia in the future.",
+        "Major impacts can no longer occur since the period of heavy bombardment is over.",
+        "Hundreds of millennia after the last major impact.",
+        "Could be any time. The probability of impact is the same next year as it is for any later year."
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "4bac3f7a3732f49fc8171f7b80351a21"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 60,
+      "question": "What about asteroids makes them stand out in sky surveys searching for them?",
+      "choices": [
+        "Asteroids emit pulsed radiation",
+        "Asteroids emit a lot of their own radiation",
+        "They reflect enough of the sun's light to make them brighter than most background stars",
+        "Asteroids have substantial motion relative to the background stars"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "01536a2da5ed328e39591df49ad79ddb"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 61,
+      "question": "Why did the solar nebula heat up as it collapsed?",
+      "choices": [
+        "Collisions among planetesimals generated friction and heat.",
+        "Radiation from other nearby stars that had formed earlier heated the nebula.",
+        "The shock wave from a nearby supernova heated the gas.",
+        "As the cloud shrank its gravitational potential energy was converted to kinetic energy and then into thermal energy."
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "c08db34b9c83ba20b7bf4f0beb22c15b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 62,
+      "question": "You observe the visible spectrum of a star viewed through a cloud of cool hydrogen gas.",
+      "choices": [
+        "You see only the star\u2019s blackbody spectrum.",
+        "You see the star\u2019s blackbody spectrum with absorption lines due to hydrogen.",
+        "You see only emission lines characteristic of hydrogen.",
+        "You see only emission lines characteristic of the star\u2019s composition."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "575c71eb339d20fc1591688794122339"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 63,
+      "question": "Which of the following most likely explains why Venus does not have a strong magnetic field?",
+      "choices": [
+        "Its rotation is too slow.",
+        "It has too thick an atmosphere.",
+        "It is too large.",
+        "It does not have a metallic core."
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "b199cda09c7ba0596197ce92faadf97c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 64,
+      "question": "Which of the following characteristics would not necessarily suggest that a rock we found is a meteorite.",
+      "choices": [
+        "It has a fusion crust",
+        "It contains solidified spherical droplets",
+        "It is highly processed",
+        "It has different elemental composition than earth"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "54c7629d7c7109b8988b8469c85cdfc2"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 65,
+      "question": "Which is not a similarity between Saturn and Jupiter's atmospheres?",
+      "choices": [
+        "a composition dominated by hydrogen and helium",
+        "the presence of belts zones and storms",
+        "an equatorial wind speed of more than 900 miles per hour",
+        "significant \"shear\" between bands of circulation at different latitudes"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "2ac98d83e4f8fb75f854ae76942f465d"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 66,
+      "question": "Jupiter's orbital distance is roughly 5 AU. How many times brighter would the Sun have to be for Europa to receive the same solar flux that we currently receive on Earth (1380W/m2)?",
+      "choices": [
+        "100 times brighter",
+        "25 times brighter",
+        "2 times brighter",
+        "50 times brighter"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "c9e4fb66d44febcfbe0971204be5ce7c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 67,
+      "question": "The Pleiades is an open star cluster that plays a role in many ancient stories and is well-known for containing ... bright stars.",
+      "choices": [
+        "5",
+        "7",
+        "9",
+        "12"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "2dbeb9a3a514638e3f8644862a65543c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 68,
+      "question": "The nebular theory of the formation of the solar system successfully predicts all but one of the following. Which one does the theory not predict?",
+      "choices": [
+        "Planets orbit around the Sun in nearly circular orbits in a flattened disk.",
+        "the equal number of terrestrial and jovian planets",
+        "the craters on the Moon",
+        "asteroids Kuiper-belt comets and the Oort cloud"
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "1e30988c383c481d1bdf090678c99ebc"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 69,
+      "question": "A sand bag has a mass of 5kg and weight 50N on Earth. What is the mass and weight of this sand bag on a planet with half the gravity compared to Earth?",
+      "choices": [
+        "Mass 5kg weight 100N",
+        "Mass 5kg weight 50N",
+        "Mass 5kg weight 25N",
+        "Mass 10kg weight 100N"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "9e01f98900a16476964f356c03629b7a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 70,
+      "question": "Where is the crater from the impact that is believed to be responsible for the mass extinction of dinosaurs 65 million years ago?",
+      "choices": [
+        "Tunguska Siberia.",
+        "Chicxulub Crater Yucatan Peninsula in Mexico.",
+        "Quebec Canada.",
+        "Meteor Crater in Arizona."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "e3064f338192a3a3250cc1c5d96badf8"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 71,
+      "question": "In addition to the conditions required for any solar eclipse what must also be true in order for you to observe a total solar eclipse?",
+      "choices": [
+        "The Earth must lie completely within the Moon's penumbra.",
+        "The Moon's penumbra must touch the area where you are located.",
+        "The Earth must be near aphelion in its orbit of the Sun.",
+        "The Moon's umbra must touch the area where you are located."
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "1860652f602b154d218e32ae00f73a1e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 72,
+      "question": "What effect or effects would be most significant if the Moon's orbital plane were exactly the same as the ecliptic plane?",
+      "choices": [
+        "Solar eclipses would be much rarer.",
+        "Solar eclipses would last much longer.",
+        "Solar eclipses would be much more frequent.",
+        "Solar eclipses would not last as long."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "bcdc4791163d0b058980894ff03a7429"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 73,
+      "question": "What type of radiation causes a black hole to evaporate over time?",
+      "choices": [
+        "Schwarzschild radiation",
+        "Planck radiation",
+        "Kolmogorov radiation",
+        "Hawking radiation"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "b48e1751bc1dd7b8acb0bd16a26ff308"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 74,
+      "question": "Approximately how far away is the Andromeda Galaxy?",
+      "choices": [
+        "1.7 million light years",
+        "2.1 million light years",
+        "2.5 million light years",
+        "3.2 million light years"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "fe46db227f9ff6c35ff8aa6a0669b806"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 75,
+      "question": "Which living organisms most resemble the common ancestor of all life according to genetic testing?",
+      "choices": [
+        "viruses",
+        "bacteria such as E. coli",
+        "organisms living deep in the oceans around seafloor volcanic vents and in hot springs",
+        "plankton that use sunlight as an energy source through photosynthesis"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "91201dff2ea7415e98bb98b895fa3d02"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 76,
+      "question": "How did Eratosthenes estimate the size of the Earth in 240 B.C.?",
+      "choices": [
+        "By measuring the maximum altitude of the Sun in two cities at different latitudes at the same time on the same day.",
+        "By measuring the size of Earth's shadow on the Moon during a lunar eclipse.",
+        "By finding a place on Earth where the Sun passes directly overhead.",
+        "By sending fleets of ships around the Earth."
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "dae4f9c5bd576547a81bfd8512a9d120"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 77,
+      "question": "Our current best observations show that Pluto has",
+      "choices": [
+        "one medium sized satellite and two small satellites.",
+        "no satellites.",
+        "one large satellite and three small satellites.",
+        "one large satellite."
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "e2fbaa159999126cfd1f9ffca66a3641"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 78,
+      "question": "Pluto's extremely cold (~40 K) surface is composed of:",
+      "choices": [
+        "mainly water ice which always remains frozen",
+        "nitrogen methane and carbon monoxide ices which sublimate into an atmosphere near perihelion",
+        "nitrogen methane and carbon monoxide ices which always remain frozen",
+        "roughly half ices and half rocky materials"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "d780faa79e969dbb92b13f5f7a3b78a1"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 79,
+      "question": "A Mars year is approximately how many Earth years long?",
+      "choices": [
+        "1/2",
+        "1",
+        "2",
+        "4"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "c32a14a331835ab28539f56c3a2584c3"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 80,
+      "question": "What is the correct numerical value and unit of the Boltzmann constant?",
+      "choices": [
+        "1.38 \u00d7 10\u221221 m^3 \u00b7 kg \u00b7 s^\u22122 \u00b7 K^\u22121",
+        "1.38 \u00d7 10\u221222 m^2 \u00b7 kg \u00b7 s^\u22123 \u00b7 K^\u22121",
+        "1.38 \u00d7 10\u221223 m^2 \u00b7 kg \u00b7 s^\u22122 \u00b7 K^\u22121",
+        "1.38 \u00d7 10\u221224 m^2 \u00b7 kg \u00b7 s^\u22122 \u00b7 K^\u22122"
+      ],
+      "correct_answer": "C",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "990fd6b68c7ff93819121ee25e67a0b6"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 81,
+      "question": "Which statement about an atom is not true:",
+      "choices": [
+        "The nucleus contains most of the atom\u2019s mass but almost none of its volume.",
+        "A neutral atom always has equal numbers of electrons and protons.",
+        "A neutral atom always has equal numbers of neutrons and protons.",
+        "The electrons can only orbit at particular energy levels."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "a939f2aa3ae08192ab72c26892127c7a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 82,
+      "question": "Earth has been gradually warming over the past few decades. Based on a great deal of evidence scientists conclude that this warming is caused by ________.",
+      "choices": [
+        "human activities that are increasing the concentration of greenhouse gases in Earth's atmosphere",
+        "the fact that our politicians spout a lot of hot air",
+        "the human release of chemicals called CFCs into the stratosphere",
+        "the increase in forest fires during recent years"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "4ca08bf0daa5cf9511c610c3c0c542bd"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 83,
+      "question": "How do scientists know that the majority of meteorites come from the asteroid belt?",
+      "choices": [
+        "The spectra of some meteorites are similar to the spectra of asteroids in the asteroid belt.",
+        "The asteroid belt is the only possible source of meteorites therefore they must originate there.",
+        "Collisions are common in the asteroid belt and we can track the fragments from their source asteroid to the Earth where they become meteorites.",
+        "High levels of Iridum have been detected in both asteroids and meteorites therefore meteorites come from the asteroid belt."
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "9a281fa2a2e3301859fc52a492c14f73"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 84,
+      "question": "Which factor s most important in determining the history of volanism and tectonism on a planet?",
+      "choices": [
+        "size of the planet",
+        "presence of an atmosphere",
+        "distance from the sun",
+        "rotation period"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "25ad19f697e185e1a7eaf54b55dba4a1"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 85,
+      "question": "The astronomical unit parsec (pc) plays a crucial role in astronomy. One parsec is equal to about 3.26 light-years. How is one parsec defined in astronomy?",
+      "choices": [
+        "Distance at which one astronomical unit measures one arcsecond from Earth.",
+        "Orbital distance of the solar system around the center of the Milky Way in one year.",
+        "Effective distance of the solar wind (i.e. the radius of the heliosphere).",
+        "Historical distance to the brightest star Sirius."
+      ],
+      "correct_answer": "A",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "a0368cb16c6559109b00482e674a8657"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 86,
+      "question": "The term Schwarzschild radius usually describes properties of ...",
+      "choices": [
+        "red dwarfs.",
+        "pulsars.",
+        "black holes.",
+        "galaxies."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "3974eb41b0c4086f859144a03a4ed0c3"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 87,
+      "question": "As the life of a star progresses heavy elements are produced. The elements form layers around the star in this order (starting from the outer layer):",
+      "choices": [
+        "H \u2192 He \u2192 Li \u2192 N \u2192 O \u2192 Si \u2192 Fe",
+        "H \u2192 He \u2192 C \u2192 O \u2192 Ne \u2192 Si \u2192 Fe",
+        "H \u2192 He \u2192 Li \u2192 O \u2192 Ne \u2192 Si \u2192 Fe",
+        "H \u2192 He \u2192 C \u2192 N \u2192 O \u2192 Si \u2192 Fe"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "6a37fdaf587c315e76ae72b5f2cdb650"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 88,
+      "question": "If you lived on Venus what phases of the Earth would you see? (Assume your telescope can see through Venus\u2019s thick clouds\u2026)",
+      "choices": [
+        "New first quarter full third quarter",
+        "Waning crescent New Waxing crescent",
+        "Waxing gibbous Full Waning gibbous",
+        "New only"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "21ff66065d4fa5b63d94b1e1198307b8"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 89,
+      "question": "Moons cause/contribute to which of the following?",
+      "choices": [
+        "stability of particles within rings.",
+        "gravitational effects at ring edges as the moons pass by.",
+        "gaps between rings.",
+        "Moons contribute to all of the above."
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "8be143e6c589cdda08f8da95b57ab657"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 90,
+      "question": "Mars has an atmospheric pressure of 600 pascals. If the acceleration due to gravity on Mars is (roughly) 4 m/s2 and the surface area of Mars is about 145000000 square km what is the approximate mass of the martian atmosphere?",
+      "choices": [
+        "2.2x1011 kg",
+        "2.2x1014kg",
+        "2.2x1020kg",
+        "2.2x1016 kg"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "80b952348a91fc9af5a2361251c00d22"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 91,
+      "question": "Why is the Mars Exploration Rover Spirit currently tilted towards the north?",
+      "choices": [
+        "Because it\u2019s climbing up a big hill.",
+        "Because it\u2019s in the southern hemisphere where it is winter now.",
+        "Because it\u2019s in the northern hemisphere where it is winter now.",
+        "Because one of its wheels broke."
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "40278ef586c8c26ee10c03730cbdfc3e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 92,
+      "question": "Mars has an atmosphere that is almost entirely carbon dioxide.Why isn't there a strong greenhouse effect keeping the planet warm?",
+      "choices": [
+        "the atmosphere on Mars is too thin to trap a significant amount of heat",
+        "There actually is a strong greenhouse effect and Mars would be 35oC colder than it is now without it.",
+        "Mars does not have enough internal heat to drive the greenhouse effect",
+        "the greenhouse effect requires an ozone layer which Mars does not have"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "49ee38a7d49e46e87b2bcf617f4815f5"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 93,
+      "question": "Which of the following was not cited as evidence for life in the martian meteorite ALH84001?",
+      "choices": [
+        "Complex organic molecules specifically PAHs",
+        "Magnetite grains similar to those formed by bacteria on Earth",
+        "Carbonate minerals indicating a thicker warmer Martian atmosphere",
+        "Amino acids with a preferred orientation or \"chirality\""
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "65ca090c416b5b59b6b9232aa02b0f72"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 94,
+      "question": "Kirkwood gaps are observed in the main asteroid belt including at the position(s) where:",
+      "choices": [
+        "asteroids would orbit with a period half that of Jupiter",
+        "asteroids would orbit with a period twice that of Jupiter",
+        "asteroids would orbit with a period twice that of Mars",
+        "A and B"
+      ],
+      "correct_answer": "A",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "02bf93a70c962ec4c64dc63b48fabd7c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 95,
+      "question": "The belts and zones of Jupiter are",
+      "choices": [
+        "names for the layers of gaseous and metallic hydrogen deep within the planet.",
+        "alternating bands of rising and falling air at different latitudes.",
+        "alternating regions of charged particles in Jupiter's magnetic field.",
+        "regions of the plasma torus created by ions from Io's volcanoes"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "72ccf9d7d1298bc27d50bb29ea2bbc67"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 96,
+      "question": "The two moons of Mars are called ...",
+      "choices": [
+        "Tritos and Desmos",
+        "Tritos and Deimos",
+        "Phobos and Tritos",
+        "Phobos and Deimos"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "7749fa6becdbf1b90af898cd402302c0"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 97,
+      "question": "The visible part of the electromagnetic spectrum is between ...",
+      "choices": [
+        "240 to 680 nm.",
+        "360 to 620 nm.",
+        "380 to 740 nm.",
+        "420 to 810 nm."
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "f7b6b97652e045b30e9182cdabb6ce32"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 98,
+      "question": "What is true about the rotation of a solid disk?",
+      "choices": [
+        "The velocity is the same on every point on the disk",
+        "The part closer to the axis has a longer period",
+        "The period of rotation is the same on every point on the disk",
+        "The part closer to the axis has a shorter period"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "40c5c07074056649c498355c308e30ee"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 99,
+      "question": "The constellation ... is a bright W-shaped constellation in the northern sky.",
+      "choices": [
+        "Centaurus",
+        "Cygnus",
+        "Cassiopeia",
+        "Cepheus"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "e78b37bc21f10d57de175cbb55599a78"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 100,
+      "question": "The so-called \u201cbigfoot\u201d on Mars was actually a rock that was about 5 cm tall. It had an angular size of about 0.5 degrees (~30 pixels). How far away was this rock from the rover?",
+      "choices": [
+        "About 6 meters",
+        "About 6 feet",
+        "About 10 meters",
+        "About 10 feet"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "edac654decd889846aaabcec0fbefc30"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 101,
+      "question": "Which is not an essential requirement for life as we know it?",
+      "choices": [
+        "The ability to breathe oxygen",
+        "The ability to make energy from sunlight or to eat things that do",
+        "A source of organic molecules",
+        "A and B"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "851d783db9d9d9af00978c76334953c6"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 102,
+      "question": "Suppose you live on the Moon. How long is a day (i.e. from sunrise to sunrise)?",
+      "choices": [
+        "about 18 years",
+        "24 hours",
+        "29 Earth days",
+        "a year"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "1996b41b59821782e3ead536d1c39314"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 103,
+      "question": "The famous Drake equation attempts to answer the following question:",
+      "choices": [
+        "Will the Sun become a black hole?",
+        "Is the universe infinitely large?",
+        "How old is the visible universe?",
+        "Are we alone in the universe?"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "b65b523ed5b49f2a1096f71f77660fb6"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 104,
+      "question": "20000 years from now ...",
+      "choices": [
+        "The Moon will be closer to the Earth and the Earth\u2019s day will be longer.",
+        "The Moon will be closer to the Earth and the Earth\u2019s day will be shorter.",
+        "The Moon will be further from the Earth and the Earth\u2019s day will be longer.",
+        "The Moon will be further from the Earth and the Earth\u2019s day will be shorter."
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "018bf3bcf45528343eb68d56a4e544a2"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 105,
+      "question": "What element is most common among the Jovian Planets?",
+      "choices": [
+        "Hydrogen",
+        "Helium",
+        "Carbon",
+        "Oxygen"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "3e3809ab33fbffb11296b4ce0bbdec22"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 106,
+      "question": "Imagine that the Earth was instantly moved to an orbit three times further away from the Sun. How much longer would a year be?",
+      "choices": [
+        "exactly 3 times longer",
+        "about 5.2 times longer",
+        "Not enough information. It will depend on the inclination of the new orbit",
+        "The length of the year wouldn't change because the Earth's mass stays the same."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "8ab8bc4c93f22e584faeabcf291da581"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 107,
+      "question": "What would weigh the most on the moon?",
+      "choices": [
+        "A kilogram of feathers",
+        "Five pounds of bricks as measured on Earth",
+        "Five kilograms of feathers",
+        "A kilogram of bricks"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "beafd15cff3d505ea36a944f8d7a277e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 108,
+      "question": "Why can't we see the Sun's corona except during total solar eclipses?",
+      "choices": [
+        "The corona is made up mostly of charged particles which aren't luminous.",
+        "It's much too cool to emit visible light",
+        "We can't see magnetic fields",
+        "It's too diffuse"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "d9c76d110b07ca9ebb65ec6fb93aed65"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 109,
+      "question": "How do we think the \"hot Jupiters\" around other stars were formed?",
+      "choices": [
+        "They where formed when their stars flung material out into the system in a process similar to planetary fission.",
+        "They formed as gas giants beyond the frost line and then migrated inwards.",
+        "They formed as dense rocky planets close to the star in the same orbits that they are seen today.",
+        "They formed as gas giants close to the star in the same orbits that they are seen today."
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "2f064952b033d8a38a67490baea99d5f"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 110,
+      "question": "The resolution of a telescope is a measure of its:",
+      "choices": [
+        "Ability to magnify distant objects",
+        "Ability to measure the angular separation of objects",
+        "Ability to measure the distance between objects",
+        "Light-collecting efficiency"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "2013b05023144cf1690609f110664156"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 111,
+      "question": "The axis of the Earth is tilted at an angle of approximately ... relative to the orbital plane around the Sun.",
+      "choices": [
+        "20.3 degrees",
+        "21.4 degrees",
+        "22.7 degrees",
+        "23.5 degrees"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "ebf3ffc40b40d9c159b2ec41fdb6aa43"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 112,
+      "question": "Why do we see essentially the same face of the Moon at all times?",
+      "choices": [
+        "because the Moon has a nearly circular orbit around the Earth",
+        "because the Moon does not rotate",
+        "because the other face points toward us only at new moon when we can't see the Moon",
+        "because the Moon's rotational and orbital periods are equal"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "e000a035e782370deba00923690c3ea4"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 113,
+      "question": "The second cosmic velocity (or escape velocity) is the speed required by an object to escape the gravitational field of a celestial body with mass M and radius R. Which formula correctly calculates this velocity? (G: gravitational constant)",
+      "choices": [
+        "v = sqrt(GM/R)",
+        "v = 2sqrt(GM/R)",
+        "v = sqrt(2GM/R)",
+        "v = sqrt(GM/2R)"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "8fb9cba391583967242a53aed41a1d53"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 114,
+      "question": "Why are there no impact craters on the surface of Io?",
+      "choices": [
+        "Io did have impact craters but they have all been buried in lava flows.",
+        "It is too small to have been hit during the Late Heavy Bombardment",
+        "Jupiter's strong gravity attracted the planetesimals more strongly than Io and thus none landed on its surface.",
+        "Any craters that existed have been eroded through the strong winds on Io's surface."
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "d905e9d0656e3a9a77282d952625fa91"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 115,
+      "question": "The star Betelgeuse is one of the brightest stars in the night sky with remarkable red color. In which constellation is Betelgeuse located?",
+      "choices": [
+        "Cassiopeia",
+        "Cygnus",
+        "Ursa Major",
+        "Orion"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "ba09d91d4db12cc6dd29022f9d979f31"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 116,
+      "question": "What is the source of the material that causes meteor showers?",
+      "choices": [
+        "Asteroid impacts elsewhere in the solar system throw sand-sized particles into space and occasionally the Earth passes through a cloud of these particles which burn up in our atmosphere and cause a meteor shower.",
+        "Near-Earth asteroids gradually disintegrate and spread out along their orbital paths. When the Earth passes through the orbit of an asteroid we are bombarded by sand-sized particles that cause a meteor shower.",
+        "Near-Earth asteroids disintegrate as they enter Earth's atmosphere creating hundreds of bright meteors that appear to radiate from a single location in the sky.",
+        "The nuclei of comets gradually disintegrate and spread out along their orbital paths. When the Earth passes through the orbit of an comet we are bombarded by sand-sized particles that cause a meteor shower."
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "7e48810ccd235919f12a3951f866edaf"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 117,
+      "question": "How does the greenhouse effect work?",
+      "choices": [
+        "Greenhouse gases absorb infrared light from the Sun which then heats the atmosphere and the surface.",
+        "Ozone transmits visible light allowing it to heat the surface but then absorbs most of the infrared heat trapping the heat near the surface.",
+        "Greenhouse gases transmit visible light allowing it to heat the surface but then absorb infrared light from Earth trapping the heat near the surface.",
+        "The higher pressure of the thick atmosphere at lower altitudes traps heat in more effectively."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "62c5158e9bc0cbbbaf01178ec94d0df5"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 118,
+      "question": "Which of the following methods has led to the most discoveries of massive planets orbiting near their parent stars?",
+      "choices": [
+        "detecting the gravitational effect of an orbiting planet by looking for the Doppler shifts in the star's spectrum",
+        "detecting the shift of the star's position against the sky due to the planet's gravitational pull",
+        "detecting a planet ejected from a binary star system",
+        "detecting the starlight reflected off the planet"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "1ed55d642133ba97bbe85022a022f0d4"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 119,
+      "question": "The distance between the Earth and the star Altair is one million times greater than the distance between the Earth and the Sun. How far is Altair from the Earth?",
+      "choices": [
+        "9.3 x 1013 meters",
+        "9.3 x 1010 meters",
+        "1.5 x 1014 meters",
+        "1.5 x 1017 meters"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "a0723e3d3b4e09b7ee5deb38851c814a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 120,
+      "question": "Why did Ptolemy have the planets orbiting Earth on \u2018circles upon circles\u2019 in his model of the universe?",
+      "choices": [
+        "To explain why more distant planets take longer to make a circuit through the constellations of the zodiac.",
+        "To explain the fact that planets sometimes appear to move westward rather than eastward relative to the stars in our sky.",
+        "To explain why the Greeks were unable to detect stellar paralax.",
+        "To properly account for the varying distances of the planets from Earth."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "30362099929f867ae9eb5bf588a8ec95"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 121,
+      "question": "Sunspots are black regions that temporarily appear on the Sun. Their number highly increases every ... years. This period is also called the solar cycle.",
+      "choices": [
+        "9",
+        "11",
+        "13",
+        "15"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "9fbd92509e784231d54e866aeb718c64"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 122,
+      "question": "Which planet(s) in the solar system has/have active plate tectonics?",
+      "choices": [
+        "Mars",
+        "Venus",
+        "Earth",
+        "Mars and Earth"
+      ],
+      "correct_answer": "C",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "5501e667868e59ae7c533070a46deeac"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 123,
+      "question": "The sky is blue because",
+      "choices": [
+        "the Sun mainly emits blue light.",
+        "the atmosphere absorbs mostly blue light.",
+        "molecules scatter red light more effectively than blue light.",
+        "molecules scatter blue light more effectively than red light."
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "f6e7064c99d02025fcba07efb974abec"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 124,
+      "question": "What are the conditions necessary for a terrestrial planet to have a strong magnetic field?",
+      "choices": [
+        "fast rotation only",
+        "a rocky mantle only",
+        "a molten metallic core only",
+        "both a molten metallic core and reasonably fast rotation"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "893c62f20e6a0ebed698f4e85ceddbff"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 125,
+      "question": "Where are the Trojan asteroids located?",
+      "choices": [
+        "in the center of the asteroid belt",
+        "on orbits that cross Earth's orbit",
+        "surrounding Jupiter",
+        "along Jupiter's orbit 60\u00b0 ahead of and behind Jupiter"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "ebd97c0dd1a81cf3ef242e35d8335d4b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 126,
+      "question": "Which of the following lists the ingredients of the solar nebula from highest to lowest percentage of mass in the nebula?",
+      "choices": [
+        "hydrogen compounds (H2O CH4 NH3) light gases (H He) metals rocks",
+        "hydrogen compounds (H2O CH4 NH3) light gases (H He) rocks metals",
+        "light gases (H He) hydrogen compounds (H2O CH4 NH3) metals rocks",
+        "light gases (H He) hydrogen compounds (H2O CH4 NH3) rocks metals"
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "485ae02d171f003a9fe6f0f7ec01772c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 127,
+      "question": "When was the telescope invented by Galileo?",
+      "choices": [
+        "1409",
+        "1509",
+        "1609",
+        "1709"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "ca2f1505f5536c08e51d7d8413ccc6f6"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 128,
+      "question": "Mars has an atmosphere that is almost entirely carbon dioxide.Why isn't there a strong greenhouse effect keeping the planet warm?",
+      "choices": [
+        "Mars does not have enough internal heat to drive the greenhouse effect",
+        "Mars is too far from the sun for the greenhouse effect to work",
+        "the greenhouse effect requires an ozone layer which Mars does not have",
+        "the atmosphere on Mars is too thin to trap a significant amount of heat"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "a14f38555390fae21836684aea963221"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 129,
+      "question": "You've made a scientific theory that there is a force between all objects. This forcce has both a dark and light side. When will your theory be proven correct?",
+      "choices": [
+        "When you and many other Jedi have tested the hypothesis",
+        "Jean-Luc Skywalker drops Yoda during the day and he falls to the ground proving your theory.",
+        "You can never prove your theory to be correct only \"yet to be proven wrong.\"",
+        "After you've repeated your experiment many times"
+      ],
+      "correct_answer": "C",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "f70acefe435db791aec0c5026cc4bb0a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 130,
+      "question": "Why do Uranus and Neptune have blue methane clouds but Jupiter and Saturn do not?",
+      "choices": [
+        "Methane does not condense into ice in the warmer atmospheric temperatures of Jupiter and Saturn.",
+        "Methane did not exist in the solar nebula at the radii of Jupiter and Saturn when the planets formed.",
+        "The relatively slow rotation of Uranus and Neptune allows methane to migrate to higher levels in the atmosphere and condense into clouds.",
+        "Methane reacts with the abundant ammonia clouds in Jupiter and Saturn and is removed from the atmosphere."
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "3d0f4eb03f5b987805ccb900554948d3"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 131,
+      "question": "All of the following have been cited as evidence for the Giant Impact Hypothesis except:",
+      "choices": [
+        "The relative size of the Moon to the size of Earth is large compared to most planets and their moon.",
+        "Most rocks on the Moon\u2019s surface are older than those on the Earth\u2019s surface.",
+        "The Moon has a much smaller iron core than the Earth even considering its size.",
+        "The Moon was once entirely molten."
+      ],
+      "correct_answer": "B",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "b72b59281801dc4955ace4ca6d22e160"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 132,
+      "question": "Why do scientists think Mars was once warmer and wetter?",
+      "choices": [
+        "Mars shows evidence of significant volcanism which implies that the climate was once warmer and therefore wetter",
+        "early observations showed what appeared to be changing vegetation patterns and canals indicating the presence of water",
+        "there are many geologic features on Mars that are difficult to explain unless liquid water was once stable at the surface",
+        "all planets tend to begin with warm wet climates and gradually become cold and dry with smaller planets cooling faster than larger planets"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "31bf19799413f2eb3ec9c86a0257a34b"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 133,
+      "question": "How do astronomers think Jupiter generates its internal heat?",
+      "choices": [
+        "nuclear fusion in the core",
+        "by contracting changing gravitational potential energy into thermal energy",
+        "internal friction due to its high rotation rate",
+        "chemical processes"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "a3a4b2c1a682ede0de5a5e35f31a393f"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 134,
+      "question": "Which one of these constellations is not located along the Milky Way in the sky?",
+      "choices": [
+        "Perseus",
+        "Cygnus",
+        "Scorpius",
+        "Leo"
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "767c6d757d1776d827f4e6ee7ba4cb74"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 135,
+      "question": "From shortest to longest wavelength which of the following correctly orders the different categories of electromagnetic radiation?",
+      "choices": [
+        "infrared visible light ultraviolet X rays gamma rays radio",
+        "radio infrared visible light ultraviolet X rays gamma rays",
+        "gamma rays X rays visible light ultraviolet infrared radio",
+        "gamma rays X rays ultraviolet visible light infrared radio"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "aaf76caad888f1817b4c5c75996a79d5"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 136,
+      "question": "Approximately how long does it take Pluto to orbit the Sun once?",
+      "choices": [
+        "150 years",
+        "200 years",
+        "250 years",
+        "300 years"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "8478f6968909b72f65be9e2b1e9a9d1c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 137,
+      "question": "Mars might be a place for future human explorations. However humans can not breathe on the surface of Mars because the atmosphere consists mostly of ...",
+      "choices": [
+        "Nitrogen",
+        "Argon",
+        "Methane",
+        "CO2"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "4962f83ebb27187344dcbec277f54a55"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 138,
+      "question": "Which of the jovian planets have rings?",
+      "choices": [
+        "Neptune",
+        "Uranus",
+        "Saturn",
+        "all of the above"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "5b1e47eb7f6389775f2326f11a7082aa"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 139,
+      "question": "Besides large astronomical objects astrophysicists are also interested in small particles from space. Which one of these particles has the weakest interactions with other particles?",
+      "choices": [
+        "\u00b5 Muons",
+        "Antiparticles",
+        "\u03bd Neutrinos",
+        "\u03c0 Pions"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "55b4643d0928d4ae5d4be3a8968eaac4"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 140,
+      "question": "Approximately how old is the surface of Venus?",
+      "choices": [
+        "750 million years.",
+        "2 billion years.",
+        "3 billion years.",
+        "4.5 billion years."
+      ],
+      "correct_answer": "A",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "d725c6c15ad82213e6d32b912888bb26"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 141,
+      "question": "Why do jovian planets bulge around the equator that is have a \"squashed\" appearance?",
+      "choices": [
+        "Their large systems of moons and rings gravitationally attract the mass around the equator more.",
+        "They are much more massive than the terrestrial planets.",
+        "Their rapid rotation flings the mass near the equator outward.",
+        "Their internal heat sources exert a pressure against the sides of the planets."
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "1204288f2a60d46020ea81371105a376"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 142,
+      "question": "How do astronomers think Jupiter generates its internal heat?",
+      "choices": [
+        "through exothermic chemical reactions converting chemical potential energy into thermal energy",
+        "nuclear fusion",
+        "by contracting changing gravitational potential energy into thermal energy",
+        "internal friction due to its rapid rotation rate and differential rotation"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "5523e317ef596d95421f0881679751c9"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 143,
+      "question": "What defines the habitable zone around a star?",
+      "choices": [
+        "the region around a star where liquid water can potentially exist on planetary surfaces",
+        "the region around a star where humans can survive",
+        "the region around a star where the ultraviolet radiation does not destroy organisms on a planetary surface",
+        "the region around a star where life exists"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "dd8623d221d3442736dd1dc2f0cfb13c"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 144,
+      "question": "Why are Cepheid stars relevant for astronomers?",
+      "choices": [
+        "To measure interstellar mass.",
+        "To measure galactic distances.",
+        "To measure galactic energy-density.",
+        "To measure interstellar density."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "5dab41dee4c6ad94429295c870a337b7"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 145,
+      "question": "What is the so-called bolometric luminosity in astronomy?",
+      "choices": [
+        "The luminosity integrated over vertically polarized wavelengths.",
+        "The luminosity integrated over horizontally wavelengths.",
+        "The luminosity integrated over visible wavelengths.",
+        "The luminosity integrated over all wavelengths."
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "eb6f6bcfa883c28b002dc507fee6d61a"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 146,
+      "question": "Radio telescopes are crucial for astronomical observations. Which one of these well-known radio telescopes has the largest parabolic antenna?",
+      "choices": [
+        "Green Bank Telescope",
+        "Arecibo Telescope",
+        "Yevpatoria RT-70 Telescope",
+        "Effelsberg Telescope"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "acb293ae299d79d161373ef1523009ed"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 147,
+      "question": "Find the best approximation for the surface temperature of the Sun:",
+      "choices": [
+        "6000 K",
+        "7000 K",
+        "9000 K",
+        "13000 K"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "37f1ee497600e797dcf971f3b2c4df67"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 148,
+      "question": "Previous IAAC rounds featured Proxima/Alpha Centauri as closes star(system) to the Earth. Which one is the second closest star(system)?",
+      "choices": [
+        "Wolf 359",
+        "Sirius",
+        "61 Cygni",
+        "Barnard\u2019s Star"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "eb94dcec81823fda09b6d9a48e2093bb"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 149,
+      "question": "How are planetary rings made?",
+      "choices": [
+        "From the dismantling of small moons by impacts",
+        "From fragments of planets ejected by impacts",
+        "From dust grains that escape from passing comets",
+        "From accretion within the solar nebula at the same time the planets formed"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "b8a7ed564c045acd5816e00fd567138e"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 150,
+      "question": "The lunar maria are:",
+      "choices": [
+        "ancient heavily cratered highlands",
+        "dark lavas inside volcanic calderas",
+        "dark lavas filling older impact basins",
+        "the bright regions on the Moon"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "a507a0cb799da12e88a0da0bd8a19b2d"
+    },
+    {
+      "subject": "astronomy",
+      "question_index": 151,
+      "question": "One astronomical unit (AU) is equal to approximately ...",
+      "choices": [
+        "130 million km",
+        "150 million km",
+        "170 million km",
+        "190 million km"
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "65c409a8772bd8cf2a4dc0eeee95e5e4"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 0,
+      "question": "_______ such as bitcoin are becoming increasingly mainstream and have a whole host of associated ethical implications, for example, they are______ and more ______. However, they have also been used to engage in _______.",
+      "choices": [
+        "Cryptocurrencies, Expensive, Secure, Financial Crime",
+        "Traditional currency, Cheap, Unsecure, Charitable giving",
+        "Cryptocurrencies, Cheap, Secure, Financial crime",
+        "Traditional currency, Expensive, Unsecure, Charitable giving"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "2aaad5155f9163457fe22aa2e76b2fcc"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 1,
+      "question": "Typical advertising regulatory bodies suggest, for example that adverts must not: encourage _________, cause unnecessary ________ or _____, and must not cause _______ offence.",
+      "choices": [
+        "Unsafe practices, Wants, Fear, Trivial",
+        "Unsafe practices, Distress, Fear, Serious",
+        "Safe practices, Wants, Jealousy, Trivial",
+        "Safe practices, Distress, Jealousy, Serious"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "82b7b426f02b220f9b9cc805e79df825"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 2,
+      "question": "______ are the obligations of workers towards their employer, based on individual contracts and wider employment laws.",
+      "choices": [
+        "Employee rights",
+        "Employee rights",
+        "Employer duties",
+        "Employee duties"
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "5b8119bfa3d6e975400d9ba682058993"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 3,
+      "question": " ______ is an employee's preferred ratio between work-related and non-work-related activities which, due to intensification of work and technological shifts, has become a hotly contested issue in recent years.",
+      "choices": [
+        "Presenteeism",
+        "Absenteeism",
+        "Work-play balance",
+        "Work-life balance"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "7664b7ae13b99b2bad1a5c6614135dce"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 4,
+      "question": " _______ can be a likened to their natural counterparts, comprising of a balanced network of interdependent organisms and their environments thus adding value to sustainability thinking due to the consideration of companies and industries as being bound together, and interdependent due to all kinds of resources and wastes.",
+      "choices": [
+        "Industrial supply loops",
+        "Industrial ecosystems",
+        "Ecological ecosystems",
+        "Corporate ecosystems"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "5f18f40cf212383c2372c07ec01f0009"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 5,
+      "question": "________, where for example one party possess more resources, unfair distribution of ________, where one party gains more from the relationship, and CSOs being ________, are all limitations and risks of business-CSO collaborations.",
+      "choices": [
+        "Power imbalance, Benefits, Hoodwinked",
+        "Power imbalance, Resources, Co-opted",
+        "Informational asymmetries, Benefits, Hoodwinked",
+        "Informational asymmetries, Resources, Co-opted"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "a97550eaeb50e3f823b7c863a6fdd47d"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 6,
+      "question": "Although corporate profit maximization is not directly prescribed by major normative theories to which normative theory is it most similar?",
+      "choices": [
+        "hedonistic utilitarianism",
+        "preference utilitarianism",
+        "The Categorical Imperative",
+        "ethics of care"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "f58c6cde0013cb03be8f2640935edd18"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 7,
+      "question": "What does Milton Friedman believe to be the sole responsibility of business?",
+      "choices": [
+        "The only social responsibility of business is to its shareholders",
+        "Managers should act in ways that balance the interest of society and shareholders",
+        "The primary responsibility organizations have is to its employees",
+        "The primary responsibility organizations have is to its stakeholders"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "b3c7d958b9c263f90835e58ea0c3c55c"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 8,
+      "question": "______ regulation goes further than the ______ that CSOs have with businesses, as it also concerns _______of such processes.",
+      "choices": [
+        "Legal, Interactions, Mechanics",
+        "Civil, Relations, Outcomes",
+        "Political, Interactions, Outcomes",
+        "Environmental, Relations, Mechanics"
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "0c6db64e4c2cc8467b7554c6e64c9639"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 9,
+      "question": "_______ working practices refer to working patterns which involve temporal, spatial and task related fluidity.",
+      "choices": [
+        "Dynamic",
+        "Fluid",
+        "Flexible",
+        "Modern"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "fdaeabf2af1a8e45358898bc07c34872"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 10,
+      "question": " What, according to Schnackenberg and Tomlinson (2014), are the three criteria which can be used to assess the quality of corporate transparency?",
+      "choices": [
+        "Breadth, Clarity, Accuracy",
+        "Disclosure, Detail, Accuracy",
+        "Disclosure, Clarity, Accuracy",
+        "Disclosure, Clarity, Efficiency"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "fa0059727387e9afda922103c3a62d67"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 11,
+      "question": "A corporation is ________ from its managers, employees, investors and customers. It therefore has _______ succession and also ________.",
+      "choices": [
+        "Indistinguishable, Perpetual, Does not own its own assets",
+        "Independent, Limited, Owns its own assets",
+        "Independent, Perpetual, Owns its own assets",
+        "Indistinguishable, Perpetual, Owns its own assets"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "5f17292139eae0d1eb2d16c65d01f061"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 12,
+      "question": "The UK Public Services (Social Value) Act 2013 requires those procuring ______ to consider how they can secure wider _____, _____and _____ benefits.",
+      "choices": [
+        "Private services, social, economic and environmental",
+        "Public services, social, cultural and environmental",
+        "Private services, cultural, economic and environmental",
+        "Public services, social, economic and environmental"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "d8ea2ed90777832385bee6fc2c8fdcd3"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 13,
+      "question": "When the true cost an item is deliberately obscured by a company this is known as?",
+      "choices": [
+        "Predatory pricing",
+        "Deceptive pricing",
+        "Price fixing",
+        "Skimming"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "1f4e8f53574d582b2d954c4f6c3b07f3"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 14,
+      "question": "What are the three differing types of stakeholder theory according to Donaldson and Preston (1995)?",
+      "choices": [
+        "Normative, Descriptive and Economic",
+        "Normative, Moral and Instrumental",
+        "Political, Descriptive and Instrumental",
+        "Normative, Descriptive and Instrumental"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "b40166f5d1fe9e5a21f00fe22a222064"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 15,
+      "question": "The Right to _______ has been a long-standing ethical concern for employees which today are addressed in most developed countries through a dense network of occupational health, safety and environmental regulations companies must abide by.",
+      "choices": [
+        "Work-life balance",
+        "Healthy and safe working conditions",
+        "Employee privacy",
+        "Free Speech"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "dc5fbd5942701bedefd53ce2ae0d6558"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 16,
+      "question": "Which of the following would most effectively act as the primary objective of a business organisation?",
+      "choices": [
+        "To make a profit",
+        "To procure resources",
+        "To communicate with shareholders",
+        "To mediate between the organisation and the environment"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "e8adbb7b460ccc9c89fcadef8ee4c0d5"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 17,
+      "question": "What is the enlightened self-interest model of CSR?",
+      "choices": [
+        "That it is in an organization's own best interest to put itself first rather than its ethics",
+        "That it is in an organization's best interest to consider what a shareholder would want",
+        "That it is in an organization's own best interest to act in an ethical way",
+        "That it is in an organization's own best interest to follow the legislation and abide by the law"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "e8e0523d939fb095e93298b28fa593fe"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 18,
+      "question": "________ is the right of a consumer to control what information companies can collect about them and how it is stored, used and shared.",
+      "choices": [
+        "Consumer inclusion",
+        "Consumer control",
+        "Consumer privacy",
+        "Consumer exclusion"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "2706ce960832f9daba4f0597c092b80d"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 19,
+      "question": "The Anglo-American model being considered the best model in light of the recession in the late 2000s.",
+      "choices": [
+        "1,2,3",
+        "1,3,4",
+        "2,3,4",
+        "1,2,3,4"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "f087b5922656560ffe47a5fcdb1271b9"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 20,
+      "question": "_______ economy is the term used to describe individuals being hired for a specific task rather than on a long-term basis. While this results in _________ which is beneficial for businesses, issues for those employed in such a manner relate to increased ________, uncertainty and a lack of _______.",
+      "choices": [
+        "Gig, Flexibility, Risk, Social welfare structures",
+        "Sharing, Risk, Flexibility, Autonomy",
+        "Gig, Risk, Flexibility, Autonomy",
+        "Sharing, Flexibility, Risk, Social welfare structures"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "ac56ff832dae8da9e29c020b10785686"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 21,
+      "question": "The Theory of _________ posits that 3 three levels of moral reasoning exist which an individual can engage in to assess ethical issues, dependant on their cognitive capacity.",
+      "choices": [
+        "Egoism",
+        "Cognitive moral development",
+        "Power distance",
+        "Uncertainty avoidance"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "c80036576672e0003d94077661142685"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 22,
+      "question": "_______ theory can be described as a code of conduct to which all rational beings should adhere. This contrasts with ________ morality which is the code of conduct adopted by a particular group or society.",
+      "choices": [
+        "Descriptive, Normative",
+        "Normative, Instrumental",
+        "Normative, Descriptive",
+        "Ethical, Descriptive"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "23eb35e1f76be19bdbd5176ef49c3e60"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 23,
+      "question": "___________, ___________ and __________ are all factors which can impact the moral intensity",
+      "choices": [
+        "Social consensus, Temporal immediacy, Proximity",
+        "Proximity, Social dissensus, Futility of effect",
+        "Proximity, Temporal immediacy, Social dissensus",
+        "Social dissensus, Cultural immediacy, Proximity"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "8ab3d7ffbfcb2daf81c607849c820140"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 24,
+      "question": "Better access to certain markets, differentiation of products, and the sale of pollution-control technology are ways in which better environmental performance can:",
+      "choices": [
+        "Increase Revenue",
+        "Increase Costs",
+        "Decrease Revenue",
+        "Decrease Costs"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "b320a0277e7ca3e2471218a794b773cb"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 25,
+      "question": "_______ is the term used to describe the ongoing approval and acceptance of a company's activities by society, especially among local communities and civil societies.",
+      "choices": [
+        "Enlightened self interest",
+        "Social licence to operate",
+        "Community approval",
+        "Supply chain responsibility"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "8c7e9a6eec4fc28fb4a23363d93155c4"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 26,
+      "question": "The degree to which corporate decisions, policies, activities and impacts are acknowledged and made visible to relevant stakeholders is known as ________",
+      "choices": [
+        "Corporate Opaqueness",
+        "Corporate Transparency",
+        "Corporate Openness",
+        "Corporate Visibility"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "0266ecd1efbf0015b3a53d81078152dd"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 27,
+      "question": " _________, such as _______ and _______ are processes by which organisations implement environmental goals, policies and responsibilities and ensure regular auditing and reporting, which go beyond legal compliance.",
+      "choices": [
+        "Environmental management systems, SA8000, EMAS",
+        "Social accountability standards, ISO14001, SA8000",
+        "Environmental management systems, ISO14001, EMAS",
+        "Social accountability standards, EMAS, SA8000"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "f8d70d30a8e3b59acdd73212a6d62f83"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 28,
+      "question": "The so-called BRIC countries (Brazil, Russia, India and _______) tend to follow a __________ approach to corporate governance. However, recently this has tended to move towards more _______-based mechanisms.",
+      "choices": [
+        "Canada, Market, Relationship",
+        "China, Market, Relationship",
+        "Canada, Relationship, Market",
+        "China, Relationship, Market"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "65d68854ba5b67bafca292458552ad43"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 29,
+      "question": "A stakeholder orientation includes all of the following activities except:",
+      "choices": [
+        "Generating Data About Stakeholder Groups",
+        "Assessing The Firm's Effects On Stakeholder Groups",
+        "Distributing Stakeholder Information Throughout The Firm",
+        "Minimizing The Influence Of Stakeholder Information On The Firm"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "a4110be5480a3a0a174f7bdc7a7660be"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 30,
+      "question": "Ethical issues related to marketing communications include the fact that they are _________ and unavoidable, they create ________ needs, reinforce _________ and perpetuate _________ and ______.",
+      "choices": [
+        "Intrusive, Artificial, Consumerism, Insecurity, Social Stereotypes",
+        "Intrusive, Artificial, De-materialism, Security, Happiness",
+        "Intrusive, Real, Consumerism, Insecurity, Happiness",
+        "Intrusive, Real, De-materialism, Security, Social stereotypes"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "a53255746fd06c7aaa15141a18f221b2"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 31,
+      "question": "In order to try and align the interest of shareholders and senior management of a company, _________ are often made available to _______ of a company, to ensure that it is in their interests to increase _______ and dividend performance.",
+      "choices": [
+        "Share options, Senior managers, Share Price",
+        "Share options, All employees, Share Price",
+        "Non-financial remunerations, Senior managers, Employee Satisfaction",
+        "Non-financial remunerations, All employees, Employee Satisfaction"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "7f3ec27d5a34921bb1eca8275a38ff91"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 32,
+      "question": "Predatory pricing.",
+      "choices": [
+        "1,2,4",
+        "1,2,3,4",
+        "1,2",
+        "1,4"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "8ad72d4149774c9daf0e9c88965feaaa"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 33,
+      "question": "There are a number of means by which can influence _______. These include _________to decision maker, varying from very direct modes to indirect modes, _________, being either public or private and ________ of communication.",
+      "choices": [
+        "Government, Avenue of approach, Breadth of transmission, Content",
+        "Consumers, Avenue of approach, Height of transmission, Content",
+        "Government, Breath of transmission, Avenue of approach, Content",
+        "Employees, Breadth of transmission, Content, Avenue of approach"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "22bc0561a740f93bd31744f8ce99fd50"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 34,
+      "question": "Pick the correct description of the following term: Utilitarianism is\u2026",
+      "choices": [
+        "A theory which states that an action is morally incorrect if it promotes the greatest good for the greatest number",
+        "A theory which states that an action is morally right if it promotes the greatest good for the decision maker",
+        "A theory which states that an action is morally right if it promotes the greatest good for the smallest number",
+        "A theory which states that an action is morally right if it promotes the greatest good for the greatest number"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "c7639c8ddd408e410f06db041e3415db"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 35,
+      "question": "Cognitive ______ models such as the Theory of _________ serve to try and explain consumer behaviour, but arguably somewhat oversimplify and overestimate individual ________.",
+      "choices": [
+        "Decision, Market equilibrium, Rationality",
+        "Attitudinal, Planned Behaviour, Social pressures",
+        "Decision, Planned behaviour, Rationality",
+        "Attitudinal, Market equilibrium, Social pressures"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "309ed52244a8e6de9ed9d99adda5dfe4"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 36,
+      "question": "____________ refers to a strategic process involving stakeholder assessment to create long-term relationships with customers, while maintaining, supporting, and enhancing the natural environment.",
+      "choices": [
+        "Eco-strategy",
+        "Green Marketing",
+        "Superfund reauthorization",
+        "Recycle and reprocess management"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "6bd30cf873539bd0fde8693505b7eb5c"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 37,
+      "question": "Sustainability can broadly be defined as",
+      "choices": [
+        "The short-term maintenance of systems according to environmental, economic and social considerations",
+        "The long-term maintenance of processes according to environmental, economic and cultural considerations.",
+        "The short-term maintenance of systems according to environmental, political and social considerations.",
+        "The long-term maintenance of systems according to environmental, economic and social considerations."
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "bff6907e9b80777defcd40455c205ab8"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 38,
+      "question": "Which of the three following organisational characteristics of small businesses tend to characterise their engagement with business related issues?",
+      "choices": [
+        "Size and complexity, owner and family member influence on the organisation, shareholder and stakeholder power",
+        "Lack of organisational resources, size and complexity, owner and family member influence",
+        "Informal relationships, owner and family member influence on the organisation, lack of organisational resources",
+        "Bureaucratic and formal organisational structure, lack of organisational resources, conflicts of interest"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "c20c27582376371046a8906a1075deb4"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 39,
+      "question": "A(n) __________ is a ________, __________ framework which goes beyond linear functions, operations and transactions to produce a certain commodity or product",
+      "choices": [
+        "International supply chain, Static, Disconnected",
+        "Global production network, Dynamic, Relational",
+        "International supply chain, Dynamic, Disconnected",
+        "Global production network, Static, Relational"
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "1577d7f5f146d4b60327543c4d44a760"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 40,
+      "question": "Demand reduction.",
+      "choices": [
+        "1,3,4",
+        "2,3,4",
+        "1,2,3",
+        "1,2,4"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "7a247b7db2092203d723595e73f58a56"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 41,
+      "question": " Although the benefit and contribution of civil society in encouraging sustainability, lobbying on important issues and helping the needy are taken for granted in many places, in many other countries, such as _____ and ______ civil society is far less developed than in, for instance, _______.",
+      "choices": [
+        "Russia, China, Britain",
+        "Norway, China, Russia",
+        "Britain, United States, Australia",
+        "Canada, Russia, United States"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "9534b7774937b51ae32d7fe32c2e58ce"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 42,
+      "question": "The extent to which an individual is able to creatively consider the consequences of, resolutions to, and issues associated with moral decision making is known as _________.",
+      "choices": [
+        "Moral imagination",
+        "Ethical reflexivity",
+        "Moral originality",
+        "Moral reflexivity"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "966a77ff0569df6eb1db14153320002f"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 43,
+      "question": "When negotiating using unethical practices, businesses can risk _______, if the negotiations are part of a longer-term business association, as well as a ___________ and __________, as negotiations can impact company image and stymy progress.",
+      "choices": [
+        "Rigid negotiations, Enhanced reputation, Greater opportunities",
+        "Damaged relationships, Sullied reputation, Lost opportunities",
+        "Rigid negotiations, Sullied Reputation, Lost opportunities",
+        "Damaged relationships, Rigid negotiations, Lost opportunities"
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "88eec9bcfaf1224afdf9f152988fbcea"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 44,
+      "question": "________ is the use of language of to mask or expose the ethical nature of decisions, actions and behaviours.",
+      "choices": [
+        "Ethical splicing",
+        "Moral framing",
+        "Ethical window dressing",
+        "Moral splicing"
+      ],
+      "correct_answer": "B",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "9ec5351b89d68c401044193c89a6eaf7"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 45,
+      "question": "The extent to which an individual believes they can control their life is determined by their __________.",
+      "choices": [
+        "Moral imagination",
+        "Personal integrity",
+        "Cognitive moral development",
+        "Locus of control"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "93e5318fdfb16b424349f09a1ed2b07c"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 46,
+      "question": "The enforcement of company privacy is complex as corporations are somewhat __________, as there are few clear barriers to define their limits, it is difficult to _________ due to the number of individuals involved and much corporate activity takes place in ________.",
+      "choices": [
+        "Boundaryless, Control information, Private spaces",
+        "Public spaces, Maintain individual privacy, Private spaces",
+        "Boundaryless, Control information, Public spaces",
+        "Private spaces, Maintain individual privacy, Public spaces"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "676a610a58e59fe462bd0b1de4c2e24e"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 47,
+      "question": "What term can be used to describe 'the hypothetical agreement between member of society and those who govern it which establishes the inter-relationships, rights and responsibilities on a fair basis'?",
+      "choices": [
+        "Social Contract",
+        "Duty Ethics",
+        "Consequentialism",
+        "Virtue Ethics"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "cb34a94fa58cc699749a62f000453200"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 48,
+      "question": "Businesses have _____ within society and have the potential to provide a ____ to society while ____ has the potential to inflict enormous harm on individuals, communities and the environment.",
+      "choices": [
+        "Little power, Small contribution, Business malpractice",
+        "Little power, Major contribution, Corporate social responsibility",
+        "Huge power, Small contribution, Corporate social responsibility",
+        "Huge power, Major contribution, Business malpractice"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "608e655dc48efab8b7c9f038cb11d5b5"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 49,
+      "question": "According Carroll what four categories or aspects can corporate social responsibility be broken down into?",
+      "choices": [
+        "Political, Legal, Ethical and Philanthropic",
+        "Economic, Legal, Ethical and Philanthropic",
+        "Economic, Legal, Cultural and Philanthropic",
+        "Economic, Legal, Ethical and Environmental"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "7ca416d83968c4ecde004485b73955da"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 50,
+      "question": "Affirmative action involves ________ attempts to target ______ who are _________ within an organisation's workforce, for instance by trying to ______ the proportion of women, disabled or racial minorities in senior management positions.",
+      "choices": [
+        "Proactive, Groups, Under-represented, Increase",
+        "Passive, Groups, Under-represented, Retain",
+        "Proactive, Individuals, Represented, Increase",
+        "Passive, Individuals, Represented, Retain"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "e1e25fbd2e2f83e3cc70a3038ae167aa"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 51,
+      "question": "Traditionally consumer rights were based on the notion of _______ or _______ where the responsibility lay with consumer to avoid subpar products. However, this has gradually eroded due to increased ________ at a ________, EU and UN level.",
+      "choices": [
+        "Caveat emptor, Company Responsibility, Informal codes, International",
+        "Caveat emptor, Buyer beware, Regulation, National",
+        "Cemptor Eaveat, Buyer beware, Regulation, National",
+        "Cemptor Eaveat, Company Responsibility, Informal Codes, International"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "0a4aec1301a6f4674581d9e5e1af6adb"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 52,
+      "question": "The state of being unable to make an informed, reasoned decision about a product purchase is known as?",
+      "choices": [
+        "Consumer inclusion",
+        "Consumer competence",
+        "Consumer exclusion",
+        "Consumer vulnerability"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "b08fdefd85f3cde4140b66f22e33736f"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 53,
+      "question": "According to Mitchell et al (1997) ______, the perceived ability of a stakeholder to influence organisational action, ________ whether the organisation perceives the stakeholder's actions as desirable, proper and appropriate and ________, the immediacy of attention the stakeholder claims require, determine stakeholder ________.",
+      "choices": [
+        "Power, Legitimacy, Salience Urgency",
+        "Legitimacy, Urgency, Salience, Power",
+        "Power, Legitimacy, Urgency, Salience",
+        "Salience, Power, Urgency, Legitimacy"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "ded457023be477facbe7e778b5d5abf4"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 54,
+      "question": "_______ and _______ are both examples of _______ -based theories which are based on basic universal principles of right and wrong.",
+      "choices": [
+        "Ethics of duty, Ethics of rights and justice, Principle",
+        "Utilitarianism, Egoism, Principle",
+        "Ethics of duty, Utilitarianism, Consequentialist",
+        "Egoism, Ethics of rights and justice, Consequentialist"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "2db485f7ea6e122f2471db5626f8d364"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 55,
+      "question": "The complexity of the theory.",
+      "choices": [
+        "1,2,3,4",
+        "1,3,4",
+        "1,2,3",
+        "1,2,4"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "2d51c612495024b289550503ed4f5d43"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 56,
+      "question": "________ is any business effort to influence government or public policy. It includes activities such as __________, political advertising, financial contributions, ________ action and political ________.",
+      "choices": [
+        "Private regulation, Lobbying, Environmental, Fundraising",
+        "Private regulation, Consumer Marketing, Legal, Fundraising",
+        "Corporate political activity, Lobbying, Legal, Campaigning",
+        "Corporate political activity, Consumer marketing, Environmental, Campaigning"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "3d56f266e8bb690d80ac71b6e8c92a71"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 57,
+      "question": "_________ such as the ________ in the United States is a key factor in driving ethical business practices.",
+      "choices": [
+        "Legislation, Sarbanes-Oxley Act",
+        "Internal company policy, Unethical corporate practices act",
+        "Internal company policy, Sarbanes-Oxley Act",
+        "Legislation, Unethical corporate practices act"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "8c3098da159c946b6a1d6ec75cc51c06"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 58,
+      "question": " _______, where actors are convinced that their actions harms nobody, _______ where actors argue that their norm violation is an attempt to realize higher-order values and ________ , where actors argue they are owed something, are all strategies for justifying or denying unethical behaviour.",
+      "choices": [
+        "Appeal to higher loyalties, Denial of injury, Metaphor of the ledger",
+        "Appeal to higher loyalties, Metaphor of the ledger, Denial of injury",
+        "Denial of injury, Appeal to higher loyalties, Metaphor of the ledger",
+        "Denial of injury, Metaphor of the ledger, Appeal to higher loyalties,"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "209c9288453b576d05609468f71b95b2"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 59,
+      "question": "Which of the following is not one the underlying principles of the corporate governance Combined Code of Practice?",
+      "choices": [
+        "Openness",
+        "Integrity",
+        "Availability",
+        "Acceptability"
+      ],
+      "correct_answer": "D",
+      "model_answer": "D",
+      "correct": true,
+      "question_hash": "43fe5bb19d8c910c3bb0bc6a440d6ba5"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 60,
+      "question": "Factors that impact ethical decision making can be broadly broken down into ________ factors, related to the unique characteristics of a person, and _________ factors, which are features of the person's environment or the particular issue.",
+      "choices": [
+        "Tailored, Individual",
+        "Situational, Individual",
+        "Situational, Tailored",
+        "Individual, Situational"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "f65f05816ca615550fa17766f5fa3f80"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 61,
+      "question": "_____ is a key driving force shaping the current and future state of business ethics, in particular regarding _____, ______ and _____ related issues.",
+      "choices": [
+        "Globalisation, Cultural, Legal, Accountability",
+        "Nationalisation, Cultural, Environmental, Accountability",
+        "Privatisation, Cultural, Legal, Accountability",
+        "Globalisation, Technological, Financial, Accountability"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "e5104ea621f19cd6fee967e032eb90a2"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 62,
+      "question": "CSO's frequently spend too much time communicating their performance measures and too much time devising them with input from beneficiaries.",
+      "choices": [
+        "2,3",
+        "1,3",
+        "3,4",
+        "1,2,3,4"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "cc91ac8bba8b003a118a4c1a95a524cd"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 63,
+      "question": "The race to the ______ is when, due to increased ________, countries compete for foreign investment through companies' relocation decisions by weakening their ______ and _____ standards.",
+      "choices": [
+        "Bottom, Globalisation, Social, Environmental",
+        "Top, Globalisation, Political, Environmental",
+        "Bottom, Standardisation, Social, Economic",
+        "Top, Standardisation, Political, Economic"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "e1f601b76d0ea4c4b84ad8f86eef8580"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 64,
+      "question": "Managers are entrusted to run the company in the best interest of ________. Specifically, they have a duty to act for the benefit of the company, as well as a duty of ________ and of _______.",
+      "choices": [
+        "Shareholders, Care and Skill, Diligence",
+        "Stakeholder, Care and Skill, Diligence",
+        "Shareholders, Self-interest, Diligence",
+        "Stakeholders, Care and skill, Self-interest"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "47f7854b7a055090300a95d6b2686c30"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 65,
+      "question": "Replacing supply chains with _______ enhances the importance of product _______as well as a fundamental redesign of every activity a firm engages in that produces _______.",
+      "choices": [
+        "Supply loops, Recapture, Waste",
+        "Supply loops, Redesign, Profit",
+        "Global production networks, Recapture, Waste",
+        "Global production networks, Redesign, Profit"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "6b73fd7512b0fcef10596ee8f652c9a9"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 66,
+      "question": "A company may become insolvent if it",
+      "choices": [
+        "has negative working capital",
+        "cannot meet its budgeted level of profit",
+        "makes a loss",
+        "cannot pay creditors in full after realisation of its assets"
+      ],
+      "correct_answer": "D",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "ecb52da7279910772c1a264019983590"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 67,
+      "question": "The ISO 26000 standard on ________ is emblematic of a number of trends emerging within the shared global governance space. Specifically, these trends concern, more deliberation and ________, greater focus on the _______ rather than outcomes and more _______ rather than specific norms.",
+      "choices": [
+        "Social responsibility, Collaboration, Process, Frameworks",
+        "Social responsibility, Individualism, Process, Legislation",
+        "Environmental responsibility, Individualism, Inputs, Frameworks",
+        "Environmental responsibility, Collaboration, Inputs, Legislation"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "1ca04836f2286e2eda2286ad3087bc82"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 68,
+      "question": "The ___________, otherwise known as _________ was launched in 1997 and is a global workplace standard that covers key labour rights such as working hours, forced labour and discrimination, with compliance being certified by independent auditors.",
+      "choices": [
+        "Social accountability standard, SA 8000",
+        "Social accountability standard, SA 9000",
+        "Sarbanes-Oxley Act, SA 8000",
+        "Sarbanes-Oxley Act, SA 9000"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "2feb04ff305c43014c6ee9ecbd2c0351"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 69,
+      "question": "Managers and directors have a fiduciary responsibility to protect the investment of shareholders.",
+      "choices": [
+        "1,3,4",
+        "1,2,3,",
+        "1,2,4",
+        "2,3,4"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "bd200ce989bd9c7d61a87d89ea90e18e"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 70,
+      "question": "Cultural homogenization.",
+      "choices": [
+        "1,3,4",
+        "1,2,3",
+        "1,2,3,4",
+        "2,3,4"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "d91dd7ad96b95d9e5d5150a72e4b5290"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 71,
+      "question": "Insider trading undermines the fiduciary relationship.",
+      "choices": [
+        "1,2,3",
+        "1,2,4",
+        "2,3,4",
+        "1,2,3,4"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "370059ae6fe935f3ada9fcaf0101d1ce"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 72,
+      "question": "There are two main issues associated with _____ sizing. _______ is a key issue as due to the information policy of the corporation it can be argued that employees have a right to know if they are being made redundant. _______ is a second issue, particularly the ________ package that employees receive when laid off.",
+      "choices": [
+        "Down, Involvement, Remuneration, Compensation",
+        "Up, Involvement, Autonomy, Compensation",
+        "Down, Autonomy, Remuneration, Benefit",
+        "Up, Independence, Involvement, Benefit"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "118b986d0bf612d7953adf476d11104e"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 73,
+      "question": "_______ locate morality beyond the sphere of rationality in an emotional 'moral impulse' towards others.",
+      "choices": [
+        "Virtue ethics",
+        "Ethical egoism",
+        "Postmodern ethics",
+        "Ethics of duty"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "ff62e261031a7134a682df79f6a3aeb6"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 74,
+      "question": "Under ethical ________ objective moral principles can be rationally determined, while ethical under ________ morality is both context dependant and subjective.",
+      "choices": [
+        "Normativity, Relativism",
+        "Absolutism, Relativism",
+        "Relativism, Absolutism",
+        "Absolutism, Normativity"
+      ],
+      "correct_answer": "B",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "229645493e14df2a1494a8406b28f051"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 75,
+      "question": " Some of key differences between Islamic finance and conventional finance include - prohibition of charging and paying _______, prohibition on ______ and ______ transactions, prohibition of sinful investment and requirement for all financial products to be backed by __________.",
+      "choices": [
+        "Interest, Certain, Speculative, Intangible assets",
+        "Interest, Uncertain, Assured, Intangible assets",
+        "Interest, Uncertain, Speculative, Tangible assets",
+        "Interest, Certain, Assured, Tangible assets"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "60c12e7a035965f0ac65842ae79e5e64"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 76,
+      "question": "________ reasoning is considered by many to be prevalent within society and particularly within businesses, where it is often referred to in the form of a ___________.",
+      "choices": [
+        "Consequentialist, Cost-benefit analysis",
+        "Rationalised, Annual audit",
+        "Consequentialist, Annual audit",
+        "Rationalised, Cost-benefit analysis"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "927c591576ebe990ae85830ee5da594e"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 77,
+      "question": "Which of the following areas is not covered by the principles enshrined in the UN Global Compact?",
+      "choices": [
+        "Human rights",
+        "Labour",
+        "Commercial performance",
+        "Anti-corruption"
+      ],
+      "correct_answer": "C",
+      "model_answer": "D",
+      "correct": false,
+      "question_hash": "69c4ed516d936c4fe16f051e57a7dbf0"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 78,
+      "question": "What are, according to Wood (1991), the three outcomes of CSR?",
+      "choices": [
+        "Social policies, Social programmes and Social impacts",
+        "Social evaluations, Social programmes and Social impacts",
+        "Social policies, Social evidencing and Social impacts",
+        "Social policies, Social programmes and Social analysis"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "d1e7429f793cccf65f8b4ad20a3fc862"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 79,
+      "question": "Businesses engage in social accounting due to demands from _________, in order to identify ________, to improve ___________ and to encourage _________ and ___________",
+      "choices": [
+        "Stakeholders, Risks, Stakeholder management, Accountability, Transparency",
+        "Stakeholders, Accountability, Transparency, Risks, Stakeholder Management",
+        "Stakeholders, Accountability, Risks, Stakeholders, Stakeholder Management",
+        "Stakeholders, Stakeholder Management, Transparency, Risks, Accountability"
+      ],
+      "correct_answer": "A",
+      "model_answer": "C",
+      "correct": false,
+      "question_hash": "3d894dde5ba9dd7b37ed6a905d2dfcb2"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 80,
+      "question": "Post-modern ethics assert that ethics are context and individual specific and as such have an internal guide to ethics.",
+      "choices": [
+        "2,3",
+        "1,3",
+        "1,2,3",
+        "1,2"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "1528a97ca158c2c3eeefdb089e84cfbe"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 81,
+      "question": "The focus on issues, the intended audience extending beyond shareholders and the voluntary nature of ___________ distinguish it from _________.",
+      "choices": [
+        "Financial accounting, Environmental management initiatives",
+        "Financial accounting, Social accounting.",
+        "Social accounting, Financial accounting.",
+        "Annual report publication, Social accounting"
+      ],
+      "correct_answer": "C",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "7d3ebb85c0c4c7e12c786e6dd7ed2147"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 82,
+      "question": "Negative advertising, stealing or poaching customers and predatory pricing are all strategies employed by businesses described using the umbrella term ________.",
+      "choices": [
+        "Reasonable competitive behaviour",
+        "Swindles",
+        "Competitive tricks",
+        "Dirty tricks"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "3adf613adbb135aa16f69d903406747c"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 83,
+      "question": "______ the workplace involves empowering employees through, for example, 'job enrichment' where employees are given a larger scope for deciding how to organize their work or 'job enlargement' where employees are given a wider range of tasks to do.",
+      "choices": [
+        "Re-invigorating",
+        "Re-flourishing",
+        "Revitalizing",
+        "Rehumanizing"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "bc6f0e28f63865b082aab194915e018d"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 84,
+      "question": "The need to head off negative publicity.",
+      "choices": [
+        "1,3,4",
+        "2,3,4",
+        "1,2,3",
+        "1,2,3,4"
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "d16b0a25166c7075ce79fbf9b31dc532"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 85,
+      "question": "The rise in business led, private regulation can be attributed to: encouragement of a _______ approach from industry, _________ and _______ achievement of objectives.",
+      "choices": [
+        "Faster, Cost effectiveness, Slower",
+        "Faster, Heightened costs, Slower",
+        "Proactive, Cost effectiveness, Faster",
+        "Proactive, Heightened costs, Faster"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "512f58b5caf331c4cd16497094ac42f3"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 86,
+      "question": " The ________ perspective on sustainability resulted from growth models that analysed the carrying capacity of the planet, overall concluding that the finite capacity of the earth and_______, ________ and _______ by current and past generations could reduce quality of life for future generations. This contrasts with the environmental perspective with focuses on the need to maintain and preserve the natural environment.",
+      "choices": [
+        "Economic, Overuse of resources, Overpopulation, Over pollution,",
+        "Economic, Underuse of resources, Underpopulation, Unsustainability",
+        "Environmental, Underuse of resources, Overpopulation, Over pollution",
+        "Environmental, Overuse of resources, Underpopulation, Unsustainability"
+      ],
+      "correct_answer": "C",
+      "model_answer": "C",
+      "correct": true,
+      "question_hash": "b0fab99b8d183153676609b3eacca34e"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 87,
+      "question": "Healthy eating, particularly relating to sugar and salt consumption, food and packaging waste and supply chain CO2 emissions are all business ethics issues facing the ________.",
+      "choices": [
+        "Supermarket industry",
+        "Chemicals industry",
+        "Construction industry",
+        "Information and mobile technology industry"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "5274e31d2a12bf94e689e9c84f5f63d2"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 88,
+      "question": "_______ is a system of exchange based on guaranteeing producers in developing countries a living wage, decent working conditions and opportunities for community development.",
+      "choices": [
+        "Sustainable sourcing",
+        "Fair trade",
+        "Ethical sourcing",
+        "Supply chain responsibility"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "0ae4ef12c2884abcfd82fcbf5b607e28"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 89,
+      "question": "_________ are individual beliefs about desirable behaviours and goals that are stable over time and which influence decision making.",
+      "choices": [
+        "Character traits",
+        "Personal values",
+        "Personal attitudes",
+        "Personal traits"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "d8276448903904885e107039a52ad232"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 90,
+      "question": "They are too irrational and uncodified.",
+      "choices": [
+        "3,4",
+        "1,3",
+        "2,3",
+        "4,1"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "f2050bc298d277335428d392056c89a1"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 91,
+      "question": "The purposes for which the information is used is in the public's interest.",
+      "choices": [
+        "1,2",
+        "1,3",
+        "2,3",
+        "1,2,3"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "1620edb421c0937ba5a955e7a365cc72"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 92,
+      "question": "The Private Sector Social Enterprise Model.",
+      "choices": [
+        "1,2,4",
+        "2,3,4",
+        "1,2,3,4",
+        "1,2,3"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "51145e9a40b5d9fb1ce21204183f786c"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 93,
+      "question": "______ is the corporate role in governing citizenship rights for the individual",
+      "choices": [
+        "Political Corporate Social Responsibility",
+        "Triple Bottom Line",
+        "Sustainability",
+        "Corporate Citizenship"
+      ],
+      "correct_answer": "D",
+      "model_answer": "A",
+      "correct": false,
+      "question_hash": "8ce497bddaa8c3d6e4b78515d47b2afd"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 94,
+      "question": "How the code is enforced.",
+      "choices": [
+        "1,2,3",
+        "1,2,4",
+        "1,3,4",
+        "2,3,4"
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "f54b9d7d4b7fde400045934261bbd16b"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 95,
+      "question": "According to Evan and Freeman (1993), the Principle of ________ and the Principle of _______ can be used in a specific situation to determine who constitutes a _______.",
+      "choices": [
+        "Corporate rights, Corporate effect, Stakeholder",
+        "Corporate deniability, Corporate effect, Stakeholder",
+        "Corporate rights, Corporate responsibility, Stakeholder",
+        "Corporate rights, Corporate effect, Shareholder"
+      ],
+      "correct_answer": "A",
+      "model_answer": "A",
+      "correct": true,
+      "question_hash": "0e5a94a178ae16a13ca5a00dc38d8df1"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 96,
+      "question": "The relationship between ethics and the law can be described as\u2026",
+      "choices": [
+        "Incredibly close, in fact, in all instances what is ethical is also what is legal and vice versa.",
+        "Not close, ethics and the law share a small amount of overlap, but fundamentally address differing questions and themes.",
+        "Close, as there is considerable overlap between ethics and law, but the two are not equivalent.",
+        "Not at all close, ethics and the law are virtually incompatible."
+      ],
+      "correct_answer": "C",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "521561e56968a8af7bddc38ec6b3e313"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 97,
+      "question": "In a business to business context, conflicts of interest can arise in two main ways: conflict of _______ and _______ interests, which might arise, for example, when a firm is hired as a supplier of professional services by another firm or conflict of _________ and ________ interests, such as where an individual's interests may conflict with that of their employer.",
+      "choices": [
+        "Professional, Organizational, Personal, Organizational",
+        "Professional, Individual, Personal, Organizational",
+        "Individual, Organizational, Organizational, Professional",
+        "Individual, Professional, Organizational, Personal"
+      ],
+      "correct_answer": "A",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "7f21d3f836d29849f5e94432fcedfffe"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 98,
+      "question": "________ are a business ethics management tool that have grown over the last few decades. Areas which these typically cover are compliance, corruption and environmental issues. However, they are constantly evolving, with for example, the onus on __________ having grown in recent years.",
+      "choices": [
+        "Annual reports, Company financial performance",
+        "Annual report, Internet - social media and networking",
+        "Codes of ethics, Company financial performance",
+        "Codes of ethics, Internet - social media and networking"
+      ],
+      "correct_answer": "D",
+      "model_answer": "B",
+      "correct": false,
+      "question_hash": "7bb5a0802af67c9782505d4dd0606d99"
+    },
+    {
+      "subject": "business_ethics",
+      "question_index": 99,
+      "question": "Which of the following statements is correct?",
+      "choices": [
+        "Business ethics is not a real concept as the rules and ethics of everyday life don't apply to the world of business.",
+        "Business Ethics is the study of business situations, activities and decisions where issues of right and wrong are addressed.",
+        "Business ethics cannot be defined as a real concept as it is an oxymoronic term.",
+        "Business ethics is concerned with the study of assessing the activities of a business based on their profitability."
+      ],
+      "correct_answer": "B",
+      "model_answer": "B",
+      "correct": true,
+      "question_hash": "21d5c89e63c01dc8ae5586e86b8b8a5e"
+    }
+  ]
+}

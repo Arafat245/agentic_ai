@@ -1,0 +1,89 @@
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ bitsandbytes installed - 4-bit quantization available
+✓ Hugging Face authenticated
+======================================================================
+Model: google/gemma-2-2b-it
+Device: cuda
+Quantization: 4-bit
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+
+❌ Error: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/google/gemma-2-2b-it.
+403 Client Error. (Request ID: Root=1-696eef34-31586c4c00f8680b2ec531be;8edd121b-f71b-4678-ae57-48e5e402ffd6)
+
+Cannot access gated repo for url https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json.
+Access to model google/gemma-2-2b-it is restricted and you are not in the authorized list. Visit https://huggingface.co/google/gemma-2-2b-it to ask for access.
+Traceback (most recent call last):
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 402, in hf_raise_for_status
+    response.raise_for_status()
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 479, in cached_files
+    hf_hub_download(
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1007, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1114, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1655, in _raise_on_head_call_error
+    raise head_call_error
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1543, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1460, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+    response = _request_wrapper(
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 419, in hf_raise_for_status
+    raise _format(GatedRepoError, message, response) from e
+huggingface_hub.errors.GatedRepoError: 403 Client Error. (Request ID: Root=1-696eef34-31586c4c00f8680b2ec531be;8edd121b-f71b-4678-ae57-48e5e402ffd6)
+
+Cannot access gated repo for url https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json.
+Access to model google/gemma-2-2b-it is restricted and you are not in the authorized list. Visit https://huggingface.co/google/gemma-2-2b-it to ask for access.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/sdb/arafat/agentic_ai/three_model.py", line 591, in <module>
+    main()
+  File "/mnt/sdb/arafat/agentic_ai/three_model.py", line 443, in main
+    model, tokenizer, load_seconds = load_model_and_tokenizer(
+  File "/mnt/sdb/arafat/agentic_ai/three_model.py", line 252, in load_model_and_tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 1109, in from_pretrained
+    config = AutoConfig.from_pretrained(
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1332, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 662, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/transformers/configuration_utils.py", line 721, in _get_config_dict
+    resolved_config_file = cached_file(
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/mnt/sdb/arafat/.local/lib/python3.10/site-packages/transformers/utils/hub.py", line 543, in cached_files
+    raise OSError(
+OSError: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/google/gemma-2-2b-it.
+403 Client Error. (Request ID: Root=1-696eef34-31586c4c00f8680b2ec531be;8edd121b-f71b-4678-ae57-48e5e402ffd6)
+
+Cannot access gated repo for url https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json.
+Access to model google/gemma-2-2b-it is restricted and you are not in the authorized list. Visit https://huggingface.co/google/gemma-2-2b-it to ask for access.

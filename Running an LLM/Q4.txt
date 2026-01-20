@@ -1,0 +1,363 @@
+(base) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai$ conda activate agentic_ai
+(agentic_ai) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai$ CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cuda --quant none
+  CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cuda --quant 4bit
+  CUDA_VISIBLE_DEVICES=0 /usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cuda --quant 8bit
+  /usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cpu --quant none
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ Quantization disabled - full precision path
+✓ Hugging Face authenticated
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+✓ Model loaded. CUDA mem: 2.47 GB allocated, 2.47 GB reserved
+
+======================================================================
+Starting evaluation
+======================================================================
+Subjects: ['astronomy', 'business_ethics']
+
+Progress: 1/2 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+Testing astronomy: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 152/152 [00:03<00:00, 40.16it/s]
+✓ Result: 76/152 correct = 50.00%
+
+Progress: 2/2 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+Testing business_ethics: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:02<00:00, 41.12it/s]
+✓ Result: 46/100 correct = 46.00%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Subjects: 2
+Questions: 252
+Correct: 122
+Accuracy: 48.41%
+Model load time: 3.85 s
+Eval time: 7.69 s (0.13 min)
+======================================================================
+
+✓ Results saved to: ./llama_3.2_1b_mmlu_results_full_cuda_20260115_080112.json
+
+Top subjects:
+  astronomy: 50.00%
+  business_ethics: 46.00%
+
+Bottom subjects:
+  astronomy: 50.00%
+  business_ethics: 46.00%
+
+✅ Done.
+	Command being timed: "python3 llama_mmlu_eval_optimized.py --device cuda --quant none"
+	User time (seconds): 18.93
+	System time (seconds): 7.00
+	Percent of CPU this job got: 153%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:16.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5486196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1010896
+	Voluntary context switches: 718
+	Involuntary context switches: 92740
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ bitsandbytes installed - 4-bit quantization available
+✓ Hugging Face authenticated
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: 4-bit
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+✓ Model loaded. CUDA mem: 1.03 GB allocated, 1.27 GB reserved
+
+======================================================================
+Starting evaluation
+======================================================================
+Subjects: ['astronomy', 'business_ethics']
+
+Progress: 1/2 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+Testing astronomy: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 152/152 [00:07<00:00, 19.39it/s]
+✓ Result: 73/152 correct = 48.03%
+
+Progress: 2/2 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+Testing business_ethics: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:05<00:00, 19.37it/s]
+✓ Result: 39/100 correct = 39.00%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: 4-bit
+Subjects: 2
+Questions: 252
+Correct: 112
+Accuracy: 44.44%
+Model load time: 6.32 s
+Eval time: 14.71 s (0.25 min)
+======================================================================
+
+✓ Results saved to: ./llama_3.2_1b_mmlu_results_4bit_cuda_20260115_080140.json
+
+Top subjects:
+  astronomy: 48.03%
+  business_ethics: 39.00%
+
+Bottom subjects:
+  astronomy: 48.03%
+  business_ethics: 39.00%
+
+✅ Done.
+	Command being timed: "python3 llama_mmlu_eval_optimized.py --device cuda --quant 4bit"
+	User time (seconds): 24.49
+	System time (seconds): 5.62
+	Percent of CPU this job got: 104%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:28.79
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3566464
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 952117
+	Voluntary context switches: 887
+	Involuntary context switches: 551797
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ bitsandbytes installed - 8-bit quantization available
+✓ Hugging Face authenticated
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: 8-bit
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+✓ Model loaded. CUDA mem: 1.50 GB allocated, 1.59 GB reserved
+
+======================================================================
+Starting evaluation
+======================================================================
+Subjects: ['astronomy', 'business_ethics']
+
+Progress: 1/2 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+Testing astronomy: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 152/152 [01:06<00:00,  2.29it/s]
+✓ Result: 79/152 correct = 51.97%
+
+Progress: 2/2 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+Testing business_ethics: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:43<00:00,  2.28it/s]
+✓ Result: 46/100 correct = 46.00%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: 8-bit
+Subjects: 2
+Questions: 252
+Correct: 125
+Accuracy: 49.60%
+Model load time: 4.72 s
+Eval time: 112.06 s (1.87 min)
+======================================================================
+
+✓ Results saved to: ./llama_3.2_1b_mmlu_results_8bit_cuda_20260115_080346.json
+
+Top subjects:
+  astronomy: 51.97%
+  business_ethics: 46.00%
+
+Bottom subjects:
+  astronomy: 51.97%
+  business_ethics: 46.00%
+
+✅ Done.
+	Command being timed: "python3 llama_mmlu_eval_optimized.py --device cuda --quant 8bit"
+	User time (seconds): 122.34
+	System time (seconds): 5.64
+	Percent of CPU this job got: 102%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:05.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3517196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1051708
+	Voluntary context switches: 2077
+	Involuntary context switches: 241938
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+======================================================================
+Environment Check
+======================================================================
+✓ Platform: Linux (x86_64)
+✓ Using CPU
+✓ Quantization disabled - full precision path
+✓ Hugging Face authenticated
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cpu
+Quantization: None (full precision)
+======================================================================
+
+
+======================================================================
+Loading model/tokenizer
+======================================================================
+✓ Model loaded.
+
+======================================================================
+Starting evaluation
+======================================================================
+Subjects: ['astronomy', 'business_ethics']
+
+Progress: 1/2 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+Testing astronomy: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 152/152 [01:44<00:00,  1.46it/s]
+✓ Result: 75/152 correct = 49.34%
+
+Progress: 2/2 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+Testing business_ethics: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [01:07<00:00,  1.48it/s]
+✓ Result: 45/100 correct = 45.00%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cpu
+Quantization: None (full precision)
+Subjects: 2
+Questions: 252
+Correct: 120
+Accuracy: 47.62%
+Model load time: 2.63 s
+Eval time: 173.26 s (2.89 min)
+======================================================================
+
+✓ Results saved to: ./llama_3.2_1b_mmlu_results_full_cpu_20260115_080647.json
+
+Top subjects:
+  astronomy: 49.34%
+  business_ethics: 45.00%
+
+Bottom subjects:
+  astronomy: 49.34%
+  business_ethics: 45.00%
+
+✅ Done.
+	Command being timed: "python3 llama_mmlu_eval_optimized.py --device cpu --quant none"
+	User time (seconds): 3116.49
+	System time (seconds): 281.78
+	Percent of CPU this job got: 1870%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:01.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7878352
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 50
+	Minor (reclaiming a frame) page faults: 26776645
+	Voluntary context switches: 114451
+	Involuntary context switches: 335594
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+(agentic_ai) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai$ 
+
+

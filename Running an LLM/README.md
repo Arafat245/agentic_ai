@@ -219,15 +219,17 @@ python3 llama_mmlu_eval_optimized.py \
 ✅ **Completed**: Created graphs and analyzed mistake patterns
 
 **Visualizations Created:**
-1. **Model Comparison Graph** (`model_comparison.png`):
+1. **Model Comparison Graph** (`graphs/model_comparison.png`):
    - Accuracy by subject (grouped bars)
    - Overall accuracy comparison
    - Accuracy heatmap (subject vs model)
    - Error rate comparison
+   - *See full graph in [Results and Analysis](#results-and-analysis) section*
 
 2. **Mistake Overlap Analysis**:
-   - Distribution of questions that multiple models get wrong
-   - Pairwise comparison of mistake overlap between models
+   - **Distribution Graph** (`graphs/mistake_overlap_distribution.png`): Shows how many questions are answered incorrectly by multiple models
+   - **Pairwise Comparison** (`graphs/mistake_overlap_pairwise.png`): Detailed comparison of mistake overlap between model pairs
+   - *See full graphs in [Mistake Pattern Analysis](#mistake-pattern-analysis) section*
 
 **Pattern Analysis Findings:**
 - **Not Random**: Models show systematic patterns in mistakes
@@ -242,6 +244,12 @@ python3 create_graphs.py \
   --question_data_dir . \
   --output_dir graphs/
 ```
+
+**Graph Output:**
+All graphs are saved in the `graphs/` directory:
+- `model_comparison.png` - Comprehensive model performance comparison
+- `mistake_overlap_distribution.png` - Distribution of mistake overlap
+- `mistake_overlap_pairwise.png` - Pairwise model mistake comparison
 
 ### Task 6: Google Colab Execution
 
@@ -342,6 +350,16 @@ python3 my_agent.py
 - **Weak Subjects**: abstract_algebra, professional_law (consistently difficult)
 - **Variable**: machine_learning, computer_security (model-dependent)
 
+**Model Comparison Visualization:**
+
+![Model Comparison](graphs/model_comparison.png)
+
+*This comprehensive comparison shows:*
+- *Top-left: Accuracy by subject (grouped bars for each model)*
+- *Top-right: Overall accuracy comparison across all models*
+- *Bottom-left: Accuracy heatmap showing subject vs model performance*
+- *Bottom-right: Error rate comparison*
+
 ### Mistake Pattern Analysis
 
 **Key Findings:**
@@ -352,9 +370,28 @@ python3 my_agent.py
    - Factual subjects (astronomy) show more random errors
 4. **Model-Specific**: Each model has unique failure modes
 
-**Visualization:**
-- See `graphs/mistake_overlap_distribution.png` for distribution
-- See `graphs/mistake_overlap_pairwise.png` for pairwise comparisons
+**Mistake Overlap Distribution:**
+
+This graph shows how many questions are answered incorrectly by multiple models. The distribution reveals whether mistakes are random or systematic.
+
+![Mistake Overlap Distribution](graphs/mistake_overlap_distribution.png)
+
+*Key insights from the distribution:*
+- *Questions that all models get wrong indicate genuinely difficult questions*
+- *Questions that only one model gets wrong suggest model-specific weaknesses*
+- *High overlap (multiple models wrong) indicates systematic challenges*
+
+**Pairwise Mistake Overlap:**
+
+This detailed comparison shows mistake overlap between pairs of models, helping identify which models make similar errors and which have unique failure patterns.
+
+![Pairwise Mistake Overlap](graphs/mistake_overlap_pairwise.png)
+
+*Analysis of pairwise comparisons:*
+- *"Both wrong" bars show questions where both models failed*
+- *"Only first wrong" / "Only second wrong" show model-specific errors*
+- *High "both wrong" indicates shared difficulty areas*
+- *High "only X wrong" indicates unique model weaknesses*
 
 ---
 

@@ -1,1 +1,1 @@
-## Go to each folder to see the readme.md to see the details and analysis.
+## Go to each folder to see the Readme.md to see the details and analysis.

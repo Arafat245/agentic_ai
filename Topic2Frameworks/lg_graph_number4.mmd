@@ -1,0 +1,26 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	get_user_input(get_user_input)
+	call_llama(call_llama)
+	call_qwen(call_qwen)
+	print_both_responses(print_both_responses)
+	print_response(print_response)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> get_user_input;
+	call_llama --> print_both_responses;
+	call_qwen --> print_both_responses;
+	get_user_input -.-> __end__;
+	get_user_input -.-> call_llama;
+	get_user_input -.-> call_qwen;
+	get_user_input -.-> print_response;
+	print_both_responses --> get_user_input;
+	print_response --> get_user_input;
+	get_user_input -.-> get_user_input;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

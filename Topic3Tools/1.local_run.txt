@@ -1,0 +1,162 @@
+(alphapose) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai/Topic3Tools$ time python llama_mmlu_eval1.py 
+
+======================================================================
+Llama 3.2-1B MMLU Evaluation (Quantized)
+======================================================================
+
+======================================================================
+Environment Check
+======================================================================
+✓ Running locally (not in Colab)
+✓ Platform: Linux (x86_64)
+/mnt/sdb/arafat/.local/lib/python3.10/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ Quantization disabled - loading full precision model
+✓ Hugging Face authenticated
+
+======================================================================
+Configuration
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Expected memory: ~2.5 GB (FP16)
+Number of subjects: 1
+======================================================================
+
+
+Loading model meta-llama/Llama-3.2-1B-Instruct...
+Device: cuda
+✓ Tokenizer loaded
+Loading model (this may take 2-3 minutes)...
+✓ Model loaded successfully!
+  Model device: cuda:0
+  Model dtype: torch.float16
+  GPU Memory: 1.26 GB allocated, 1.28 GB reserved
+
+======================================================================
+Starting evaluation on 1 subjects
+======================================================================
+
+
+Progress: 1/1 subjects
+
+======================================================================
+Evaluating subject: astronomy
+======================================================================
+Testing astronomy:   0%|                                                                                            | 0/152 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Testing astronomy: 100%|██████████████████████████████████████████████████████████████████████████████████| 152/152 [00:13<00:00, 10.97it/s]
+✓ Result: 75/152 correct = 49.34%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+None (full precision)
+Total Subjects: 1
+Total Questions: 152
+Total Correct: 75
+Overall Accuracy: 49.34%
+Duration: 0.3 minutes
+======================================================================
+
+✓ Results saved to: llama_3.2_1b_mmlu_results_full_20260127_145425.json
+
+📊 Top 5 Subjects:
+  1. astronomy: 49.34%
+
+📉 Bottom 5 Subjects:
+  1. astronomy: 49.34%
+
+✅ Evaluation complete!
+
+real    3m7.084s
+user    0m52.370s
+sys     0m8.707s
+
+
+
+
+(alphapose) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai/Topic3Tools$ time python llama_mmlu_eval2.py
+
+======================================================================
+Llama 3.2-1B MMLU Evaluation (Quantized)
+======================================================================
+
+======================================================================
+Environment Check
+======================================================================
+✓ Running locally (not in Colab)
+✓ Platform: Linux (x86_64)
+/mnt/sdb/arafat/.local/lib/python3.10/site-packages/torch/cuda/__init__.py:716: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+✓ GPU Available: NVIDIA RTX A6000
+✓ GPU Memory: 50.93 GB
+✓ Quantization disabled - loading full precision model
+✓ Hugging Face authenticated
+
+======================================================================
+Configuration
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+Device: cuda
+Quantization: None (full precision)
+Expected memory: ~2.5 GB (FP16)
+Number of subjects: 1
+======================================================================
+
+
+Loading model meta-llama/Llama-3.2-1B-Instruct...
+Device: cuda
+✓ Tokenizer loaded
+Loading model (this may take 2-3 minutes)...
+✓ Model loaded successfully!
+  Model device: cuda:0
+  Model dtype: torch.float16
+  GPU Memory: 1.26 GB allocated, 1.28 GB reserved
+
+======================================================================
+Starting evaluation on 1 subjects
+======================================================================
+
+
+Progress: 1/1 subjects
+
+======================================================================
+Evaluating subject: business_ethics
+======================================================================
+Testing business_ethics:   0%|                                                                                      | 0/100 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Testing business_ethics: 100%|████████████████████████████████████████████████████████████████████████████| 100/100 [00:03<00:00, 32.16it/s]
+✓ Result: 45/100 correct = 45.00%
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+Model: meta-llama/Llama-3.2-1B-Instruct
+None (full precision)
+Total Subjects: 1
+Total Questions: 100
+Total Correct: 45
+Overall Accuracy: 45.00%
+Duration: 0.1 minutes
+======================================================================
+
+✓ Results saved to: llama_3.2_1b_mmlu_results_full_20260127_145741.json
+
+📊 Top 5 Subjects:
+  1. business_ethics: 45.00%
+
+📉 Bottom 5 Subjects:
+  1. business_ethics: 45.00%
+
+✅ Evaluation complete!
+
+real    0m22.185s
+user    0m30.763s
+sys     0m4.451s
+
+
+
+

@@ -21,7 +21,7 @@ List of team members are here:
 
 ## Learning Goals
 
-This topic focuses on understanding when to use RAG, what each component of a RAG pipeline does, and how retrieval parameters (chunking, top-k, prompt templates) affect quality and latency. :contentReference[oaicite:1]{index=1}
+This topic focuses on understanding when to use RAG, what each component of a RAG pipeline does, and how retrieval parameters (chunking, top-k, prompt templates) affect quality and latency.
 
 
 ## Setup (Exercise 0)
@@ -33,9 +33,9 @@ This topic focuses on understanding when to use RAG, what each component of a RA
 - Corpora.zip (linked on the course page)
 
 Notes from course updates (important for getting good retrieval results):
-- Re-download Corpora.zip and use the “NewModelT” files (cleaner text) rather than older low-quality OCR. Prefer the .txt versions. :contentReference[oaicite:2]{index=2}
-- The Congressional Record corpus can have garbled tables after extraction; some questions that depend on tables may not work well without improved preprocessing. :contentReference[oaicite:3]{index=3}
-- In general, use the provided .txt files rather than extracting embedded PDF text in-code if possible. :contentReference[oaicite:4]{index=4}
+- Re-download Corpora.zip and use the “NewModelT” files (cleaner text) rather than older low-quality OCR. Prefer the .txt versions.
+- The Congressional Record corpus can have garbled tables after extraction; some questions that depend on tables may not work well without improved preprocessing.
+- In general, use the provided .txt files rather than extracting embedded PDF text in-code if possible.
 
 
 ## What We Ran
@@ -66,8 +66,7 @@ using two corpora separately:
 - Model T repair manual
 - Congressional Record corpus
 
-The course page provides example queries for both corpora. :contentReference[oaicite:5]{index=5}
-
+The course page provides example queries for both corpora. 
 
 ### Exercise 2 — Open Model + RAG vs Large Model (No RAG)
 
@@ -76,7 +75,7 @@ We wrote/adapted a small script to query GPT-4o Mini (no tools, single-turn ques
 We documented:
 - hallucination avoidance relative to the small open model,
 - which questions GPT-4o Mini got right without retrieval,
-- how this relates to the corpora’s time period vs the model’s training cut-off. :contentReference[oaicite:6]{index=6}
+- how this relates to the corpora’s time period vs the model’s training cut-off.
 
 
 ### Exercise 3 — Local RAG vs Frontier Chat Model
@@ -88,7 +87,7 @@ We compared:
 We documented:
 - where the frontier model’s general knowledge succeeds,
 - where local RAG provides more specific/grounded answers,
-- cases where the frontier model seems to use live web search. :contentReference[oaicite:7]{index=7}
+- cases where the frontier model seems to use live web search.
 
 
 ### Exercise 4 — Effect of Top-K Retrieval Count
@@ -99,8 +98,7 @@ k = 1, 3, 5, 10, 20
 For each k, we ran the same 3–5 queries and recorded:
 - answer quality (accuracy, completeness),
 - latency,
-- when additional context stopped helping or started hurting. :contentReference[oaicite:8]{index=8}
-
+- when additional context stopped helping or started hurting.
 
 ### Exercise 5 — Handling Unanswerable Questions
 
@@ -115,7 +113,7 @@ We documented:
 - whether irrelevant retrieved context makes hallucination more likely.
 
 We also tested prompt-template changes such as:
-“If the context doesn’t contain the answer, say ‘I cannot answer this from the available documents.’” :contentReference[oaicite:9]{index=9}
+“If the context doesn’t contain the answer, say ‘I cannot answer this from the available documents.’”
 
 
 ### Exercise 6 — Query Phrasing Sensitivity
@@ -126,7 +124,7 @@ We selected one underlying question and rephrased it 5+ ways (formal, casual, ke
 - overlap between retrieval sets,
 - which phrasing retrieved best context.
 
-This experiment is used to reason about query rewriting strategies. :contentReference[oaicite:10]{index=10}
+This experiment is used to reason about query rewriting strategies.
 
 
 ## Repository Organization
@@ -148,12 +146,11 @@ Suggested structure (adapt if your folder already differs):
   - findings.md (short write-up across experiments)
   - pitfalls.md (preprocessing issues, table failures, etc.)
 
-We ensured each team member has a copy of results in their GitHub, per the assignment instructions. :contentReference[oaicite:11]{index=11}
-
+We ensured each team member has a copy of results in their GitHub, per the assignment instructions.
 
 ## How To Run
 
-Option A (recommended by course): run on Colab, especially for long-running re-indexing experiments. :contentReference[oaicite:12]{index=12}
+Option A (recommended by course): run on Colab, especially for long-running re-indexing experiments.
 
 Option B (local): run the notebook locally.
 
@@ -167,4 +164,4 @@ Typical workflow:
 
 ## Notes
 
-Preprocessing quality is decisive for retrieval quality, especially with multi-column PDFs and tables. The course page explicitly notes this limitation and recommends using the provided text corpora (and the cleaner Model T text). :contentReference[oaicite:13]{index=13}
+Preprocessing quality is decisive for retrieval quality, especially with multi-column PDFs and tables. The course page explicitly notes this limitation and recommends using the provided text corpora (and the cleaner Model T text).

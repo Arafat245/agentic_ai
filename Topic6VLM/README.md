@@ -21,8 +21,9 @@ Learning goals include:
 ## Requirements
 
 Install dependencies (recommended to use a venv/conda env):
-
+```bash
 pip install -r requirements.txt
+```
 
 You will need:
 - Ollama installed
@@ -33,23 +34,26 @@ You will need:
   - opencv-python (for the video exercise)
 
 If you do not already have the model, pull it with:
-
+```bash
 ollama pull llava
+```
 
 
 ## Repository Structure
 
-This folder contains one program per required exercise, plus saved terminal outputs and a screenshot.
+This folder contains one program per required exercise, plus saved terminal outputs, a screenshot, and extracted video frames.
 
 ```
 Topic6VLM/
 ├── exercise1_vlm_langgraph_chat_agent.py
 ├── Exercise2.py                    # Video surveillance agent
+├── 2min.mp4                         # Test video for Exercise 2
 ├── requirements.txt
 ├── outputs/
 │   ├── exercise1_terminal_output.txt
 │   ├── exercise2_terminal_output.txt
 │   └── screenshot.png              # Screenshot of Exercise 1 Gradio interface
+├── frames/                          # Extracted frames from Exercise 2 (frame_0000.jpg, ...)
 └── README.md
 ```
 
@@ -65,8 +69,8 @@ Goal:
 - If the program runs slowly, reduce the uploaded image resolution.
 
 Implementation:
-- **Gradio interface** (default): Web UI with image upload and chat. Run `python exercise1_vlm_langgraph_chat_agent.py`
-- **CLI interface**: Text-based flow. Run `python exercise1_vlm_langgraph_chat_agent.py --cli`
+- **Gradio interface** (default): Web UI with image upload and chat. Run `python3 exercise1_vlm_langgraph_chat_agent.py`
+- **CLI interface**: Text-based flow. Run `python3 exercise1_vlm_langgraph_chat_agent.py --cli`
 - Uses Ollama + LLaVA (`llava:latest`) for vision-language inference
 - LangGraph pipeline: add_user_message → call_vlm → trim_history
 - Image handling: loads from file path immediately, clears conversation on new image upload
@@ -88,17 +92,11 @@ Goal:
 - Run through frames with a prompt asking whether a person is present.
 - Report the times at which a person enters and exits the scene.
 
-Install OpenCV:
-
-pip install opencv-python
-
-Core concept:
-- Use cv2.VideoCapture("video.mp4")
-- Compute FPS
-- Sample every ~2 seconds
-- Save sampled frames as images
-- For each sampled frame, ask LLaVA if a person is present
-- Convert frame index to timestamp using FPS and sampling interval
+Implementation:
+- **Video**: `2min.mp4` (2-minute test clip)
+- **Frame extraction**: OpenCV, one frame every 2 seconds (~63 frames for 2 min)
+- **Person detection**: LLaVA (`llava:latest`) with JSON prompt per frame
+- **Output**: Frames saved to `frames/`, ENTRY/EXIT timestamps printed
 
 
 ## Running
@@ -111,36 +109,56 @@ ollama pull llava
 
 Exercise 1 (Gradio):
 ```bash
-python exercise1_vlm_langgraph_chat_agent.py
+python3 exercise1_vlm_langgraph_chat_agent.py
 ```
 
 Exercise 1 (CLI):
 ```bash
-python exercise1_vlm_langgraph_chat_agent.py --cli
+python3 exercise1_vlm_langgraph_chat_agent.py --cli
 ```
 
 Exercise 2:
 ```bash
-python Exercise2.py
+python3 Exercise2.py
 ```
 
 **Saving terminal output** (use `-u` for unbuffered output so logs are captured):
 ```bash
 python3 -u exercise1_vlm_langgraph_chat_agent.py 2>&1 | tee outputs/exercise1_terminal_output.txt
+python3 -u Exercise2.py 2>&1 | tee outputs/exercise2_terminal_output.txt
 ```
 
 
-## Expected Outputs
+## Outputs
 
-Exercise 1:
-- A multi-turn chat loop where you upload an image and ask multiple questions about it.
-- Terminal output saved in `outputs/exercise1_terminal_output.txt`
-- Screenshot of the Gradio interface in `outputs/screenshot.png`
+### Exercise 1
+- **Terminal output**: [outputs/exercise1_terminal_output.txt](outputs/exercise1_terminal_output.txt)
+- **Screenshot**: [outputs/screenshot.png](outputs/screenshot.png)
 
-Exercise 2:
-- Extracted frame images (either in a frames/ folder or current directory).
-- Printed timestamps for person entry/exit.
-- Terminal output saved in `outputs/exercise2_terminal_output.txt`
+Sample (Gradio startup + VLM calls):
+```
+Launching Gradio interface...
+* Running on local URL:  http://127.0.0.1:7860
+[VLM] Sending 2 messages, image attached: True
+...
+```
+
+### Exercise 2
+- **Terminal output**: [outputs/exercise2_terminal_output.txt](outputs/exercise2_terminal_output.txt)
+- **Extracted frames**: `frames/frame_0000.jpg` through `frame_0062.jpg`
+
+Sample (Surveillance Report):
+```
+============================================================
+Surveillance Report
+============================================================
+  ENTRY at 00:07
+  EXIT at 00:09
+  ENTRY at 00:13
+  EXIT at 00:17
+  ...
+Done.
+```
 
 
 ## Resources (from course page)
@@ -157,5 +175,5 @@ https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic6VLM/vlm.ht
 ## Notes
 
 - This README covers only the required exercises (Exercise 1 and Exercise 2). Optional extensions on the course page are not included here.
-- Save terminal logs in `outputs/` for portfolio review, as requested by the course page.
-- To add the screenshot: capture the Gradio interface (e.g., with a screenshot tool) while the Exercise 1 app is running, and save it as `outputs/screenshot.png`.
+- Terminal logs are saved in `outputs/` for portfolio review, as requested by the course page.
+- Use `python3` (not `python`) on systems where only `python3` is available.

@@ -1,0 +1,108 @@
+============================================================
+Exercise 2 — Video-Surveillance Agent
+============================================================
+
+Video: /mnt/sdb/arafat/agentic_ai/Topic6VLM/2min.mp4
+Frame interval: 2 seconds
+Model: llava:latest
+
+Extracting frames...
+Extracted 63 frames.
+Saved frames to frames/
+
+Analyzing frames with LLaVA...
+  Frame 1/63 (00:00): empty
+  Frame 2/63 (00:01): empty
+  Frame 3/63 (00:03): empty
+  Frame 4/63 (00:05): empty
+  Frame 5/63 (00:07): PERSON
+  Frame 6/63 (00:09): empty
+  Frame 7/63 (00:11): empty
+  Frame 8/63 (00:13): empty
+  Frame 9/63 (00:15): PERSON
+  Frame 10/63 (00:17): empty
+  Frame 11/63 (00:19): empty
+  Frame 12/63 (00:21): empty
+  Frame 13/63 (00:23): PERSON
+  Frame 14/63 (00:25): empty
+  Frame 15/63 (00:27): empty
+  Frame 16/63 (00:29): PERSON
+  Frame 17/63 (00:31): empty
+  Frame 18/63 (00:33): PERSON
+  Frame 19/63 (00:35): empty
+  Frame 20/63 (00:37): empty
+  Frame 21/63 (00:39): PERSON
+  Frame 22/63 (00:41): empty
+  Frame 23/63 (00:43): empty
+  Frame 24/63 (00:45): PERSON
+  Frame 25/63 (00:47): PERSON
+  Frame 26/63 (00:49): empty
+  Frame 27/63 (00:51): PERSON
+  Frame 28/63 (00:53): empty
+  Frame 29/63 (00:55): empty
+  Frame 30/63 (00:56): empty
+  Frame 31/63 (00:58): empty
+  Frame 32/63 (01:00): empty
+  Frame 33/63 (01:02): PERSON
+  Frame 34/63 (01:04): PERSON
+  Frame 35/63 (01:06): empty
+  Frame 36/63 (01:08): empty
+  Frame 37/63 (01:10): empty
+  Frame 38/63 (01:12): empty
+  Frame 39/63 (01:14): empty
+  Frame 40/63 (01:16): empty
+  Frame 41/63 (01:18): PERSON
+  Frame 42/63 (01:20): empty
+  Frame 43/63 (01:22): empty
+  Frame 44/63 (01:24): empty
+  Frame 45/63 (01:26): PERSON
+  Frame 46/63 (01:28): PERSON
+  Frame 47/63 (01:30): empty
+  Frame 48/63 (01:32): empty
+  Frame 49/63 (01:34): empty
+  Frame 50/63 (01:36): PERSON
+  Frame 51/63 (01:38): empty
+  Frame 52/63 (01:40): empty
+  Frame 53/63 (01:42): empty
+  Frame 54/63 (01:44): empty
+  Frame 55/63 (01:46): PERSON
+  Frame 56/63 (01:48): empty
+  Frame 57/63 (01:50): empty
+  Frame 58/63 (01:52): empty
+  Frame 59/63 (01:53): empty
+  Frame 60/63 (01:55): empty
+  Frame 61/63 (01:57): empty
+  Frame 62/63 (01:59): empty
+  Frame 63/63 (02:01): empty
+
+============================================================
+Surveillance Report
+============================================================
+  ENTRY at 00:07
+  EXIT at 00:09
+  ENTRY at 00:15
+  EXIT at 00:17
+  ENTRY at 00:23
+  EXIT at 00:25
+  ENTRY at 00:29
+  EXIT at 00:31
+  ENTRY at 00:33
+  EXIT at 00:35
+  ENTRY at 00:39
+  EXIT at 00:41
+  ENTRY at 00:45
+  EXIT at 00:49
+  ENTRY at 00:51
+  EXIT at 00:53
+  ENTRY at 01:02
+  EXIT at 01:06
+  ENTRY at 01:18
+  EXIT at 01:20
+  ENTRY at 01:26
+  EXIT at 01:30
+  ENTRY at 01:36
+  EXIT at 01:38
+  ENTRY at 01:46
+  EXIT at 01:48
+
+Done.

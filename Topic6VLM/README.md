@@ -39,16 +39,19 @@ ollama pull llava
 
 ## Repository Structure
 
-This folder contains one program per required exercise, plus saved terminal outputs.
+This folder contains one program per required exercise, plus saved terminal outputs and a screenshot.
 
-Recommended structure:
-
-- exercise1_vlm_langgraph_chat_agent.py
-- exercise2_video_surveillance_agent.py
-- outputs/
-  - exercise1_terminal_output.txt
-  - exercise2_terminal_output.txt
-- README.md
+```
+Topic6VLM/
+├── exercise1_vlm_langgraph_chat_agent.py
+├── Exercise2.py                    # Video surveillance agent
+├── requirements.txt
+├── outputs/
+│   ├── exercise1_terminal_output.txt
+│   ├── exercise2_terminal_output.txt
+│   └── screenshot.png              # Screenshot of Exercise 1 Gradio interface
+└── README.md
+```
 
 
 ## Exercise 1 — Vision-Language LangGraph Chat Agent
@@ -61,22 +64,22 @@ Goal:
 - Use good LangGraph structure and manage context carefully.
 - If the program runs slowly, reduce the uploaded image resolution.
 
-Implementation notes (from the course page):
-- Use Ollama + llava for image Q/A.
-- The Ollama chat call supports messages with an "images" key containing file paths and/or base64 strings.
+Implementation:
+- **Gradio interface** (default): Web UI with image upload and chat. Run `python exercise1_vlm_langgraph_chat_agent.py`
+- **CLI interface**: Text-based flow. Run `python exercise1_vlm_langgraph_chat_agent.py --cli`
+- Uses Ollama + LLaVA (`llava:latest`) for vision-language inference
+- LangGraph pipeline: add_user_message → call_vlm → trim_history
+- Image handling: loads from file path immediately, clears conversation on new image upload
 
-Example model call pattern (reference only; actual implementation is in the script):
-- model='llava'
-- messages include:
-  - role='user'
-  - content='Describe this image in English.'
-  - images=['./photo.jpg']
+### Screenshot
+
+![Exercise 1 — VLM LangGraph Chat Agent](outputs/screenshot.png)
 
 
 ## Exercise 2 — Video-Surveillance Agent
 
 File:
-- exercise2_video_surveillance_agent.py
+- Exercise2.py
 
 Goal:
 - Use LLaVA indirectly on video by extracting frames and running a per-frame prompt.
@@ -100,25 +103,44 @@ Core concept:
 
 ## Running
 
-Exercise 1:
+**Prerequisites:** Start Ollama and pull the model:
+```bash
+ollama serve          # In a separate terminal
+ollama pull llava
+```
 
+Exercise 1 (Gradio):
+```bash
 python exercise1_vlm_langgraph_chat_agent.py
+```
+
+Exercise 1 (CLI):
+```bash
+python exercise1_vlm_langgraph_chat_agent.py --cli
+```
 
 Exercise 2:
+```bash
+python Exercise2.py
+```
 
-python exercise2_video_surveillance_agent.py
+**Saving terminal output** (use `-u` for unbuffered output so logs are captured):
+```bash
+python3 -u exercise1_vlm_langgraph_chat_agent.py 2>&1 | tee outputs/exercise1_terminal_output.txt
+```
 
 
 ## Expected Outputs
 
 Exercise 1:
-- A multi-turn chat loop where you upload/select an image, then ask multiple questions about it.
-- Terminal output saved in outputs/exercise1_terminal_output.txt
+- A multi-turn chat loop where you upload an image and ask multiple questions about it.
+- Terminal output saved in `outputs/exercise1_terminal_output.txt`
+- Screenshot of the Gradio interface in `outputs/screenshot.png`
 
 Exercise 2:
 - Extracted frame images (either in a frames/ folder or current directory).
 - Printed timestamps for person entry/exit.
-- Terminal output saved in outputs/exercise2_terminal_output.txt
+- Terminal output saved in `outputs/exercise2_terminal_output.txt`
 
 
 ## Resources (from course page)
@@ -135,4 +157,5 @@ https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic6VLM/vlm.ht
 ## Notes
 
 - This README covers only the required exercises (Exercise 1 and Exercise 2). Optional extensions on the course page are not included here.
-- Save terminal logs in outputs/ for portfolio review, as requested by the course page.
+- Save terminal logs in `outputs/` for portfolio review, as requested by the course page.
+- To add the screenshot: capture the Gradio interface (e.g., with a screenshot tool) while the Exercise 1 app is running, and save it as `outputs/screenshot.png`.

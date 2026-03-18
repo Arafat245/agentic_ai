@@ -1,0 +1,8 @@
+Launching Gradio interface...
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.
+[VLM] Sending 2 messages, image attached: True
+[VLM] Sending 4 messages, image attached: True
+[VLM] Sending 6 messages, image attached: True
+[VLM] Sending 8 messages, image attached: True
+[VLM] Sending 2 messages, image attached: True

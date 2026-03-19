@@ -3,3 +3,16 @@ __pycache__/
 *.pyc
 .env
 
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.bin
+*.onnx
+*.pkl
+*.pickle
+data/
+models/
+checkpoints/
+*.zip
+*.faiss

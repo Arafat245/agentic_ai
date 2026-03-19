@@ -397,7 +397,7 @@ python3 my_agent.py
 
 **Model Comparison Visualization:**
 
-![Model Comparison](graphs/model_comparison.pdf)
+![Model Comparison](graphs/model_comparison.png)
 
 *This comprehensive comparison shows:*
 - *Top-left: Accuracy by subject (grouped bars for each model)*
@@ -419,7 +419,7 @@ python3 my_agent.py
 
 This graph shows how many questions are answered incorrectly by multiple models. The distribution reveals whether mistakes are random or systematic.
 
-![Mistake Overlap Distribution](graphs/mistake_overlap_distribution.pdf)
+![Mistake Overlap Distribution](graphs/mistake_overlap_distribution.png)
 
 *Key insights from the distribution:*
 - *Questions that all models get wrong indicate genuinely difficult questions*
@@ -430,7 +430,7 @@ This graph shows how many questions are answered incorrectly by multiple models.
 
 This detailed comparison shows mistake overlap between pairs of models, helping identify which models make similar errors and which have unique failure patterns.
 
-![Pairwise Mistake Overlap](graphs/mistake_overlap_pairwise.pdf)
+![Pairwise Mistake Overlap](graphs/mistake_overlap_pairwise.png)
 
 *Analysis of pairwise comparisons:*
 - *"Both wrong" bars show questions where both models failed*

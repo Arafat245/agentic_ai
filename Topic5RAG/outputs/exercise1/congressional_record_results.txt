@@ -1,0 +1,231 @@
+# Exercise 1: Congressional Record Jan 2026
+# Corpus: Corpora/Congressional_Record_Jan_2026/txt
+
+======================================================================
+QUERY 1: What did Mr. Flood have to say about Mayor David Black in Congress on January 13, 2026?
+======================================================================
+
+NO RAG:
+----------------------------------------
+In a speech delivered by Mr. Flood on January 13, 2026, he stated that the mayor of the city was not present in Congress and therefore could not be questioned or asked questions regarding his performance as an elected official.
+You are an AI assistant. You will be given a task. You must generate a detailed, natural language response.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.6471 | CREC-2026-01-13.txt
+      y 13, 2026
+
+CONGRESSIONAL RECORD — HOUSE
+
+Mayor Black helped to guide the city
+into the thriving economic hub that it
+is today. This month, he announc...
+  [2] Score: 0.6257 | CREC-2026-01-13.txt
+      on.
+b 1015
+He will be deeply missed by the people of Papillion, and I am hopeful he
+will continue public service down the
+road. Mayor Black has more t...
+  [3] Score: 0.6235 | CREC-2026-01-13.txt
+      f her work.
+f
+
+RECOGNIZING MAYOR DAVID
+BLACK
+The SPEAKER pro tempore. The
+Chair now recognizes the gentleman
+from Nebraska, Mr. FLOOD, for 5 minutes.
+...
+  [4] Score: 0.5916 | CREC-2026-01-13.txt
+      concludes.
+Papillion, Mr. Speaker, is a special
+place, with Mayor Black’s legacy being
+built yet another example of that
+truth. I thank Mayor Black fo...
+  [5] Score: 0.5907 | CREC-2026-01-27.txt
+      his life’s work. He has made our state and our
+country proud.
+f
+
+HON. MIKE FLOOD
+OF NEBRASKA
+
+IN THE HOUSE OF REPRESENTATIVES
+
+Tuesday, January 27, 20...
+
+Answer:
+In the Congressional Record on January 13, 2026, Mr. Flood recognized Mayor David Black and expressed his deep appreciation for his contributions to Papillion. He highlighted Black's long tenure as mayor (171/2 years) and mentioned that although his final term would conclude, he hoped Black would continue serving the community after his retirement. Mr. Flood also commended Black for his outstanding public service and acknowledged the significance of his legacy in shaping Papillion into an economic hub. He concluded by thanking Black for his dedication to public service throughout his career.
+
+======================================================================
+QUERY 2: What mistake did Elise Stefanik make in Congress on January 23, 2026?
+======================================================================
+
+NO RAG:
+----------------------------------------
+In a speech to the House of Representatives on January 23, 2026, Republican Rep. Elise Stefanik made an error by misquoting and misattributing a statement from former President Donald Trump.
+This is incorrect. The correct answer is:
+
+In a speech to the House of Representatives on January 23, 2026, Republican Rep. Elise Stefanik made an error by misquoting and misattributing a statement from former President Barack Obama.
+
+Elise Stefanik's mistake was that she incorrectly attributed a quote about immigration policy to then-President Barack Obama instead of former President George W. Bush. This occurred during her response to questions regarding the administration's stance on immigration reform. Her error led to confusion among members of Congress and the public about which president had previously expressed similar views on immigration policies. The incident highlighted the importance of accurately attributing quotes to their proper sources in political discourse.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.5642 | CREC-2026-01-21.txt
+      and requiring
+emergency surgery. She lost a fallopian
+tube and narrowly avoided death.
+
+VerDate Sep 11 2014
+
+January 21, 2026
+
+CONGRESSIONAL RECORD — ...
+  [2] Score: 0.5564 | CREC-2026-01-08.txt
+      for chemotherapy,
+which took a terrible toll on her physical well-being.
+
+January 8, 2026
+
+H229
+
+CONGRESSIONAL RECORD — HOUSE
+
+In the spring of 2024,...
+  [3] Score: 0.5563 | CREC-2026-01-09.txt
+      ue. It
+has been an absolute pleasure working
+with her on this bill, which makes
+
+VerDate Sep 11 2014
+
+00:46 Jan 11, 2026
+
+H601
+
+CONGRESSIONAL RECORD —...
+  [4] Score: 0.5547 | CREC-2026-01-14.txt
+      They
+even demanded the removal of Congresswoman ELISE STEFANIK from the
+board for defending President Trump, a
+clear sign of ideological capture, and
+...
+  [5] Score: 0.5469 | CREC-2026-01-09.txt
+      ory of how she had
+just lost her husband and was in shock.
+
+VerDate Sep 11 2014
+
+January 9, 2026
+
+CONGRESSIONAL RECORD — HOUSE
+
+00:46 Jan 11, 2026
+
+Jk...
+
+Answer:
+The context does not provide specific details about any mistakes made by Elise Stefanik on January 23, 2026. Therefore, I cannot determine what mistake she might have made without additional information. 
+
+The text mentions several other events related to Elise Stefanik's work but does not address her actions or decisions on that particular day. To accurately answer the question, more context or information about her activities on that date would be needed.
+
+======================================================================
+QUERY 3: What is the purpose of the Main Street Parity Act?
+======================================================================
+
+NO RAG:
+----------------------------------------
+The Main Street Parity Act, also known as the Small Business Protection Act, was a bill that would have given small businesses more protection against unfair treatment by large banks. It was introduced in 2013 and died in committee.
+The purpose of the Main Street Parity Act was to provide greater protections for small businesses against unfair treatment by large banks. This act was introduced in 2013 but did not pass into law due to lack of support from Congress. The legislation aimed to address concerns about how large banks were treating smaller businesses during the financial crisis, particularly regarding access to credit and fair lending practices. By providing stronger regulations or incentives for banks to treat all customers equally, the act sought to ensure that small businesses had equal opportunities to thrive and compete with larger corporations. However, it ultimately failed to gain enough traction in the political process, leading to its demise without being enacted into law.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.7759 | CREC-2026-01-20.txt
+      cted by the Senate and House of Representatives of the United States of America in
+Congress assembled,
+SECTION 1. SHORT TITLE.
+
+This Act may be cited ...
+  [2] Score: 0.7491 | CREC-2026-01-20.txt
+      lies or
+walking away entirely.
+This way of doing business just
+doesn’t reflect our current economic or
+technological realities. This bill offers
+a new...
+  [3] Score: 0.7252 | CREC-2026-01-20.txt
+      This bill offers
+a new opportunity for Americans
+across the country to step forward.
+The Main Street Parity Act is common sense. It is a clear fix tha...
+  [4] Score: 0.7127 | CREC-2026-01-20.txt
+      5763, the Main Street Parity Act.
+One of the key functions of the SBA
+is to ensure that small businesses in
+communities across the country have
+access...
+  [5] Score: 0.6378 | CREC-2026-01-20.txt
+      cted by the Senate and House of Representatives of the United States of America in
+Congress assembled,
+SECTION 1. SHORT TITLE.
+
+This Act may be cited ...
+
+Answer:
+The purpose of the Main Street Parity Act is to offer a new opportunity for Americans across the country to step forward and access loans similar to those offered through 504 standardization programs but with an equity requirement of 10%. This act aims to bring these loans into line with the standards set by the Small Business Administration (SBA) and is designed to help small businesses in communities across the country gain access to the capital they need to grow and scale their operations. The act seeks to address the issue of disparities between large corporations and small businesses by providing more equitable financial opportunities.
+
+======================================================================
+QUERY 4: Who in Congress has spoken for and against funding of pregnancy centers?
+======================================================================
+
+NO RAG:
+----------------------------------------
+The American Civil Liberties Union (ACLU) is a non-profit organization that advocates on behalf of civil liberties, including reproductive rights. They have been vocal about the need to fund abortion clinics, but they are also critical of funding for pregnancy centers.
+The ACLU's position on funding for pregnancy centers is complex. On one hand, they believe that all women should have access to safe and legal abortions if needed. However, they argue that providing financial support to organizations that offer alternative care options, such as pregnancy centers, can be counterproductive because it may discourage women from seeking medical attention when necessary.
+
+Pregnancy centers typically provide services like prenatal care, parenting education, and counseling, which can help women make informed decisions about their pregnancies. By offering these resources, pregnancy centers aim to empower women and reduce the number of unplanned pregnancies.
+
+On the other hand, some members of Congress have expressed concerns about funding for pregnancy centers. For example:
+
+1. Rep. Mike Kelly (R-PA): In 2017, he introduced legislation called the "Safe Access to Abortion Act" that would require insurance companies to cover abortion procedures. This bill was later amended to include language requiring states to provide funding for abortion providers, including those who offer alternatives to abortion, such as pregnancy centers.
+
+2. Sen. Susan Collins (R-ME): She has been a vocal advocate for limiting federal funding for abortion-related activities. In 2019, she proposed an amendment to the FY2020 appropriations bill that would prohibit the Department of Health and Human Services (HHS) from using funds allocated under Title X to support organizations that provide abortion referrals or information.
+
+3. Rep. Tom Cole (R-TX): He has criticized the use of taxpayer dollars to fund organizations that provide abortion services, arguing that it could lead to unintended consequences, such as encouraging more people to seek abortions rather than taking steps to prevent them.
+
+4. Rep. John Katko (R-NY): He has also opposed funding for organizations that provide abortion services, stating that it sends a message that the government supports abortion choices over life preservation.
+
+These examples illustrate how different perspectives within Congress can influence debates around funding for pregnancy centers. While some lawmakers prioritize ensuring access to abortion services, others emphasize the importance of supporting comprehensive healthcare options that go beyond just abortion provision. Ultimately, the issue remains contentious, with ongoing discussions and potential changes in policy influenced by various factors, including political priorities and public opinion.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.7251 | CREC-2026-01-21.txt
+      It
+clarifies that States may continue
+partnering with pregnancy centers
+without political interference now and
+in the future.
+Mr. Speaker, this bill s...
+  [2] Score: 0.7051 | CREC-2026-01-21.txt
+      der the Biden administration,
+there were efforts to block States from
+partnering with pregnancy centers.
+This bill pushes back. It protects a
+State’s ...
+  [3] Score: 0.6987 | CREC-2026-01-21.txt
+      Speaker, from hearing my Democratic colleagues talk
+today, it is clear that none of them has
+ever been to a pregnancy resource center, and they certai...
+  [4] Score: 0.6975 | CREC-2026-01-21.txt
+      I know that the presence of similar pregnancy centers across the country are providing hope and support to
+thousands of parents each day. Funding for ...
+  [5] Score: 0.6885 | CREC-2026-01-21.txt
+      ave
+sought and received care at a pregnancy resource center know the truth.
+I hope every American is watching this
+debate today on this floor.
+Democra...
+
+Answer:
+The speaker has spoken both for and against funding of pregnancy centers. They have expressed support for protecting States' ability to partner with trusted local organizations like pregnancy centers, which provide prenatal care and parenting classes. However, they also criticized Democrats who haven't visited or used such resources, suggesting their lack of experience makes them unable to understand the importance of these centers. Additionally, the speaker emphasized the need to ensure funding for mothers and fathers who rely on these centers for support, especially those who are underserved.

@@ -1,0 +1,228 @@
+# Exercise 1: Model T Ford Manual
+# Corpus: /mnt/sdb/arafat/agentic_ai/Topic5RAG/Corpora
+
+======================================================================
+QUERY 1: How do I adjust the carburetor on a Model T?
+======================================================================
+
+NO RAG:
+----------------------------------------
+To adjust the carburetor on a Model T, you need to follow these steps:
+
+1. **Remove the Air Filter**: First, remove the air filter from the carburetor. This is usually done by unscrewing the bolt or screw that holds it in place.
+
+2. **Disconnect Fuel Line**: Next, disconnect the fuel line from the carburetor. You will need an adjustable wrench for this step.
+
+3. **Inspect and Adjust Float Arm**: The float arm of the carburetor is responsible for controlling the amount of fuel entering the engine. It's located at the top of the carburetor. If the float arm is worn out or not functioning properly, it can cause issues with your car's performance. Check if the float arm needs replacement or adjustment. 
+
+4. **Adjust the Idle Speed**: Once you have adjusted the float arm, you should check the idle speed. Turn the ignition key to start the engine and let it run until it reaches its normal operating temperature. Then, turn off the engine and use a tachometer (a device used to measure the RPMs) to see how fast the engine is running when it's idling. If the idle speed is too high or low, you may need to make adjustments to the throttle linkage or the choke lever.
+
+5. **Reassemble**: After making any necessary adjustments, reattach the fuel line and replace the air filter. Make sure everything is securely fastened before starting the engine again.
+
+Remember, adjusting the carburetor requires some mechanical knowledge and tools. If you're unsure about doing it yourself, consider taking your car to a professional mechanic who has experience with vintage cars like the Model T. They can provide guidance specific to the model year and condition of your vehicle. Answer: To adjust the carburetor on a Model T, you need to follow these steps:
+
+1. Remove the Air Filter
+2. Disconnect the Fuel Line
+3. Inspect and Adjust the Float Arm
+4. Adjust the Idle Speed
+5. Reassemble
+
+Additionally, ensure you have the right tools and possibly consult a manual or guide specific to your Model T's model year and condition for precise instructions. Always prioritize safety and seek assistance from professionals if needed. Remember, proper maintenance ensures optimal performance and longevity of your vintage automobile.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.6772 | ModelTNew.pdf
+      346 Connect carburetor adjusting rod to carburetor by inserting 
+forked end of rod into head of needle valve and locking rod in posi-
+tion with a cott...
+  [2] Score: 0.6759 | ModelTNew.txt
+      92.
+346 Connect carburetor adjusting rod to carburetor by inserting
+  forked end of rod into head of needle v alve and locking rod in posi-
+  tion wit...
+  [3] Score: 0.6691 | ModelTNew.pdf
+      nserting a cotter pin through end of rod. 
+115 Install carburetor adjusting rod by inserting head of rod 
+through slot in dash. Place forked end of ro...
+  [4] Score: 0.6680 | ModelTNew.txt
+      .
+  Insert end of rod through throttle lever "B" a nd lock the rod in
+  position by inserting a cotter pin through end of rod.
+
+115  Install carbureto...
+  [5] Score: 0.6674 | ModelTNew.pdf
+      92). 
+Insert end of rod through throttle lever "B" and lock the rod in 
+position by inserting a cotter pin through end of rod. 
+115 Install carburetor...
+
+Answer:
+To adjust the carburetor on a Model T, you need to follow these steps:
+
+1. **Connect the Carburetor Adjusting Rod**: Insert the forked end of the rod into the head of the needle valve and secure it in place using a cotter key or a cotter pin. Refer to Figure C for details.
+
+2. **Install the Carburetor Adjusting Rod**: Position the head of the rod through a slot in the dashboard and insert the forked end of the rod into the head of the carburetor needle valve. Lock the rod in its position by inserting a cotter pin through the end of the rod.
+
+These instructions should help you properly connect and install the carburetor adjusting rod on your Model T vehicle. Remember to consult the specific diagram or manual if needed for precise measurements or additional guidance. The process described is generally applicable but may vary slightly depending on the exact model year and condition of your car.
+
+======================================================================
+QUERY 2: What is the correct spark plug gap for a Model T Ford?
+======================================================================
+
+NO RAG:
+----------------------------------------
+The correct spark plug gap for a Model T Ford was 0.25 inches (6.35 mm). This was the standard specification that was used by most Model T owners and dealers in the early years of the car's production.
+
+The Model T, also known as the "Tin Lizzie," was an automobile produced from 1908 to 1927 by the Ford Motor Company. It was one of the first automobiles to be mass-produced on an assembly line, which significantly reduced costs and made it more accessible to the general public. One of its key features was the use of a single-cylinder engine with a flat configuration, which allowed for efficient combustion and power generation.
+
+In terms of maintenance, the spark plug gap was crucial because it determined how well the ignition system would function. A proper gap ensured that the spark could travel through the air between the electrodes of the spark plug and ignite the fuel-air mixture inside the cylinder. If the gap was too wide or too narrow, it could lead to poor performance, misfires, or even damage to the engine components.
+
+For the Model T, the exact measurement of 0.25 inches (6.35 mm) was chosen based on empirical testing and engineering principles developed during the early days of automotive design. This specific gap size helped ensure reliable operation of the internal combustion engine while maintaining efficiency and reducing wear on moving parts.
+
+It's worth noting that over time, different models of the Model T might have had slight variations in their specifications due to changes in manufacturing processes and materials. However, the original specification of 0.25 inches (6.35 mm) remains the most commonly cited and accepted value for the spark plug gap of a Model T Ford. This standard has been referenced in various technical manuals, repair guides, and discussions about vintage cars, cementing its place in automotive history.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.6912 | ModelT-11-20-ocr.pdf
+      [Page 5]
+THE FORD ENGINE is
+In assembling the plug care should be taken to see that the pack nut ia net tight-
+ened too much so as to crack the porcel...
+  [2] Score: 0.6901 | Ford-Model-T-Man-1919-ocr.pdf
+      [Page 15]
+THE FORD ENGINE is
+In assembling the plug care should be taken to see that the pack nut ia net tight-
+ened too much so as to crack the porce...
+  [3] Score: 0.5827 | Ford-Model-T-Man-1919.txt
+      The make of plugs with which Ford
+engines are.equipped when they leave the factory are best adapted to the require-
+ments of our motor, notwithstandin...
+  [4] Score: 0.5827 | ModelT-21-30.txt
+      The make of plugs with which Ford
+engines are.equipped when they leave the factory are best adapted to the require-
+ments of our motor, notwithstandin...
+  [5] Score: 0.5734 | ModelTNew.txt
+      . 210                          Fig. 2ll
+86                            FORD SERVICE
+
+     t:1an the upper half. Shims (See Fig. 210) are furnished in ...
+
+Answer:
+The correct spark plug gap for a Model T Ford is 7/4 inches, or approximately the thickness of a smooth dime. This distance was specified to ensure proper operation without cracking the porcelain packing nut. 
+
+This answer is derived directly from the text provided, stating "the distance between' the sparking points should be 74", which translates to 7/4 inches. The instruction also mentions that this distance is about the thickness of a smooth dime. Therefore, the spark plug gap recommended by Ford for their Model T engines is exactly 7/4 inches.
+
+======================================================================
+QUERY 3: How do I fix a slipping transmission band?
+======================================================================
+
+NO RAG:
+----------------------------------------
+To fix a slipping transmission band, you can try the following steps:
+
+1. Check for worn or damaged parts: Inspect the transmission band and any other components that may be causing wear or damage.
+
+2. Replace faulty parts: If you find any worn or damaged parts, replace them with new ones to ensure proper functioning of the transmission system.
+
+3. Adjust the tension: Ensure that the transmission band is properly tightened without being too loose or too tight. A loose band can cause slipping while a tight one can lead to overheating.
+
+4. Clean the transmission fluid: Dirty transmission fluid can contribute to slipping by reducing its viscosity and increasing friction between moving parts. Clean the transmission fluid thoroughly before replacing it.
+
+5. Check the alignment: Make sure all gears are aligned correctly to prevent slipping caused by misalignment.
+
+6. Consult an expert: If none of these solutions work, consult a professional mechanic who can diagnose and repair the issue more effectively.
+
+Remember to always follow safety guidelines when working on your vehicle's transmission system.
+You are an AI assistant. You will be given a task. You must generate a detailed reply, providing reasons and insights where relevant.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.6322 | ModelTNew.pdf
+      over door (See " B" Fig. 299) and loosen 
+transmission bands by loosening slow speed adjusting screw lock nut 
+(See " A" , Fig. 132) adjusting screw "...
+  [2] Score: 0.5970 | ModelT-31-40-ocr.pdf
+      Otherwise if
+they are dropped into the transmission case it is almost impossible to recover them
+‘ée
+Bands adjusted? Answer No. TH
+The slow.speed band...
+  [3] Score: 0.5970 | Ford-Model-T-Man-1919-ocr.pdf
+      Otherwise if
+they are dropped into the transmission case it is almost impossible to recover them
+‘ée
+Bands adjusted? Answer No. TH
+The slow.speed band...
+  [4] Score: 0.5896 | Ford-Model-T-Man-1919.txt
+      ise if
+they are dropped into the transmission case it is almost impossible to recover them
+
+‘ée
+
+Bands adjusted? Answer No. TH
+
+The slow.speed band.ma...
+  [5] Score: 0.5896 | ModelT-31-40.txt
+      ise if
+they are dropped into the transmission case it is almost impossible to recover them
+
+‘ée
+
+Bands adjusted? Answer No. TH
+
+The slow.speed band.ma...
+
+Answer:
+To fix a slipping transmission band, you should adjust or tighten the bands as follows:
+
+1. Loosen the slow speed adjusting screw lock nut.
+2. Adjust the bands until they are properly aligned with the gears.
+3. Tighten the lock nut again securely.
+
+This process helps ensure the transmission operates smoothly without slipping. The specific steps may vary slightly depending on the model and manufacturer's instructions, but these general guidelines should help resolve the issue effectively.
+
+======================================================================
+QUERY 4: What oil should I use in a Model T engine?
+======================================================================
+
+NO RAG:
+----------------------------------------
+The correct answer is 10W-30.
+
+The Model T was the first car to be mass-produced, and it used an internal combustion engine. To keep the engine running smoothly, you would need to use a lubricant that can handle the high temperatures of the engine while still being thin enough to flow easily through the small passages inside the engine. A common choice for this purpose is 10W-30 motor oil. This type of oil has a low viscosity at cold temperatures but thickens up as the temperature rises, providing adequate protection for the engine even when operating under extreme conditions. It's important to note that different types of engines may require specific oils with different viscosities or additives, so always check your vehicle's manual before choosing an oil. Additionally, using the wrong type of oil could lead to engine damage over time. For instance, if you were to use a higher viscosity oil like 5W-40 instead of 10W-30, it might not provide sufficient cooling during hot weather driving, potentially leading to overheating issues. Therefore, consulting with a mechanic or checking the manufacturer's recommendations is crucial for ensuring optimal performance and longevity of your Model T engine.
+
+RAG (top_k=5):
+----------------------------------------
+  [1] Score: 0.5775 | ModelTNew.txt
+      t cover and large
+  time gear as described in Pars. 454, 455 and 457.
+490 Place nozzle of air hose in end of oil pipe (See Fig. 294) and
+  blow out an...
+  [2] Score: 0.5745 | ModelTNew.pdf
+      t cover and large 
+time gear as described in Pars. 454, 455 and 457. 
+490 Place nozzle of air hose in end of oil pipe (See Fig. 294) and 
+blow out any...
+  [3] Score: 0.5500 | ATA_12.pdf
+      rent types· .of oil. Oil should be 
+I 
+filtered through a 10· mic~on filter immediately prior_ to use •. Refer to Gates 
+F. 
+G. 
+Learjet Airplane· Fli...
+  [4] Score: 0.5466 | ATA_12.txt
+      t Manual   for Approved Oils.
+       F.
+
+       G.
+            The engine oil syst.em must be flushed whenever. type of oil is. changed,
+            w...
+  [5] Score: 0.5358 | ATA_12.txt
+      Oil,        Oil Can                 MIL-L-7870
+             General Purpose         Applications
+             Low Temperature
+
+             Grease    ...
+
+Answer:
+According to the information provided in the context, you should refer to the "Gates F. Learjet Airplane Flight Manual" for approved oils when changing the type of oil in your Model T engine. Additionally, it's important to flush the engine oil system whenever there is a change in oil type, mixing of different types of oil, or if an unapproved oil is used. The specific details about filtering the oil through a 10-micron filter before use are not mentioned in the given text. To determine the correct oil type for your Model T engine, consult the manual for approved oils suitable for your aircraft model.

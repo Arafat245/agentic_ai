@@ -1,0 +1,13 @@
+Sample conversation from Task 6 (multi-LLM chat with shared history).
+
+Run: echo -e "What is the best ice cream flavor?\nHey Qwen, what do you think?\nI agree.\nquit" | python task7_multi_llm_history.py
+
+Expected flow:
+1. Human: "What is the best ice cream flavor?" → Llama responds
+2. Human: "Hey Qwen, what do you think?" → Qwen responds (sees Human + Llama in context)
+3. Human: "I agree." → Llama responds (sees Human, Llama, Qwen, Human in context)
+
+To record your own conversation, run interactively:
+  python task7_multi_llm_history.py
+
+Then type your messages. Use "Hey Qwen" to switch to Qwen; otherwise Llama responds.

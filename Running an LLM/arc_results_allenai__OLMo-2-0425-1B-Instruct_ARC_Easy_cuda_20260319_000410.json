@@ -1,0 +1,22 @@
+{
+  "model": "allenai/OLMo-2-0425-1B-Instruct",
+  "dataset": "ARC-Easy",
+  "benchmark": "ARC",
+  "device": "cuda",
+  "timestamp": "20260319_000410",
+  "overall_accuracy": 63.0,
+  "total_correct": 63,
+  "total_questions": 100,
+  "subject_results": [
+    {
+      "subject": "ARC-Easy",
+      "correct": 63,
+      "total": 100,
+      "accuracy": 63.0
+    }
+  ],
+  "timing": {
+    "eval_wall_s": 2.5646598413586617,
+    "eval_cpu_s": 2.565865917
+  }
+}

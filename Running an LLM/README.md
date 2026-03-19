@@ -1,6 +1,15 @@
-# Running an LLM: A Comprehensive Guide to Large Language Models
+# Running an LLM
+
+**Topic 1** — Agentic AI Spring 2026 | [Course Page](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/Running_an_LLM.html)
 
 This repository contains implementations and experiments for understanding Large Language Models (LLMs) from the ground up, including model evaluation, chat agent development, and performance analysis.
+
+## Portfolio Contents
+
+Per course requirements, this subdirectory includes:
+- **Code**: All evaluation scripts, chat agent, and graph generation tools
+- **Graphs (PDF)**: Accuracy and performance comparison across multiple models and benchmark datasets (MMLU, ARC)
+- **Notes**: This markdown file discussing the questions from the tasks
 
 ## Table of Contents
 
@@ -10,10 +19,19 @@ This repository contains implementations and experiments for understanding Large
 - [Tasks and Implementations](#tasks-and-implementations)
 - [Results and Analysis](#results-and-analysis)
 - [Key Findings](#key-findings)
+- [Optional Tasks](#optional-tasks)
+- [References](#references)
 
 ---
 
 ## Learning Goals
+
+*(From [course instructions](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/Running_an_LLM.html))*
+
+- Understand how an LLM works at a high level and the role of a tokenizer
+- Have knowledge of the range of LLMs available and the major LLM benchmark datasets on Hugging Face
+- Be able to run tiny/small LLMs on your laptop and small/medium ones on Google Colab on a variety of benchmarks
+- Understand how a chat agent maintains the conversation context, and be able to build a simple chat agent
 
 ### 1. Understanding LLMs at a High Level
 
@@ -75,31 +93,34 @@ This repository contains implementations and experiments for understanding Large
 
 ## Setup and Installation
 
-### Prerequisites
+### Task 1: Prerequisites
+
+Per [course instructions](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/Running_an_LLM.html):
 
 ```bash
-# Install required packages
+# Required packages (conda or pip)
+pip install -r requirements.txt
+
+# Or install manually:
 pip install transformers torch datasets accelerate tqdm huggingface_hub bitsandbytes
-
-# Or using conda
-conda install -c conda-forge transformers torch datasets accelerate tqdm
-pip install huggingface_hub bitsandbytes
+pip install matplotlib seaborn numpy   # for graph scripts
 ```
 
-### Hugging Face Authentication
+### Task 2: Hugging Face Authentication
+
+Set up [Hugging Face authorization](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/COMPLETE_HF_AUTH_GUIDE.html) for Llama 3.2-1B:
 
 ```bash
-# Login to Hugging Face (required for gated models like Llama)
 huggingface-cli login
-
-# Enter your token from: https://huggingface.co/settings/tokens
+# Enter token from: https://huggingface.co/settings/tokens
 ```
 
-### Verify Setup
+### Task 3: Verify Setup
 
-Run the basic evaluation script to verify everything works:
+Run [llama_mmlu_eval.py](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/llama_mmlu_eval.py) on two [MMLU topics](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/datasets2025.html):
 
 ```bash
+conda activate agentic_ai   # or your env with dependencies
 python3 llama_mmlu_eval.py
 ```
 
@@ -109,17 +130,21 @@ python3 llama_mmlu_eval.py
 
 ```
 Running an LLM/
-├── README.md                          # This file
+├── README.md                          # This file (notes discussing task questions)
+├── requirements.txt                   # Python dependencies
 ├── llama_mmlu_eval.py                 # Original MMLU evaluation script
 ├── llama_mmlu_eval_optimized.py       # Optimized version with better timing
 ├── three_model.py                     # Multi-model evaluation script
-├── create_graphs.py                   # Visualization and analysis script
+├── arc_eval.py                        # ARC benchmark evaluation script
+├── create_graphs.py                   # MMLU visualization (PDF/PNG)
+├── create_cross_dataset_graphs.py     # Cross-dataset comparison (MMLU + ARC)
 ├── my_agent.py                        # Enhanced chat agent implementation
 ├── simple_chat_agent.py               # Basic chat agent (starter code)
-├── graphs/                            # Generated visualization graphs
-│   ├── model_comparison.png
-│   ├── mistake_overlap_distribution.png
-│   └── mistake_overlap_pairwise.png
+├── graphs/                            # Generated graphs (PDF for portfolio)
+│   ├── model_comparison.pdf
+│   ├── mistake_overlap_distribution.pdf
+│   ├── mistake_overlap_pairwise.pdf
+│   └── cross_dataset_comparison.pdf   # MMLU vs ARC comparison
 ├── chat_history/                      # Saved conversation histories
 └── *.json                            # Evaluation results (JSON format)
 ```
@@ -128,28 +153,32 @@ Running an LLM/
 
 ## Tasks and Implementations
 
-### Task 1: Environment Setup and Verification
+### Task 1–3: Environment Setup and Verification
 
 ✅ **Completed**: Set up Python environment with all required modules
-- Installed: `transformers`, `torch`, `datasets`, `accelerate`, `tqdm`, `huggingface_hub`, `bitsandbytes`
-- Configured Hugging Face authentication for Llama 3.2-1B
+- Installed: `transformers`, `torch`, `datasets`, `accelerate`, `tqdm`, `huggingface_hub`, `bitsandbytes`, `matplotlib`, `seaborn`, `numpy`
+- Configured [Hugging Face authentication](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/COMPLETE_HF_AUTH_GUIDE.html) for Llama 3.2-1B
 - Verified setup by running `llama_mmlu_eval.py` on two MMLU subjects
 
-### Task 2: Performance Timing Comparison
+### Task 4: Performance Timing Comparison
 
 ✅ **Completed**: Timed code execution across different configurations
 
-**Timing Method:**
+**Timing Method** (using `time` shell command):
 ```bash
-/usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device <device> --quant <quant>
+/usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cuda --quant none
+/usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cuda --quant 4bit
+/usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cuda --quant 8bit
+/usr/bin/time -v python3 llama_mmlu_eval_optimized.py --device cpu --quant none
+# CPU + 4-bit: Not possible (bitsandbytes requires CUDA; skip on MacBook)
 ```
 
 **Configurations Tested:**
 1. **GPU, no quantization**: Full precision on CUDA
-2. **GPU, 4-bit quantization**: Memory-efficient with bitsandbytes
-3. **GPU, 8-bit quantization**: Balanced quality/memory
+2. **GPU, 4-bit quantization**: Memory-efficient with bitsandbytes *(skip on MacBook)*
+3. **GPU, 8-bit quantization**: Balanced quality/memory *(skip on MacBook)*
 4. **CPU, no quantization**: Full precision on CPU
-5. **CPU, 4-bit quantization**: (Not supported - bitsandbytes requires CUDA)
+5. **CPU, 4-bit quantization**: Not supported (bitsandbytes requires CUDA)
 
 **Key Findings:**
 - GPU execution is 10-50x faster than CPU
@@ -161,15 +190,15 @@ Running an LLM/
 - **CPU time**: Process CPU time
 - **GPU time**: CUDA kernel execution time (when on GPU)
 
-### Task 3: Multi-Model Evaluation
+### Task 5: Multi-Model Evaluation (Code Modifications)
 
-✅ **Completed**: Extended evaluation to 10 subjects across 3+ models
+✅ **Completed**: Modified code per course requirements
 
-**Models Evaluated:**
-1. `meta-llama/Llama-3.2-1B-Instruct`
-2. `allenai/OLMo-2-0425-1B-Instruct`
-3. `Qwen/Qwen2.5-0.5B-Instruct`
-4. Additional models tested on Colab
+**5a. Run on 10 subjects using 2 other tiny/small models** (in addition to Llama 3.2-1B):
+- `meta-llama/Llama-3.2-1B-Instruct`
+- `allenai/OLMo-2-0425-1B-Instruct` — [LLM reference](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/llm_vlm_models_reference.html)
+- `Qwen/Qwen2.5-0.5B-Instruct`
+- Additional models tested on Colab
 
 **Subjects Evaluated (10 total):**
 - astronomy
@@ -193,33 +222,27 @@ python3 three_model.py \
   --subjects astronomy business_ethics abstract_algebra anatomy computer_security econometrics electrical_engineering high_school_physics machine_learning professional_law
 ```
 
-### Task 4: Enhanced Timing and Question-Level Analysis
+**5b. Add timing information** to evaluation summary: real time, CPU time, GPU time
 
-✅ **Completed**: Added comprehensive timing and per-question tracking
+**5c. Add option to print** each question, model answer, and correctness:
+- `--verbose` flag
+- `--save_question_data` for detailed question-level results
 
-**Features Added:**
-- Real time, CPU time, and GPU time tracking
-- Per-question correctness tracking
-- `--verbose` flag to print each question, answer, and correctness
-- `--save_question_data` flag to save detailed question-level results
-
-**Usage:**
+**Example:**
 ```bash
-python3 llama_mmlu_eval_optimized.py \
-  --model allenai/OLMo-2-0425-1B-Instruct \
-  --device cuda \
-  --quant none \
-  --verbose \
-  --save_question_data \
-  --subjects astronomy business_ethics
+python3 llama_mmlu_eval_optimized.py --model allenai/OLMo-2-0425-1B-Instruct --device cuda --quant none --verbose --save_question_data --subjects astronomy business_ethics
 ```
 
-### Task 5: Results Visualization and Pattern Analysis
+### Task 6: Results Visualization and Pattern Analysis
 
-✅ **Completed**: Created graphs and analyzed mistake patterns
+✅ **Completed**: Ran code and created graphs; analyzed mistake patterns
+
+**Course questions:**
+- *Can you see any patterns to the mistakes each model makes or do they appear random?* → See [Mistake Pattern Analysis](#mistake-pattern-analysis)
+- *Do all the models make mistakes on the same questions?* → Yes, significant overlap; see pairwise graphs
 
 **Visualizations Created:**
-1. **Model Comparison Graph** (`graphs/model_comparison.png`):
+1. **Model Comparison Graph** (`graphs/model_comparison.pdf`):
    - Accuracy by subject (grouped bars)
    - Overall accuracy comparison
    - Accuracy heatmap (subject vs model)
@@ -227,8 +250,8 @@ python3 llama_mmlu_eval_optimized.py \
    - *See full graph in [Results and Analysis](#results-and-analysis) section*
 
 2. **Mistake Overlap Analysis**:
-   - **Distribution Graph** (`graphs/mistake_overlap_distribution.png`): Shows how many questions are answered incorrectly by multiple models
-   - **Pairwise Comparison** (`graphs/mistake_overlap_pairwise.png`): Detailed comparison of mistake overlap between model pairs
+   - **Distribution Graph** (`graphs/mistake_overlap_distribution.pdf`): Shows how many questions are answered incorrectly by multiple models
+   - **Pairwise Comparison** (`graphs/mistake_overlap_pairwise.pdf`): Detailed comparison of mistake overlap between model pairs
    - *See full graphs in [Mistake Pattern Analysis](#mistake-pattern-analysis) section*
 
 **Pattern Analysis Findings:**
@@ -237,37 +260,59 @@ python3 llama_mmlu_eval_optimized.py \
 - **Subject-Specific**: Some subjects (e.g., professional_law, abstract_algebra) are consistently harder
 - **Model-Specific Strengths**: Different models excel in different domains
 
-**Generate Graphs:**
+**Generate Graphs** (PDF format for portfolio):
 ```bash
-python3 create_graphs.py \
-  --result_dir . \
-  --question_data_dir . \
-  --output_dir graphs/
+python3 create_graphs.py --result_dir . --question_data_dir . --output_dir graphs/ --format pdf
 ```
+*Requires: `pip install matplotlib seaborn numpy`*
 
 **Graph Output:**
-All graphs are saved in the `graphs/` directory:
-- `model_comparison.png` - Comprehensive model performance comparison
-- `mistake_overlap_distribution.png` - Distribution of mistake overlap
-- `mistake_overlap_pairwise.png` - Pairwise model mistake comparison
+All graphs are saved in PDF format (portfolio requirement) in the `graphs/` directory:
+- `model_comparison.pdf` - Comprehensive model performance comparison
+- `mistake_overlap_distribution.pdf` - Distribution of mistake overlap
+- `mistake_overlap_pairwise.pdf` - Pairwise model mistake comparison
+- `cross_dataset_comparison.pdf` - Model performance across MMLU and ARC benchmarks
 
-### Task 6: Google Colab Execution
+### Task 7: Google Colab Execution
 
-✅ **Completed**: Ran evaluations on Google Colab
+✅ **Completed**: Repeated steps on [Google Colab](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/COLAB_MMLU_GUIDE.html)
 
 **Models Tested on Colab:**
-- Tiny/Small: Llama 3.2-1B, OLMo 2 1B, Qwen 2.5 0.5B
-- Small/Medium: Qwen 2.5 1.5B, Qwen 2.5 3B, Qwen 2.5 7B
+- **3 tiny/small**: Llama 3.2-1B, OLMo 2 1B, Qwen 2.5 0.5B
+- **3 small/medium**: Qwen 2.5 1.5B, Qwen 2.5 3B, Qwen 2.5 7B — [reference](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/llm_vlm_models_reference.html)
 
-**Colab Advantages:**
-- Free GPU access (T4, V100, or A100)
-- Built-in Gemini coding assistant
-- Easy file download/upload
-- Longer runtime sessions
+**Colab advantages:** Free GPU, built-in Gemini coding assistant, file download/upload
 
-### Task 7: Chat Agent Implementation
+### Multiple Benchmark Datasets (Portfolio Requirement)
 
-✅ **Completed**: Built a comprehensive chat agent from scratch
+✅ **Completed**: Added ARC benchmark for cross-dataset comparison
+
+**ARC (AI2 Reasoning Challenge):**
+- Science reasoning multiple-choice dataset
+- Configs: ARC-Easy, ARC-Challenge
+- Dataset: `allenai/ai2_arc` on Hugging Face
+
+**Usage:**
+```bash
+# Evaluate on ARC-Easy (quick test with 100 examples)
+python3 arc_eval.py --model meta-llama/Llama-3.2-1B-Instruct --config ARC-Easy --max_examples 100
+
+# Full ARC-Challenge evaluation
+python3 arc_eval.py --model Qwen/Qwen2.5-0.5B-Instruct --config ARC-Challenge --device cuda
+```
+
+**Cross-Dataset Graphs:**
+```bash
+# Generate PDF comparing models across MMLU and ARC
+python3 create_graphs.py --result_dir . --question_data_dir . --output_dir graphs/ --format pdf
+python3 create_cross_dataset_graphs.py --result_dir . --output_dir graphs/ --format pdf
+```
+
+### Task 8: Chat Agent Implementation
+
+✅ **Completed**: Built chat agent from scratch (no pre-defined chat library)
+
+Based on [simple chat agent](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/simple_chat_agent.py); implements [context management](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/CONTEXT_MANAGEMENT.html)
 
 **Features Implemented:**
 1. **Basic Chat Functionality**:
@@ -285,10 +330,10 @@ All graphs are saved in the `graphs/` directory:
    - Prevents context overflow in long conversations
    - Implementation: `manage_context_sliding_window()`
 
-4. **Conversation History Toggle**:
-   - `/history` command to toggle history on/off
-   - Compare performance with vs without context
-   - Demonstrates importance of conversation memory
+4. **Conversation History Toggle** (course requirement):
+   - `/history` command to turn off conversation history
+   - Compare chat agent on multi-turn conversation: with history maintained vs. when it is not
+   - With history OFF: each turn sees only system prompt + current message (no memory)
 
 5. **Additional Features**:
    - Save/load conversations (`/save`, `/load`)
@@ -352,7 +397,7 @@ python3 my_agent.py
 
 **Model Comparison Visualization:**
 
-![Model Comparison](graphs/model_comparison.png)
+![Model Comparison](graphs/model_comparison.pdf)
 
 *This comprehensive comparison shows:*
 - *Top-left: Accuracy by subject (grouped bars for each model)*
@@ -374,7 +419,7 @@ python3 my_agent.py
 
 This graph shows how many questions are answered incorrectly by multiple models. The distribution reveals whether mistakes are random or systematic.
 
-![Mistake Overlap Distribution](graphs/mistake_overlap_distribution.png)
+![Mistake Overlap Distribution](graphs/mistake_overlap_distribution.pdf)
 
 *Key insights from the distribution:*
 - *Questions that all models get wrong indicate genuinely difficult questions*
@@ -385,7 +430,7 @@ This graph shows how many questions are answered incorrectly by multiple models.
 
 This detailed comparison shows mistake overlap between pairs of models, helping identify which models make similar errors and which have unique failure patterns.
 
-![Pairwise Mistake Overlap](graphs/mistake_overlap_pairwise.png)
+![Pairwise Mistake Overlap](graphs/mistake_overlap_pairwise.pdf)
 
 *Analysis of pairwise comparisons:*
 - *"Both wrong" bars show questions where both models failed*
@@ -519,11 +564,15 @@ You: /stats
 ### Generating Visualizations
 
 ```bash
-# Create comparison graphs
+# Create comparison graphs (PDF for portfolio)
 python3 create_graphs.py \
   --result_dir . \
   --question_data_dir . \
-  --output_dir graphs/
+  --output_dir graphs/ \
+  --format pdf
+
+# Create cross-dataset comparison (MMLU + ARC)
+python3 create_cross_dataset_graphs.py --result_dir . --output_dir graphs/ --format pdf
 ```
 
 ---
@@ -532,13 +581,15 @@ python3 create_graphs.py \
 
 ### Evaluation Scripts
 
-- **`llama_mmlu_eval.py`**: Original evaluation script with quantization support
-- **`llama_mmlu_eval_optimized.py`**: Optimized version with better timing and question tracking
-- **`three_model.py`**: Multi-model evaluation script
+- **`llama_mmlu_eval.py`**: Original MMLU evaluation (2 subjects)
+- **`llama_mmlu_eval_optimized.py`**: Optimized with timing, `--verbose`, `--save_question_data`
+- **`three_model.py`**: Multi-model MMLU evaluation
+- **`arc_eval.py`**: ARC benchmark evaluation (ARC-Easy, ARC-Challenge)
 
 ### Analysis Scripts
 
-- **`create_graphs.py`**: Visualization and mistake pattern analysis
+- **`create_graphs.py`**: MMLU visualization and mistake pattern analysis (PDF/PNG)
+- **`create_cross_dataset_graphs.py`**: Cross-dataset comparison (MMLU + ARC)
 
 ### Chat Agent
 
@@ -549,11 +600,13 @@ python3 create_graphs.py \
 
 - **`*.json`**: Evaluation results in JSON format
 - **`*_questions.json`**: Per-question detailed results
-- **`graphs/*.png`**: Visualization graphs
+- **`graphs/*.pdf`**: Visualization graphs (PDF for portfolio submission)
 
 ---
 
 ## Notes and Observations
+
+*Discussion of questions from the tasks (portfolio requirement)*
 
 ### Question 1: How does an LLM work at a high level?
 
@@ -609,32 +662,46 @@ Popular families: Llama, Qwen, OLMo, Mistral, Phi, Gemma
 
 ---
 
+## Optional Tasks
+
+### Task 9 (Recommended): Restartability
+
+*Learn how to make the program restartable if killed using the [pickle library](https://docs.python.org/3/library/pickle.html).* — Not yet implemented; listed in Future Work.
+
+### Task 10 (Ambitious): MT-Bench
+
+*Get [MT-Bench](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/MULTITURN_BENCHMARKS_GUIDE.html) installed and test chat agent; compare with other students' agents.* — Not yet implemented.
+
+---
+
 ## Future Work
 
-### Recommended Extensions
-
-1. **Restartability**: Implement pickle-based checkpointing for long evaluations
-2. **MT-Bench**: Test chat agent on multi-turn benchmark
-3. **Additional Benchmarks**: HellaSwag, ARC, TruthfulQA
-4. **Fine-tuning**: Experiment with LoRA/QLoRA fine-tuning
-5. **Vector Databases**: Implement semantic search for long-term memory
-
-### Optional Enhancements
-
-- **Web Interface**: Create web UI for chat agent
-- **API Server**: Expose chat agent as REST API
-- **Multi-modal**: Extend to vision-language models
-- **Distributed Evaluation**: Parallel evaluation across multiple GPUs
+- **Restartability**: Pickle-based checkpointing for long evaluations (Task 9)
+- **MT-Bench**: Multi-turn benchmark with GPT-4 judge (Task 10)
+- **Additional Benchmarks**: HellaSwag, TruthfulQA (ARC implemented)
+- **Fine-tuning**: LoRA/QLoRA experiments
+- **Vector Databases**: Semantic search for long-term memory
 
 ---
 
 ## References
 
-- [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers)
-- [MMLU Dataset](https://huggingface.co/datasets/cais/mmlu)
-- [Llama Chat Context Management Guide](https://huggingface.co/docs/transformers/main/en/llama_torch)
+### Course Resources
+
+- [Topic 1: Running an LLM](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/Running_an_LLM.html)
+- [LLM and VLM Reference Guide](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/llm_vlm_models_reference.html)
+- [Datasets](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/datasets2025.html)
+- [Hugging Face Authentication Guide](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/COMPLETE_HF_AUTH_GUIDE.html)
+- [Guide to Running llama_mmlu_eval on Google Colab](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/COLAB_MMLU_GUIDE.html)
+- [Llama Chat Context Management Guide](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/CONTEXT_MANAGEMENT.html)
+- [Multi-Turn Benchmark Guide](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/MULTITURN_BENCHMARKS_GUIDE.html)
 - [The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/)
-- [Hugging Face Authentication Guide](https://huggingface.co/docs/hub/security-tokens)
+
+### External
+
+- [Hugging Face Transformers](https://huggingface.co/docs/transformers)
+- [MMLU Dataset](https://huggingface.co/datasets/cais/mmlu)
+- [ARC Dataset](https://huggingface.co/datasets/allenai/ai2_arc)
 
 ---
 
@@ -649,7 +716,7 @@ This project is for educational purposes. Model usage is subject to each model's
 
 ## Author
 
-Created as part of the "Running an LLM" course project to understand LLMs from the inside out.
+Created as part of **Topic 1: Running an LLM** — Agentic AI Spring 2026. Subdirectory named "Running an LLM" per [portfolio requirements](https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/Running_an_LLM.html).
 
 ---
 

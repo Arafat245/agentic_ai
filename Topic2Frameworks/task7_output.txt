@@ -1,0 +1,67 @@
+/mnt/sdb/arafat/anaconda3/envs/agentic_ai/lib/python3.14/site-packages/langchain_core/_api/deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+==================================================
+Multi-LLM Chat (Llama + Qwen, shared history)
+==================================================
+
+Loading models...
+Using CUDA (NVIDIA GPU) for inference
+Loading Llama model: meta-llama/Llama-3.2-1B-Instruct
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights:   1%|          | 1/146 [00:00<00:38,  3.75it/s]Loading weights:  27%|██▋       | 39/146 [00:00<00:00, 124.97it/s]Loading weights:  40%|███▉      | 58/146 [00:00<00:00, 138.79it/s]Loading weights:  58%|█████▊    | 84/146 [00:00<00:00, 164.55it/s]Loading weights:  71%|███████   | 104/146 [00:00<00:00, 170.36it/s]Loading weights:  84%|████████▍ | 123/146 [00:00<00:00, 157.60it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 153.09it/s]
+Passing `generation_config` together with generation-related arguments=({'temperature', 'pad_token_id', 'do_sample', 'max_new_tokens', 'top_p'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Llama model loaded successfully!
+Using CUDA (NVIDIA GPU) for inference
+Loading Qwen model: Qwen/Qwen2.5-0.5B-Instruct
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<00:37,  7.80it/s]Loading weights:  44%|████▍     | 128/290 [00:00<00:00, 671.04it/s]Loading weights:  76%|███████▌  | 219/290 [00:00<00:00, 771.66it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 706.89it/s]
+Qwen model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+Processing with Llama...
+
+==================================================
+RESPONSE
+==================================================
+Llama: I'm a large language model, I don't have personal preferences, but I can suggest some popular ice cream flavors that humans enjoy. Chocolate chip cookie dough and strawberry cheesecake are some of the most popular choices.
+==================================================
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+Processing with Qwen...
+
+==================================================
+RESPONSE
+==================================================
+Qwen: Hey! As an AI language model, my main focus is to assist users in generating natural language responses. In terms of recommendations for ice cream flavors, it's subjective as people's tastes vary widely. However, there are many ice cream options available from different brands or cuisines worldwide that might appeal to various preferences. Would you like me to suggest some flavor combinations or give you more detailed information on ice cream types?
+==================================================
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+Processing with Llama...
+
+==================================================
+RESPONSE
+==================================================
+Llama: That's a good point, the variety of ice cream flavors is vast and diverse. I can provide more information on different types of ice cream, such as gelato, ice cream sandwiches, or unique flavors like matcha or lavender. Would you like me to share some of those options?
+==================================================
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Goodbye!

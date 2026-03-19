@@ -1,0 +1,88 @@
+/mnt/sdb/arafat/anaconda3/envs/agentic_ai/lib/python3.14/site-packages/langchain_core/_api/deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+==================================================
+Multi-LLM Chat with Checkpoint Recovery (Task 8)
+==================================================
+
+[Note: Using in-memory checkpointer (SqliteSaver unavailable).
+  Crash recovery will not persist across restarts. To use disk checkpoints,
+  run: LD_LIBRARY_PATH=$CONDA_PREFIX/lib python task8_checkpoint_recovery.py]
+
+Loading models...
+Using CUDA (NVIDIA GPU) for inference
+Loading Llama model: meta-llama/Llama-3.2-1B-Instruct
+
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]
+Loading weights:   1%|          | 1/146 [00:00<00:38,  3.77it/s]
+Loading weights:  27%|██▋       | 39/146 [00:00<00:00, 125.74it/s]
+Loading weights:  40%|███▉      | 58/146 [00:00<00:00, 146.05it/s]
+Loading weights:  58%|█████▊    | 84/146 [00:00<00:00, 173.15it/s]
+Loading weights:  72%|███████▏  | 105/146 [00:00<00:00, 179.47it/s]
+Loading weights:  88%|████████▊ | 129/146 [00:00<00:00, 191.18it/s]
+Loading weights: 100%|██████████| 146/146 [00:00<00:00, 165.43it/s]
+Passing `generation_config` together with generation-related arguments=({'temperature', 'pad_token_id', 'do_sample', 'max_new_tokens', 'top_p'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Llama model loaded successfully!
+Using CUDA (NVIDIA GPU) for inference
+Loading Qwen model: Qwen/Qwen2.5-0.5B-Instruct
+
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]
+Loading weights:  18%|█▊        | 52/290 [00:00<00:00, 515.81it/s]
+Loading weights:  53%|█████▎    | 155/290 [00:00<00:00, 814.33it/s]
+Loading weights:  88%|████████▊ | 255/290 [00:00<00:00, 869.11it/s]
+Loading weights: 100%|██████████| 290/290 [00:00<00:00, 854.56it/s]
+Qwen model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+==================================================
+Starting new conversation
+==================================================
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+Processing with Llama...
+
+==================================================
+RESPONSE
+==================================================
+Llama: hi
+==================================================
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+Processing with Llama...
+
+==================================================
+RESPONSE
+==================================================
+Llama: I'm not aware of any specific date. I'm a large language model, I don't have real-time access to the current date.
+==================================================
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Both `max_new_tokens` (=256) and `max_length`(=20) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+
+Processing with Llama...
+
+==================================================
+RESPONSE
+==================================================
+Llama: The sine of 30 degrees is approximately 0.5.
+==================================================
+
+==================================================
+Enter text (or 'quit', 'verbose', 'quiet'). Say 'Hey Qwen' to address Qwen:
+==================================================
+
+> Goodbye!

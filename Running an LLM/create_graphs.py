@@ -18,7 +18,6 @@ import hashlib
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
-from datasets import load_dataset
 
 
 def parse_args() -> argparse.Namespace:
@@ -47,6 +46,12 @@ def parse_args() -> argparse.Namespace:
         type=str,
         default=None,
         help="Directory containing per-question JSON files (from --save_question_data in evaluation script)",
+    )
+    p.add_argument(
+        "--format",
+        choices=["pdf", "png"],
+        default="pdf",
+        help="Output format for graphs (default: pdf for portfolio compliance)",
     )
     return p.parse_args()
 
@@ -121,7 +126,7 @@ def create_question_hash(subject: str, question: str, choices: List[str]) -> str
     return hashlib.md5(content.encode()).hexdigest()
 
 
-def plot_model_comparison(results_list: List[Tuple[str, Dict]], output_dir: str):
+def plot_model_comparison(results_list: List[Tuple[str, Dict]], output_dir: str, fmt: str = "pdf"):
     """Create bar charts comparing models across subjects."""
     # Increase figure size significantly
     fig, axes = plt.subplots(2, 2, figsize=(20, 14))
@@ -240,13 +245,13 @@ def plot_model_comparison(results_list: List[Tuple[str, Dict]], output_dir: str)
     
     # Adjust layout with reduced padding since legend is inside
     plt.tight_layout(rect=[0, 0, 1, 0.98], h_pad=2.0, w_pad=2.0)
-    output_path = os.path.join(output_dir, "model_comparison.png")
-    plt.savefig(output_path, dpi=300, bbox_inches="tight", facecolor='white')
+    output_path = os.path.join(output_dir, f"model_comparison.{fmt}")
+    plt.savefig(output_path, dpi=300, bbox_inches="tight", facecolor='white', format=fmt)
     print(f"✓ Saved model comparison: {output_path}")
     plt.close()
 
 
-def analyze_mistake_overlap(question_data_dir: str, output_dir: str):
+def analyze_mistake_overlap(question_data_dir: str, output_dir: str, fmt: str = "pdf"):
     """Analyze which questions multiple models get wrong."""
     if not question_data_dir or not os.path.exists(question_data_dir):
         print("⚠️  Question-level data directory not found. Skipping mistake overlap analysis.")
@@ -326,8 +331,8 @@ def analyze_mistake_overlap(question_data_dir: str, output_dir: str):
     ax1.set_ylim(0, max(counts) * 1.15)
     
     plt.tight_layout()
-    output_path1 = os.path.join(output_dir, "mistake_overlap_distribution.png")
-    plt.savefig(output_path1, dpi=300, bbox_inches="tight", facecolor='white')
+    output_path1 = os.path.join(output_dir, f"mistake_overlap_distribution.{fmt}")
+    plt.savefig(output_path1, dpi=300, bbox_inches="tight", facecolor='white', format=fmt)
     print(f"✓ Saved mistake overlap distribution: {output_path1}")
     plt.close()
     
@@ -419,8 +424,8 @@ def analyze_mistake_overlap(question_data_dir: str, output_dir: str):
                                     f'{int(height)}', ha='center', va='bottom', fontsize=15, fontweight="bold")
             
             plt.tight_layout(rect=[0, 0, 1, 0.98], h_pad=2.0)
-            output_path2 = os.path.join(output_dir, "mistake_overlap_pairwise.png")
-            plt.savefig(output_path2, dpi=300, bbox_inches="tight", facecolor='white')
+            output_path2 = os.path.join(output_dir, f"mistake_overlap_pairwise.{fmt}")
+            plt.savefig(output_path2, dpi=300, bbox_inches="tight", facecolor='white', format=fmt)
             print(f"✓ Saved pairwise mistake overlap: {output_path2}")
             plt.close()
     
@@ -524,11 +529,11 @@ def main():
     print("Creating visualizations...")
     print("=" * 70)
     
-    plot_model_comparison(results_list, args.output_dir)
+    plot_model_comparison(results_list, args.output_dir, fmt=args.format)
     
     # Analyze mistake overlap if question-level data is available
     if args.question_data_dir:
-        analyze_mistake_overlap(args.question_data_dir, args.output_dir)
+        analyze_mistake_overlap(args.question_data_dir, args.output_dir, fmt=args.format)
     else:
         print("\n💡 Tip: Use --question_data_dir to enable mistake overlap analysis")
         print("   First run evaluations with --save_question_data flag")

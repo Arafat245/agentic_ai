@@ -1,0 +1,47 @@
+Example output from: echo -e "What is 2+2?\nquit" | python task4_parallel_models.py
+
+==================================================
+LangGraph Agent with Llama and Qwen (parallel)
+==================================================
+
+Loading models...
+Using CUDA (NVIDIA GPU) for inference
+Loading Llama model: meta-llama/Llama-3.2-1B-Instruct
+Loading Qwen model: Qwen/Qwen2.5-0.5B-Instruct
+Llama model loaded successfully!
+Qwen model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+==================================================
+Enter your text (or 'quit' to exit, 'verbose' for tracing, 'quiet' to disable tracing):
+==================================================
+
+> What is 2+2?
+
+Processing with Llama...
+Processing with Qwen...
+
+==================================================
+MODEL RESPONSES
+==================================================
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+2 + 2 equals 4.
+
+--------------------------------------------------
+Qwen Response:
+--------------------------------------------------
+2 + 2 equals 4.
+
+==================================================
+
+==================================================
+Enter your text (or 'quit' to exit, 'verbose' for tracing, 'quiet' to disable tracing):
+==================================================
+
+> quit
+Goodbye!

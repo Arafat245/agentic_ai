@@ -1,0 +1,16 @@
+# Topic 1: Running an LLM - Dependencies
+# Course: https://www.cs.virginia.edu/~rmw7my/Courses/AgenticAISpring2026/Topic1Running/Running_an_LLM.html
+
+# Core (course requirement)
+transformers
+torch
+datasets
+accelerate
+tqdm
+huggingface_hub
+bitsandbytes
+
+# Graph generation (create_graphs.py, create_cross_dataset_graphs.py)
+matplotlib
+seaborn
+numpy

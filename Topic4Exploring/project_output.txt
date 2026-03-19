@@ -1,0 +1,101 @@
+agentic_ai) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai/Topic4Exploring$ python3 project.py
+/mnt/sdb/arafat/anaconda3/envs/agentic_ai/lib/python3.14/site-packages/langchain_core/_api/deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+/mnt/sdb/arafat/agentic_ai/Topic4Exploring/project.py:113: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  return create_react_agent(
+================================================================================
+YouTube Transcript ReAct Agent
+================================================================================
+Type a normal question and include a YouTube URL or video ID.
+Type 'exit' or 'quit' to stop.
+
+Example prompts:
+  - Summarize this video: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  - Give me 5 bullet points from video dQw4w9WgXcQ
+  - What are the key ideas in this video: https://youtu.be/dQw4w9WgXcQ
+================================================================================
+
+You: what are the key ideas in this video: https://www.youtube.com/watch?v=X-ZKeYFh0P0
+
+Assistant: The video discusses recent tensions between the U.S., Israel, and Iran, particularly focusing on Israeli attacks on Iran's South Pars gas field, the largest in the world. Here are the key ideas:
+
+1. **U.S. Response to Israeli Actions**: President Donald Trump stated he was unaware of Israeli attacks on the South Pars gas field and warned that further attacks would only occur if Iran retaliated. This marks a rare rebuke of Israel from the U.S. administration.
+
+2. **Coordination Between U.S. and Israel**: Israeli officials indicated that the attacks were coordinated with the U.S., emphasizing the close military and political relationship between the two nations. The attacks were specifically aimed at gas and electricity infrastructure to minimize impact on global fuel prices.
+
+3. **Iran's Retaliation**: Following the Israeli strikes, Iran retaliated by attacking oil and gas facilities in the region, including sites in Qatar, the UAE, and Kuwait. Saudi Arabia intercepted missiles aimed at Riyadh.
+
+4. **Future Military Actions**: The discussion includes potential future Israeli strikes on Iranian targets, including naval assets in the Caspian Sea and targeted killings of Iranian leaders. The situation remains fluid, with ongoing military operations.
+
+5. **U.S. Military Presence**: The video mentions the deployment of a U.S. military ship with personnel to the region, with discussions about possibly sending more troops to secure Iranian uranium or establish a presence around the Straits of Hormuz.
+
+6. **Political Implications**: Trump's comments reflect concerns about the vulnerability of the energy sector and the potential political fallout from rising fuel prices due to the conflict.
+
+The transcript appears to be complete, providing a comprehensive overview of the current geopolitical situation involving these nations.
+
+You: thank you 
+
+Assistant: You're welcome! If you have any more questions or need further assistance, feel free to ask.
+
+You: quit
+
+Session ended.
+
+
+
+(agentic_ai) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai/Topic4Exploring$ python3 project.py
+/mnt/sdb/arafat/anaconda3/envs/agentic_ai/lib/python3.14/site-packages/langchain_core/_api/deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+/mnt/sdb/arafat/agentic_ai/Topic4Exploring/project.py:113: LangGraphDeprecatedSinceV10: create_react_agent has been moved to `langchain.agents`. Please update your import to `from langchain.agents import create_agent`. Deprecated in LangGraph V1.0 to be removed in V2.0.
+  return create_react_agent(
+================================================================================
+YouTube Transcript ReAct Agent
+================================================================================
+Type a normal question and include a YouTube URL or video ID.
+Type 'exit' or 'quit' to stop.
+
+Example prompts:
+  - Summarize this video: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  - Give me 5 bullet points from video dQw4w9WgXcQ
+  - What are the key ideas in this video: https://youtu.be/dQw4w9WgXcQ
+================================================================================
+
+You: Summarize this video, list 5 key concepts, and create 3 quiz questions: https://www.youtube.com/watch?v=-BIOl8qobmM
+
+Assistant: ### Video Summary
+The video discusses the strategic importance of the Strait of Hormuz, a critical shipping route through which approximately 20% of the world's daily oil supply passes. It highlights Iran's effective blockade of this route and explores alternative oil pipelines that could bypass the Strait. The East West pipeline and the Habshan-Fajyra pipeline are mentioned as potential alternatives, but both have significantly lower capacities compared to the volume typically transported through the Strait. Other pipelines, such as the Kirkuk-Jihan and Gorajas pipelines, are also discussed, but they face operational challenges due to regional tensions and sanctions.
+
+### Key Concepts
+1. **Strait of Hormuz**: A vital shipping route for global oil supplies, accounting for about 20% of daily oil transport.
+2. **East West Pipeline**: A major pipeline in Saudi Arabia that connects the Gulf to the Red Sea, with a capacity of 7 million barrels per day.
+3. **Habshan-Fajyra Pipeline**: A pipeline from Abu Dhabi to the Gulf of Oman, with a limited capacity of 1.5 million barrels per day.
+4. **Kirkuk-Jihan Pipeline**: Connects Iraq's northern oil fields to Turkey, currently underutilized due to regional conflicts.
+5. **Gorajas Pipeline**: An Iranian pipeline designed to bypass the Strait of Hormuz, facing operational challenges and sanctions.
+
+### Quiz Questions
+1. What percentage of the world's daily oil supply passes through the Strait of Hormuz?
+   - A) 10%
+   - B) 20%
+   - C) 30%
+   - D) 40%
+
+2. What is the capacity of the East West pipeline in Saudi Arabia?
+   - A) 1.5 million barrels per day
+   - B) 7 million barrels per day
+   - C) 10 million barrels per day
+   - D) 20 million barrels per day
+
+3. Which pipeline connects Iraq's northern oil fields to the Turkish Mediterranean port?
+   - A) Habshan-Fajyra
+   - B) East West
+   - C) Kirkuk-Jihan
+   - D) Gorajas
+
+(Note: The transcript was not truncated.)
+
+You: quit
+
+Session ended.
+(agentic_ai) arafat@user-WS-C621E-SAGE-Series:~/agentic_ai/Topic4Exploring$ 
+
+

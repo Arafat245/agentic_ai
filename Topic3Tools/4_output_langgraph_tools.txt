@@ -1,0 +1,25 @@
+Task 4: LangGraph Multi-Tool Queries Output
+===========================================
+
+To run: export OPENAI_API_KEY="your-key" && python task4_multi_tool_demo.py
+
+Expected behavior - queries that trigger multiple tools:
+-------------------------------------------------------
+
+Q1: "How many s's and i's in Mississippi riverboats?"
+    -> count_letter called twice (or in one turn with 2 tool_calls)
+
+Q2: "Are there more i's than s's in Mississippi riverboats?"
+    -> count_letter twice, possibly calculator for comparison
+
+Q3: "What is sin of (number of i's minus number of s's) in Mississippi riverboats?"
+    -> count_letter twice (inner), calculator once (outer loop)
+
+Q4: "Reverse 'hello world', count l's in result, sqrt of that count"
+    -> reverse_words, count_letter, calculator (all three tools)
+
+Q5: Chained 5-turn query
+    -> Multiple iterations through the agent loop
+
+Save actual output by running:
+  python task4_multi_tool_demo.py 2>&1 | tee 4_output_langgraph_tools_live.txt

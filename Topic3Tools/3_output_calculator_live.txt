@@ -1,0 +1,68 @@
+============================================================
+TEST 1: Calculator - geometric (sin)
+============================================================
+User: What is sin(pi/2)?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression_json': '{"expression": "sin(pi/2)"}'}
+  Result: {"result": 1.0}
+
+--- Iteration 2 ---
+Assistant: The value of \( \sin\left(\frac{\pi}{2}\right) \) is 1.0.
+
+
+============================================================
+TEST 2: Calculator - sqrt
+============================================================
+User: What is the square root of 144?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression_json': '{"expression": "sqrt(144)"}'}
+  Result: {"result": 12.0}
+
+--- Iteration 2 ---
+Assistant: The square root of 144 is 12.
+
+
+============================================================
+TEST 3: Weather (original tool)
+============================================================
+User: What's the weather in Tokyo?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: get_weather
+  Args: {'location': 'Tokyo'}
+  Result: Clear, 65°F
+
+--- Iteration 2 ---
+Assistant: The weather in Tokyo is clear with a temperature of 65°F.
+
+
+============================================================
+TEST 4: Combined - cos and expression
+============================================================
+User: Compute cos(0) + sqrt(9)
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: calculator
+  Args: {'expression_json': '{"expression": "cos(0)"}'}
+  Result: {"result": 1.0}
+  Tool: calculator
+  Args: {'expression_json': '{"expression": "sqrt(9)"}'}
+  Result: {"result": 3.0}
+
+--- Iteration 2 ---
+Assistant: The result of \( \cos(0) + \sqrt{9} \) is:
+
+\[
+1.0 + 3.0 = 4.0
+\]
+
+So, the final answer is \( 4.0 \).
+

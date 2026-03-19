@@ -1,0 +1,40 @@
+Task 6: Persistent Conversation Output
+======================================
+
+To run (interactive): export OPENAI_API_KEY="your-key" && python task6_langgraph_persistent_conversation.py
+
+Mermaid diagram (from task6_langgraph_persistent_conversation.py):
+------------------------------------------------------------------
+
+flowchart TD
+    START --> input
+    input -->|user message| call_model
+    input -->|exit| END
+    input -->|verbose/quiet| input
+    call_model -->|has tool_calls| tools
+    call_model -->|final answer| output
+    tools --> call_model
+    output --> input
+
+Example conversation demonstrating tool use:
+------------------------------------------
+You: How many s's in Mississippi?
+[NODE] input_node
+[NODE] call_model
+[NODE] tools_node
+  Tool: count_letter, Args: {text: "Mississippi", letter: "s"}
+[NODE] call_model
+[NODE] output_node
+Assistant: There are 4 s's in Mississippi.
+
+You: What's the square root of that?
+[NODE] input_node
+[NODE] call_model
+... (context from previous turn is in messages)
+[NODE] tools_node
+  Tool: calculator, Args: {expression: "sqrt(4)"}
+Assistant: The square root of 4 is 2.
+
+Recovery: With MemorySaver checkpointing, if the process is interrupted,
+you can resume by invoking with the same thread_id and the conversation
+state will be restored from the last checkpoint.

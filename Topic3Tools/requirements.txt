@@ -1,0 +1,23 @@
+# Topic 3: Agent Tool Use - Dependencies
+# Install: pip install -r requirements.txt
+
+# Ollama (local LLM)
+ollama>=0.3.0
+
+# OpenAI (GPT-4o-mini)
+openai>=1.0.0
+
+# LangChain / LangGraph
+langchain>=0.3.0
+langchain-openai>=0.2.0
+langchain-core>=0.3.0
+langgraph>=0.2.0
+
+# Optional: persistent checkpointing for Task 5 recovery
+# langgraph-checkpoint-sqlite>=2.0.0
+
+# MMLU dataset (for Task 1)
+datasets>=2.0.0
+
+# Optional: numexpr for calculator (Task 3)
+numexpr>=2.8.0

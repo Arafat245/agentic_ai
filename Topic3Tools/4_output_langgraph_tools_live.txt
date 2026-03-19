@@ -1,0 +1,124 @@
+/mnt/sdb/arafat/anaconda3/envs/agentic_ai/lib/python3.14/site-packages/langchain_core/_api/deprecation.py:25: UserWarning: Core Pydantic V1 functionality isn't compatible with Python 3.14 or greater.
+  from pydantic.v1.fields import FieldInfo as FieldInfoV1
+======================================================================
+Task 4: LangGraph Multi-Tool Queries Demo
+======================================================================
+
+======================================================================
+Q1: Letter count twice
+======================================================================
+User: How many s's are in Mississippi riverboats? And how many i's?
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: count_letter
+  Args: {'text': 'Mississippi riverboats', 'letter': 's'}
+  Result: {"text": "Mississippi riverboats", "letter": "s", "count": 5}
+  Tool: count_letter
+  Args: {'text': 'Mississippi riverboats', 'letter': 'i'}
+  Result: {"text": "Mississippi riverboats", "letter": "i", "count": 5}
+
+--- Iteration 2 ---
+Assistant: In "Mississippi riverboats," there are 5 occurrences of the letter 's' and 5 occurrences of the letter 'i'.
+
+
+======================================================================
+Q2: Compare counts
+======================================================================
+User: Are there more i's than s's in Mississippi riverboats?
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: count_letter
+  Args: {'text': 'Mississippi riverboats', 'letter': 'i'}
+  Result: {"text": "Mississippi riverboats", "letter": "i", "count": 5}
+  Tool: count_letter
+  Args: {'text': 'Mississippi riverboats', 'letter': 's'}
+  Result: {"text": "Mississippi riverboats", "letter": "s", "count": 5}
+
+--- Iteration 2 ---
+Assistant: In the phrase "Mississippi riverboats," there are 5 occurrences of the letter 'i' and 5 occurrences of the letter 's'. Therefore, there are not more 'i's than 's's; they are equal.
+
+
+======================================================================
+Q3: Sin of difference
+======================================================================
+User: What is the sin of the difference between the number of i's and the number of s's in Mississippi riverboats?
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: count_letter
+  Args: {'text': 'Mississippi riverboats', 'letter': 'i'}
+  Result: {"text": "Mississippi riverboats", "letter": "i", "count": 5}
+  Tool: count_letter
+  Args: {'text': 'Mississippi riverboats', 'letter': 's'}
+  Result: {"text": "Mississippi riverboats", "letter": "s", "count": 5}
+
+--- Iteration 2 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression': 'sin(5 - 5)'}
+  Result: {"result": 0.0}
+
+--- Iteration 3 ---
+Assistant: The sine of the difference between the number of 'i's (5) and the number of 's's (5) in "Mississippi riverboats" is 0.0.
+
+
+======================================================================
+Q4: All three tools
+======================================================================
+User: Take the text 'hello world', reverse each word, then count how many l's are in the result, and finally compute the square root of that count.
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: reverse_words
+  Args: {'text': 'hello world'}
+  Result: {"original": "hello world", "result": "olleh dlrow"}
+  Tool: count_letter
+  Args: {'text': 'hello world', 'letter': 'l'}
+  Result: {"text": "hello world", "letter": "l", "count": 3}
+
+--- Iteration 2 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression': 'sqrt(3)'}
+  Result: {"result": 1.7320508075688772}
+
+--- Iteration 3 ---
+Assistant: The reversed text is "olleh dlrow". The count of the letter 'l' in the original text is 3. The square root of that count is approximately 1.732.
+
+
+======================================================================
+Q5: Chained (5 turns)
+======================================================================
+User: First tell me how many s's in Mississippi. Then how many i's. Then compute their difference. Then take the square root. Finally reverse the words in 'done'.
+
+--- Iteration 1 ---
+LLM wants to call 3 tool(s)
+  Tool: count_letter
+  Args: {'text': 'Mississippi', 'letter': 's'}
+  Result: {"text": "Mississippi", "letter": "s", "count": 4}
+  Tool: count_letter
+  Args: {'text': 'Mississippi', 'letter': 'i'}
+  Result: {"text": "Mississippi", "letter": "i", "count": 4}
+  Tool: reverse_words
+  Args: {'text': 'done'}
+  Result: {"original": "done", "result": "enod"}
+
+--- Iteration 2 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression': '4 - 4'}
+  Result: {"result": 0}
+
+--- Iteration 3 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression': 'sqrt(0)'}
+  Result: {"result": 0.0}
+
+--- Iteration 4 ---
+Assistant: In "Mississippi", there are 4 occurrences of the letter 's' and 4 occurrences of the letter 'i'. The difference between these counts is \(4 - 4 = 0\). The square root of this difference is \(0.0\).
+
+Additionally, the word "done" reversed is "enod".
+

@@ -1,0 +1,98 @@
+Task 5: Persistent LangGraph Conversation with Checkpointing
+============================================================
+
+To run (interactive):
+  export OPENAI_API_KEY="your-key"
+  python task5_langgraph_persistent_conversation.py
+
+For persistent recovery across process restarts:
+  pip install langgraph-checkpoint-sqlite
+  export TASK5_SQLITE=1
+  export TASK5_THREAD_ID=my_conversation
+  python task5_langgraph_persistent_conversation.py
+
+  # Interrupt (Ctrl+C), then resume:
+  export TASK5_SQLITE=1
+  export TASK5_THREAD_ID=my_conversation
+  python task5_langgraph_persistent_conversation.py
+
+
+Mermaid diagram of the system
+-----------------------------
+
+flowchart TD
+    START([START]) --> input
+    input[input_node] -->|user message| call_model
+    input -->|exit| END([END])
+    input -->|verbose/quiet| input
+    call_model[call_model] -->|has tool_calls| tools
+    call_model -->|final answer| output
+    tools[tools_node] --> call_model
+    output[output_node] --> input
+
+Nodes:
+  - input:   Reads user input, handles quit/verbose/quiet
+  - call_model: LLM with tools (calculator, count_letter, reverse_words)
+  - tools:   Executes tool calls, returns results to call_model
+  - output:  Prints assistant response, loops back to input
+
+
+Example conversation: Tool use
+------------------------------
+
+You: How many s's in Mississippi?
+[NODE] input_node
+[NODE] call_model
+[NODE] tools_node
+  Tool: count_letter, Args: {text: "Mississippi", letter: "s"}
+[NODE] call_model
+[NODE] output_node
+Assistant: There are 4 s's in Mississippi.
+
+You: What's the square root of that?
+[NODE] input_node
+[NODE] call_model
+[NODE] tools_node
+  Tool: calculator, Args: {expression: "sqrt(4)"}
+[NODE] output_node
+Assistant: The square root of 4 is 2.
+
+
+Example conversation: Conversation context
+------------------------------------------
+
+The graph maintains a single long conversation. Each turn appends to the
+messages list; the LLM sees the full history. Example:
+
+You: How many i's in Mississippi?
+Assistant: There are 4 i's in Mississippi.
+
+You: And s's?
+Assistant: There are 4 s's in Mississippi.
+  (LLM infers "s's" from prior context about Mississippi)
+
+You: What's the difference?
+Assistant: The difference is 0.
+  (LLM uses prior tool results: 4 - 4 = 0)
+
+
+Example: Recovery
+-----------------
+
+With SqliteSaver (TASK5_SQLITE=1), state is persisted to .checkpoints/task5.db.
+
+1. Start conversation:
+   export TASK5_SQLITE=1 TASK5_THREAD_ID=recovery_demo
+   python task5_langgraph_persistent_conversation.py
+
+2. Exchange a few messages, e.g.:
+   You: How many s's in Mississippi?
+   Assistant: There are 4 s's...
+
+3. Interrupt with Ctrl+C. State is checkpointed.
+
+4. Resume:
+   export TASK5_SQLITE=1 TASK5_THREAD_ID=recovery_demo
+   python task5_langgraph_persistent_conversation.py
+
+5. Continue the conversation. The full message history is restored.

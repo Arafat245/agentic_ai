@@ -1,0 +1,26 @@
+Task 1: Ollama Timing Output
+===========================
+
+Prerequisites:
+- ollama pull llama3.2:1b
+- ollama serve (run in separate terminal)
+
+To run sequential timing:
+  time { python llama_mmlu_eval1_ollama.py ; python llama_mmlu_eval2_ollama.py }
+
+To run parallel timing:
+  time { python llama_mmlu_eval1_ollama.py & python llama_mmlu_eval2_ollama.py & wait ; }
+
+Or use the script:
+  ./run_ollama_timing.sh
+
+Expected observations (to add to README):
+----------------------------------------
+- Sequential: Total time ≈ sum of individual run times (each loads dataset, runs all questions).
+- Parallel: Total time ≈ max of the two runs (they share the Ollama server, so both can run
+  concurrently). With a single GPU, parallel may not be 2x faster if GPU is the bottleneck;
+  with CPU-only Ollama, parallel can show significant speedup.
+- The "real" time from the shell `time` command is wall-clock elapsed time.
+
+Save actual output:
+  ./run_ollama_timing.sh 2>&1 | tee 1_output_ollama_timing_live.txt

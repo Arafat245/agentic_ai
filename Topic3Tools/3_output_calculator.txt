@@ -1,0 +1,66 @@
+Task 3: Manual Calculator Tool Output
+=====================================
+
+To run: export OPENAI_API_KEY="your-key" && python task3_manual_calculator_tool.py
+
+Expected output (when API key is set):
+-------------------------------------
+
+============================================================
+TEST 1: Calculator - geometric (sin)
+============================================================
+User: What is sin(pi/2)?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression_json': '{"expression": "sin(3.141592653589793/2)"}'}
+  Result: {"result": 1.0}
+
+--- Iteration 2 ---
+Assistant: The sine of π/2 is 1.0.
+
+============================================================
+TEST 2: Calculator - sqrt
+============================================================
+User: What is the square root of 144?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression_json': '{"expression": "sqrt(144)"}'}
+  Result: {"result": 12.0}
+
+--- Iteration 2 ---
+Assistant: The square root of 144 is 12.
+
+============================================================
+TEST 3: Weather (original tool)
+============================================================
+User: What's the weather in Tokyo?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: get_weather
+  Args: {'location': 'Tokyo'}
+  Result: Clear, 65°F
+
+--- Iteration 2 ---
+Assistant: The weather in Tokyo is Clear, 65°F.
+
+============================================================
+TEST 4: Combined - cos and expression
+============================================================
+User: Compute cos(0) + sqrt(9)
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'expression_json': '{"expression": "cos(0) + sqrt(9)"}'}
+  Result: {"result": 4.0}
+
+--- Iteration 2 ---
+Assistant: cos(0) + sqrt(9) = 1 + 3 = 4.
+
+Note: If the LLM tries to do math itself instead of using the calculator,
+see README.md for strategies (explicit system prompt, tool_choice="required", etc.).

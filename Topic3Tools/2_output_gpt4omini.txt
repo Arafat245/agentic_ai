@@ -1,0 +1,23 @@
+Task 2: OpenAI GPT-4o-mini Test Output
+=====================================
+
+To run: export OPENAI_API_KEY="your-key" && python task2_openai_gpt4o_mini_test.py
+
+Expected output when API key is set:
+------------------------------------
+Success! Response: Working!
+Cost: $0.000002
+
+(Actual cost may vary slightly based on token count.)
+
+If OPENAI_API_KEY is not set:
+------------------------------
+openai.OpenAIError: The api_key client option must be set either by passing 
+api_key to the client or by setting the OPENAI_API_KEY environment variable
+
+README explanation of the two key lines:
+- client = OpenAI(): Creates an OpenAI client. By default it reads api_key from 
+  the OPENAI_API_KEY environment variable. This keeps the key out of source code.
+- response = client.chat.completions.create(...): Sends a chat completion request 
+  to the API with the specified model, messages, and max_tokens. Returns the 
+  model's response and usage metadata.

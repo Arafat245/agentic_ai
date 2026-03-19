@@ -1,3 +1,5 @@
+> Outputs and findings are in the `outputs/` and `notes/` folders.
+
 # Topic5RAG — Retrieval Augmented Generation (RAG)
 
 This directory contains my team’s work for Topic 5: RAG (Retrieval Augmented Generation) in Agentic AI Spring 2026 (CS 6501, University of Virginia).

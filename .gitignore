@@ -16,3 +16,4 @@ models/
 checkpoints/
 *.zip
 *.faiss
+project/Processed data/

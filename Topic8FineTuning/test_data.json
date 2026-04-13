@@ -1,0 +1,1002 @@
+[
+  {
+    "answer": "SELECT COUNT(high_points) FROM table_18904831_7 WHERE location = \"MCI Center\"",
+    "question": "What were the high points for the game played at the MCI Center?",
+    "context": "CREATE TABLE table_18904831_7 (high_points VARCHAR, location VARCHAR)"
+  },
+  {
+    "answer": "SELECT gender FROM table_name_28 WHERE residence = \"haliburton\"",
+    "question": "Which Gender has a Residence of Haliburton?",
+    "context": "CREATE TABLE table_name_28 (gender VARCHAR, residence VARCHAR)"
+  },
+  {
+    "answer": "SELECT reactor_type FROM table_name_25 WHERE commercial_operation = \"\u2014\" AND unit = \"tianwan-7\"",
+    "question": "What reactor type that has a commercial operation of \u2014, and a tianwan-7 unit?",
+    "context": "CREATE TABLE table_name_25 (reactor_type VARCHAR, commercial_operation VARCHAR, unit VARCHAR)"
+  },
+  {
+    "answer": "SELECT player FROM table_name_97 WHERE pba_team = \"alaska milkmen\" AND college = \"up-diliman\"",
+    "question": "Which player went to college at Up-Diliman and plays on PBA team of the Alaska Milkmen?",
+    "context": "CREATE TABLE table_name_97 (player VARCHAR, pba_team VARCHAR, college VARCHAR)"
+  },
+  {
+    "answer": "SELECT partner FROM table_name_93 WHERE tournament = \"tampa\"",
+    "question": "Who is the partner at the Tampa tournament?",
+    "context": "CREATE TABLE table_name_93 (partner VARCHAR, tournament VARCHAR)"
+  },
+  {
+    "answer": "SELECT play_by_play FROM table_22485543_1 WHERE studio_analysts = \"Mike Milbury\" AND ice_level_reporters = \"Darren Pang\"",
+    "question": "Which play-by-play has mike milbury as the studio analyst and darren pang as the ice level reporters?",
+    "context": "CREATE TABLE table_22485543_1 (play_by_play VARCHAR, studio_analysts VARCHAR, ice_level_reporters VARCHAR)"
+  },
+  {
+    "answer": "SELECT state FROM table_name_49 WHERE name = \"yi\"",
+    "question": "What is the name of Yi's state?",
+    "context": "CREATE TABLE table_name_49 (state VARCHAR, name VARCHAR)"
+  },
+  {
+    "answer": "SELECT title FROM table_name_91 WHERE length = \"3:32\" AND producer_s_ = \"hadise a\u00e7\u0131kg\u00f6z, yves jongen\"",
+    "question": "Which Title has a Length of 3:32, and a Producer(s) of hadise a\u00e7\u0131kg\u00f6z, yves jongen?",
+    "context": "CREATE TABLE table_name_91 (title VARCHAR, length VARCHAR, producer_s_ VARCHAR)"
+  },
+  {
+    "answer": "SELECT normal_temperature FROM table_name_8 WHERE city = \"abbotsford, british columbia\"",
+    "question": "What is the normal temperature of Abbotsford, British Columbia?",
+    "context": "CREATE TABLE table_name_8 (normal_temperature VARCHAR, city VARCHAR)"
+  },
+  {
+    "answer": "SELECT visitor FROM table_name_7 WHERE home = \"nets\"",
+    "question": "Who were the Visitor when the Nets were the Home team?",
+    "context": "CREATE TABLE table_name_7 (visitor VARCHAR, home VARCHAR)"
+  },
+  {
+    "answer": "SELECT track_number FROM table_name_44 WHERE album_title = \"\u6587\u6b66\u53cc\u5168\u5347\u7ea7\u7248\" AND title = \"\u8001\u7238\u4f60\u522b\u88c5\u9177\"",
+    "question": "Which Track number has a Album title of \u6587\u6b66\u53cc\u5168\u5347\u7ea7\u7248, and a Title of \u8001\u7238\u4f60\u522b\u88c5\u9177?",
+    "context": "CREATE TABLE table_name_44 (track_number VARCHAR, album_title VARCHAR, title VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(pick) FROM table_name_30 WHERE player = \"mike o'quinn\" AND round < 15",
+    "question": "Player of mike o'quinn, and a Round smaller than 15 had what lowest pick?",
+    "context": "CREATE TABLE table_name_30 (pick INTEGER, player VARCHAR, round VARCHAR)"
+  },
+  {
+    "answer": "SELECT total__kg_ FROM table_name_86 WHERE snatch = 132.5",
+    "question": "What's the Total (kg) of a Snatch of 132.5?",
+    "context": "CREATE TABLE table_name_86 (total__kg_ VARCHAR, snatch VARCHAR)"
+  },
+  {
+    "answer": "SELECT team_classification FROM table_name_88 WHERE general_classification = \"vladimir karpets\" AND mountains_classification = \"no award\"",
+    "question": "Which Team classification has a General classification of Vladimir Karpets and a Mountains classification of No Award?",
+    "context": "CREATE TABLE table_name_88 (team_classification VARCHAR, general_classification VARCHAR, mountains_classification VARCHAR)"
+  },
+  {
+    "answer": "SELECT status FROM table_name_84 WHERE authors = \"del corro\"",
+    "question": "What is the status of Author Del Corro?",
+    "context": "CREATE TABLE table_name_84 (status VARCHAR, authors VARCHAR)"
+  },
+  {
+    "answer": "SELECT district FROM table_1341843_19 WHERE incumbent = \"F. Edward Hebert\"",
+    "question": "What district is F. Edward Hebert the incumbent in?",
+    "context": "CREATE TABLE table_1341843_19 (district VARCHAR, incumbent VARCHAR)"
+  },
+  {
+    "answer": "SELECT year_erected FROM table_name_51 WHERE artist = \"enrique alciati\"",
+    "question": "what year did enrique alciati make a statue",
+    "context": "CREATE TABLE table_name_51 (year_erected VARCHAR, artist VARCHAR)"
+  },
+  {
+    "answer": "SELECT opponents FROM table_name_49 WHERE team = \"arsenal\" AND year = \"1963\u201364\"",
+    "question": "Which Opponents have a Team of arsenal, and a Year of 1963\u201364?",
+    "context": "CREATE TABLE table_name_49 (opponents VARCHAR, team VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(gold) FROM table_name_80 WHERE silver < 14 AND rank > 8 AND bronze = 3",
+    "question": "How much Gold has a Silver smaller than 14, and a Rank larger than 8, and a Bronze of 3?",
+    "context": "CREATE TABLE table_name_80 (gold VARCHAR, bronze VARCHAR, silver VARCHAR, rank VARCHAR)"
+  },
+  {
+    "answer": "SELECT player FROM table_name_43 WHERE total = 3 AND ekstraklasa < 3 AND uefa_cup = 2",
+    "question": "Which Player has a Total of 3, and an Ekstraklasa smaller than 3, and a UEFA Cup of 2?",
+    "context": "CREATE TABLE table_name_43 (player VARCHAR, uefa_cup VARCHAR, total VARCHAR, ekstraklasa VARCHAR)"
+  },
+  {
+    "answer": "SELECT player FROM table_12962773_2 WHERE position = \"Center\"",
+    "question": "What player plays center?",
+    "context": "CREATE TABLE table_12962773_2 (player VARCHAR, position VARCHAR)"
+  },
+  {
+    "answer": "SELECT crowd FROM table_name_28 WHERE home_team = \"footscray\"",
+    "question": "What is the size of the crowd for the home team of Footscray?",
+    "context": "CREATE TABLE table_name_28 (crowd VARCHAR, home_team VARCHAR)"
+  },
+  {
+    "answer": "SELECT home_team FROM table_name_71 WHERE venue = \"mcg\"",
+    "question": "I want to know the home team for mcg venue",
+    "context": "CREATE TABLE table_name_71 (home_team VARCHAR, venue VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(length__in_m_) FROM table_1749567_2 WHERE name = \"Keutenberg\"",
+    "question": "The Keutenberg race had what race length?",
+    "context": "CREATE TABLE table_1749567_2 (length__in_m_ INTEGER, name VARCHAR)"
+  },
+  {
+    "answer": "SELECT country FROM table_name_55 WHERE director_s_ = \"julio robledo\"",
+    "question": "Julio Robledo represents which country?",
+    "context": "CREATE TABLE table_name_55 (country VARCHAR, director_s_ VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(crowd) FROM table_name_54 WHERE away_team = \"carlton\"",
+    "question": "What was the largest crowd for an away Carlton game?",
+    "context": "CREATE TABLE table_name_54 (crowd INTEGER, away_team VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(mintage) FROM table_name_88 WHERE weight = \"12.61 g\" AND theme = \"ruby-throated hummingbird\"",
+    "question": "What is the Mintage of the 12.61 g Weight Ruby-Throated Hummingbird?",
+    "context": "CREATE TABLE table_name_88 (mintage VARCHAR, weight VARCHAR, theme VARCHAR)"
+  },
+  {
+    "answer": "SELECT Membership_card FROM member GROUP BY Membership_card HAVING COUNT(*) > 5",
+    "question": "Which membership card has more than 5 members?",
+    "context": "CREATE TABLE member (Membership_card VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(left) FROM table_261946_3 WHERE location__all_in_ohio_ = \"Gambier\"",
+    "question": "Which year did enrolled Gambier members leave?",
+    "context": "CREATE TABLE table_261946_3 (left INTEGER, location__all_in_ohio_ VARCHAR)"
+  },
+  {
+    "answer": "SELECT authority FROM table_name_64 WHERE roll < 254 AND decile = \"8\" AND area = \"te akau\"",
+    "question": "Name the authority for te akau with roll less than 254 and decile of 8",
+    "context": "CREATE TABLE table_name_64 (authority VARCHAR, area VARCHAR, roll VARCHAR, decile VARCHAR)"
+  },
+  {
+    "answer": "SELECT Name FROM ship ORDER BY Tonnage DESC LIMIT 1",
+    "question": "What is the name of the ship with the largest tonnage?",
+    "context": "CREATE TABLE ship (Name VARCHAR, Tonnage VARCHAR)"
+  },
+  {
+    "answer": "SELECT AVG(total) FROM table_name_99 WHERE championship > 13",
+    "question": "Which Championship total is over 13?",
+    "context": "CREATE TABLE table_name_99 (total INTEGER, championship INTEGER)"
+  },
+  {
+    "answer": "SELECT opponent FROM table_16864968_8 WHERE attendance = 19041",
+    "question": "Who was the opponent in the game where 19041 people attended?",
+    "context": "CREATE TABLE table_16864968_8 (opponent VARCHAR, attendance VARCHAR)"
+  },
+  {
+    "answer": "SELECT location FROM table_name_51 WHERE event = \"ufc 98\"",
+    "question": "Name the location of ufc 98",
+    "context": "CREATE TABLE table_name_51 (location VARCHAR, event VARCHAR)"
+  },
+  {
+    "answer": "SELECT home FROM table_name_95 WHERE score = \"103-93\"",
+    "question": "What is Home, when Score is 103-93?",
+    "context": "CREATE TABLE table_name_95 (home VARCHAR, score VARCHAR)"
+  },
+  {
+    "answer": "SELECT T1.Birth_Date FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID = T2.People_ID ORDER BY T2.Earnings LIMIT 1",
+    "question": "What is the birth date of the poker player with the lowest earnings?",
+    "context": "CREATE TABLE poker_player (People_ID VARCHAR, Earnings VARCHAR); CREATE TABLE people (Birth_Date VARCHAR, People_ID VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(opponents) FROM table_21092427_1 WHERE record = \"8-1\"",
+    "question": "Name the most opponents for 8-1 record",
+    "context": "CREATE TABLE table_21092427_1 (opponents INTEGER, record VARCHAR)"
+  },
+  {
+    "answer": "SELECT joint_music_award FROM table_name_32 WHERE total > 18 AND year > 2007",
+    "question": "How many Joint Music Awards are there when the Total is larger than 18, in a Year after 2007?",
+    "context": "CREATE TABLE table_name_32 (joint_music_award VARCHAR, total VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT music_director FROM table_name_86 WHERE year > 2003",
+    "question": "Name a music director, belonging to a year after 2003?",
+    "context": "CREATE TABLE table_name_86 (music_director VARCHAR, year INTEGER)"
+  },
+  {
+    "answer": "SELECT SUM(rank) FROM table_name_56 WHERE nation = \"new zealand\" AND bronze < 1",
+    "question": "What is the total rank for New Zealand, when less than 1 bronze medals were won?",
+    "context": "CREATE TABLE table_name_56 (rank INTEGER, nation VARCHAR, bronze VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(pick) FROM table_name_52 WHERE player = \"kenny evans\"",
+    "question": "How many picks included Kenny Evans?",
+    "context": "CREATE TABLE table_name_52 (pick VARCHAR, player VARCHAR)"
+  },
+  {
+    "answer": "SELECT district FROM table_1341930_33 WHERE incumbent = \"Lawrence H. Fountain\"",
+    "question": "what's the\u00a0district with\u00a0incumbent\u00a0being lawrence h. fountain",
+    "context": "CREATE TABLE table_1341930_33 (district VARCHAR, incumbent VARCHAR)"
+  },
+  {
+    "answer": "SELECT ceremony FROM table_name_45 WHERE outcome = \"nominated\" AND nominee = \"leela chitnis\"",
+    "question": "What ceremony was leela chitnis nominated at?",
+    "context": "CREATE TABLE table_name_45 (ceremony VARCHAR, outcome VARCHAR, nominee VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(party) FROM table_1342013_20 WHERE incumbent = \"Thomas J. Lane\"",
+    "question": "Thomas J. Lane is the incumbent of how many parties?",
+    "context": "CREATE TABLE table_1342013_20 (party VARCHAR, incumbent VARCHAR)"
+  },
+  {
+    "answer": "SELECT difference FROM table_name_66 WHERE points > 10 AND drawn < 2",
+    "question": "What difference has a points greater than 10, and a drawn less than 2?",
+    "context": "CREATE TABLE table_name_66 (difference VARCHAR, points VARCHAR, drawn VARCHAR)"
+  },
+  {
+    "answer": "SELECT finish FROM table_name_88 WHERE league = \"al\" AND year = 1939",
+    "question": "In the Year 1939, what was the Finish when Al was the League?",
+    "context": "CREATE TABLE table_name_88 (finish VARCHAR, league VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT tournament FROM table_name_55 WHERE result = \"20th\"",
+    "question": "In which tournament did he place 20th?",
+    "context": "CREATE TABLE table_name_55 (tournament VARCHAR, result VARCHAR)"
+  },
+  {
+    "answer": "SELECT developer_s_ FROM table_name_90 WHERE year = 2010",
+    "question": "Which Developer(s) has a Year of 2010?",
+    "context": "CREATE TABLE table_name_90 (developer_s_ VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT points FROM table_13564702_4 WHERE \"lost\" = \"lost\"",
+    "question": "What is the value of the points column when the value of the column lost is \"lost\"",
+    "context": "CREATE TABLE table_13564702_4 (points VARCHAR)"
+  },
+  {
+    "answer": "SELECT builder FROM table_name_71 WHERE date = \"1953\"",
+    "question": "What is Builder, when Date is 1953?",
+    "context": "CREATE TABLE table_name_71 (builder VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(margin) FROM table_22753439_1 WHERE winner = \"S. Singaravadivel\"",
+    "question": "How many margins have a winner of S. Singaravadivel?",
+    "context": "CREATE TABLE table_22753439_1 (margin VARCHAR, winner VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_6 WHERE network_brand_name = \"movistar\"",
+    "question": "What date was Movistar accredited?",
+    "context": "CREATE TABLE table_name_6 (date VARCHAR, network_brand_name VARCHAR)"
+  },
+  {
+    "answer": "SELECT open_cup FROM table_2357201_1 WHERE year = 2009",
+    "question": "How did Cleveland do in the Open Cup in 2009?",
+    "context": "CREATE TABLE table_2357201_1 (open_cup VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT original_air_date FROM table_28116528_1 WHERE production_code = \"3X6316\"",
+    "question": "What date did the episode with a production code of 3x6316 originally air?",
+    "context": "CREATE TABLE table_28116528_1 (original_air_date VARCHAR, production_code VARCHAR)"
+  },
+  {
+    "answer": "SELECT evening FROM table_name_18 WHERE sunday = \"no\" AND name = \"s. vidal/plant express\"",
+    "question": "Name the Evening that has a Sunday of no, and a Name of s. vidal/plant express?",
+    "context": "CREATE TABLE table_name_18 (evening VARCHAR, sunday VARCHAR, name VARCHAR)"
+  },
+  {
+    "answer": "SELECT school FROM table_name_87 WHERE team = \"eagles\"",
+    "question": "Name the school for eagles",
+    "context": "CREATE TABLE table_name_87 (school VARCHAR, team VARCHAR)"
+  },
+  {
+    "answer": "SELECT commissioned FROM table_1220125_4 WHERE laid_down = \"4 May 1943\"",
+    "question": "What is the comissioned for 4 may 1943?",
+    "context": "CREATE TABLE table_1220125_4 (commissioned VARCHAR, laid_down VARCHAR)"
+  },
+  {
+    "answer": "SELECT january_15_16 FROM table_25355392_2 WHERE november_3 = \"153\"",
+    "question": "What is january 15-16 when november 3 is 153?",
+    "context": "CREATE TABLE table_25355392_2 (january_15_16 VARCHAR, november_3 VARCHAR)"
+  },
+  {
+    "answer": "SELECT location_attendance FROM table_name_16 WHERE record = \"21\u201322\"",
+    "question": "What is the Location and Attendance with a Record of 21\u201322?",
+    "context": "CREATE TABLE table_name_16 (location_attendance VARCHAR, record VARCHAR)"
+  },
+  {
+    "answer": "SELECT score_points FROM table_name_42 WHERE rank_points = \"10\" AND event = \"wc milan\"",
+    "question": "which Score points has a Rank points of 10, and an Event of wc milan?",
+    "context": "CREATE TABLE table_name_42 (score_points VARCHAR, rank_points VARCHAR, event VARCHAR)"
+  },
+  {
+    "answer": "SELECT DISTINCT fname FROM student",
+    "question": "What are the first names of all the students?",
+    "context": "CREATE TABLE student (fname VARCHAR)"
+  },
+  {
+    "answer": "SELECT tujunga FROM table_name_33 WHERE la_crescenta__montrose = \"28%\"",
+    "question": "What is the percentage of Tukunga when La Crescenta-Montrose is 28%?",
+    "context": "CREATE TABLE table_name_33 (tujunga VARCHAR, la_crescenta__montrose VARCHAR)"
+  },
+  {
+    "answer": "SELECT high_points FROM table_name_23 WHERE series = \"0-2\"",
+    "question": "With a 0-2 series, what is the high points?",
+    "context": "CREATE TABLE table_name_23 (high_points VARCHAR, series VARCHAR)"
+  },
+  {
+    "answer": "SELECT rocket FROM table_name_31 WHERE cospar_id = \"2002-001a\"",
+    "question": "What rocket has a COSPAR ID of 2002-001a?",
+    "context": "CREATE TABLE table_name_31 (rocket VARCHAR, cospar_id VARCHAR)"
+  },
+  {
+    "answer": "SELECT margin_of_victory FROM table_name_25 WHERE year > 1994 AND to_par = \"\u201314\" AND score = 69 - 67 - 69 - 69 = 274",
+    "question": "Which Margin of victory has a Year larger than 1994, and a To par of \u201314, and a Score of 69-67-69-69=274?",
+    "context": "CREATE TABLE table_name_25 (margin_of_victory VARCHAR, year VARCHAR, to_par VARCHAR, score VARCHAR)"
+  },
+  {
+    "answer": "SELECT class FROM table_name_17 WHERE team = \"cagiva\" AND points = 4",
+    "question": "What is listed for the Class that's got a Team of Cagiva and Points of 4?",
+    "context": "CREATE TABLE table_name_17 (class VARCHAR, team VARCHAR, points VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_88 WHERE location = \"gold coast\"",
+    "question": "On what Date was the Tournament in Gold Coast?",
+    "context": "CREATE TABLE table_name_88 (date VARCHAR, location VARCHAR)"
+  },
+  {
+    "answer": "SELECT AVG(points) FROM table_name_5 WHERE wins < 0",
+    "question": "What is the average points won when Carlos had 0 wins?",
+    "context": "CREATE TABLE table_name_5 (points INTEGER, wins INTEGER)"
+  },
+  {
+    "answer": "SELECT attendance FROM table_name_62 WHERE date = \"may 28\"",
+    "question": "What is the attendance on may 28?",
+    "context": "CREATE TABLE table_name_62 (attendance VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT result FROM table_name_43 WHERE date = \"september 26\"",
+    "question": "What was the result on september 26?",
+    "context": "CREATE TABLE table_name_43 (result VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT country FROM table_name_21 WHERE score = 71 - 69 - 70 - 71 = 281",
+    "question": "What Country's Player scored 71-69-70-71=281?",
+    "context": "CREATE TABLE table_name_21 (country VARCHAR, score VARCHAR)"
+  },
+  {
+    "answer": "SELECT venue FROM table_name_89 WHERE away_team = \"hawthorn\"",
+    "question": "Where did Hawthorn play as the away team?",
+    "context": "CREATE TABLE table_name_89 (venue VARCHAR, away_team VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(track) FROM table_name_12 WHERE japanese_title = \"\u30e1\u30ed\u30c7\u30a3\u30fc\"",
+    "question": "Which track has a Japanese title of \u30e1\u30ed\u30c7\u30a3\u30fc?",
+    "context": "CREATE TABLE table_name_12 (track INTEGER, japanese_title VARCHAR)"
+  },
+  {
+    "answer": "SELECT main_contestant FROM table_name_33 WHERE co_contestant__yaar_vs_pyaar_ = \"shalini chandran\"",
+    "question": "Who is the main contestant when the co-contestant (yaar vs. pyaar) is Shalini Chandran?",
+    "context": "CREATE TABLE table_name_33 (main_contestant VARCHAR, co_contestant__yaar_vs_pyaar_ VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(crowd) FROM table_name_39 WHERE venue = \"arden street oval\"",
+    "question": "Tell me the most crowd for arden street oval venue",
+    "context": "CREATE TABLE table_name_39 (crowd INTEGER, venue VARCHAR)"
+  },
+  {
+    "answer": "SELECT founded FROM table_2076490_1 WHERE enrollment__2005_ = \"963\"",
+    "question": "What year is the founding year, for the school that had an enrollment in 2005 of 963?",
+    "context": "CREATE TABLE table_2076490_1 (founded VARCHAR, enrollment__2005_ VARCHAR)"
+  },
+  {
+    "answer": "SELECT team FROM table_name_22 WHERE start = \"33\"",
+    "question": "What team has 33 starts?",
+    "context": "CREATE TABLE table_name_22 (team VARCHAR, start VARCHAR)"
+  },
+  {
+    "answer": "SELECT round FROM table_name_74 WHERE opponent = \"sofia bagherdai\"",
+    "question": "What round did the fight against Sofia Bagherdai go to?",
+    "context": "CREATE TABLE table_name_74 (round VARCHAR, opponent VARCHAR)"
+  },
+  {
+    "answer": "SELECT name FROM table_11585313_1 WHERE date_of_death\u2020 = \"01-04-1954\"",
+    "question": "What is the name of the person whose date of death is 01-04-1954?",
+    "context": "CREATE TABLE table_11585313_1 (name VARCHAR, date_of_death\u2020 VARCHAR)"
+  },
+  {
+    "answer": "SELECT location_attendance FROM table_11960944_11 WHERE high_assists = \"Billups , Stuckey (4)\"",
+    "question": "Where was the game played when the high assists were scored by billups , stuckey (4)?",
+    "context": "CREATE TABLE table_11960944_11 (location_attendance VARCHAR, high_assists VARCHAR)"
+  },
+  {
+    "answer": "SELECT averaging_time FROM table_name_53 WHERE regulatory_citation = \"40 cfr 50.4(b)\"",
+    "question": "what is the averaging time when the regulatory citation is 40 cfr 50.4(b)?",
+    "context": "CREATE TABLE table_name_53 (averaging_time VARCHAR, regulatory_citation VARCHAR)"
+  },
+  {
+    "answer": "SELECT name FROM table_name_17 WHERE floors = 23 AND street_address_in_detroit = \"144 west congress street\"",
+    "question": "Which place has 23 floors and a street address in Detroit of 144 west congress street?",
+    "context": "CREATE TABLE table_name_17 (name VARCHAR, floors VARCHAR, street_address_in_detroit VARCHAR)"
+  },
+  {
+    "answer": "SELECT SUM(bronze) FROM table_name_82 WHERE gold > 2 AND rank < 3 AND silver < 22",
+    "question": "What is the sum of bronzes for teams with more than 2 gold, ranked under 3, and less than 22 silver?",
+    "context": "CREATE TABLE table_name_82 (bronze INTEGER, silver VARCHAR, gold VARCHAR, rank VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_73 WHERE score = \"7-1\"",
+    "question": "When was the score 7-1?",
+    "context": "CREATE TABLE table_name_73 (date VARCHAR, score VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(attendance) FROM table_name_76 WHERE date = \"december 14, 1958\" AND week > 12",
+    "question": "What is the lowest attendance for December 14, 1958 after week 12?",
+    "context": "CREATE TABLE table_name_76 (attendance INTEGER, date VARCHAR, week VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_76 WHERE player = \"raymond floyd\"",
+    "question": "Can you tell me the Score that has the Player of raymond floyd?",
+    "context": "CREATE TABLE table_name_76 (score VARCHAR, player VARCHAR)"
+  },
+  {
+    "answer": "SELECT distance FROM table_name_83 WHERE date = \"24 may\"",
+    "question": "What was the distance on 24 May?",
+    "context": "CREATE TABLE table_name_83 (distance VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT Age FROM editor GROUP BY Age ORDER BY COUNT(*) DESC LIMIT 1",
+    "question": "Please show the most common age of editors.",
+    "context": "CREATE TABLE editor (Age VARCHAR)"
+  },
+  {
+    "answer": "SELECT matches FROM table_name_95 WHERE result = \"first group stage\" AND year = \"1998\"",
+    "question": "What were the matches where the teams finished in the first group stage, in 1998?",
+    "context": "CREATE TABLE table_name_95 (matches VARCHAR, result VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_24901152_2 WHERE outcome = \"Winner\"",
+    "question": "When winner is the outcome what is the score?",
+    "context": "CREATE TABLE table_24901152_2 (score VARCHAR, outcome VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_9 WHERE date = \"april 25\"",
+    "question": "What was the score on April 25?",
+    "context": "CREATE TABLE table_name_9 (score VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT result FROM table_name_28 WHERE venue = \"rosehill\" AND race = \"todman stakes\"",
+    "question": "What was the result of the Todman stakes race at rosehill?",
+    "context": "CREATE TABLE table_name_28 (result VARCHAR, venue VARCHAR, race VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(season) FROM table_23647668_2 WHERE champion = \"Melgar\"",
+    "question": "How many season had Melgar as a champion?",
+    "context": "CREATE TABLE table_23647668_2 (season VARCHAR, champion VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(rank) FROM table_name_56 WHERE time = \"7:34.24\"",
+    "question": "What is the total rank for the athlete that had a race time of 7:34.24?",
+    "context": "CREATE TABLE table_name_56 (rank VARCHAR, time VARCHAR)"
+  },
+  {
+    "answer": "SELECT surface FROM table_name_61 WHERE tournament = \"pune, india\"",
+    "question": "What Surface has a Tournament of pune, india?",
+    "context": "CREATE TABLE table_name_61 (surface VARCHAR, tournament VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_38 WHERE time = \"17:37\" AND set_4 = \"25\u201315\"",
+    "question": "What is the Date with a Time of 17:37, and the Set 4 is 25\u201315?",
+    "context": "CREATE TABLE table_name_38 (date VARCHAR, time VARCHAR, set_4 VARCHAR)"
+  },
+  {
+    "answer": "SELECT type FROM table_name_11 WHERE e_coli = \"muty\"",
+    "question": "What is the type of glycosylase that has an E. coli of Muty?",
+    "context": "CREATE TABLE table_name_11 (type VARCHAR, e_coli VARCHAR)"
+  },
+  {
+    "answer": "SELECT years_in_orlando FROM table_name_7 WHERE nationality = \"united states\" AND school_club_team = \"clemson\"",
+    "question": "What years did the player in Orlando play that is from the United States, and is part of the school/club team Clemson?",
+    "context": "CREATE TABLE table_name_7 (years_in_orlando VARCHAR, nationality VARCHAR, school_club_team VARCHAR)"
+  },
+  {
+    "answer": "SELECT maximum_seating_capacity FROM table_name_91 WHERE arena_venue = \"san agustin gym\"",
+    "question": "What is the maximum capacity of the San Agustin Gym?",
+    "context": "CREATE TABLE table_name_91 (maximum_seating_capacity VARCHAR, arena_venue VARCHAR)"
+  },
+  {
+    "answer": "SELECT time FROM table_name_15 WHERE city = \"sheffield\"",
+    "question": "What is the time for Sheffield?",
+    "context": "CREATE TABLE table_name_15 (time VARCHAR, city VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(loses) FROM table_name_30 WHERE goals_scored > 42 AND goals_conceded > 20 AND draws < 3",
+    "question": "What is the lowest number of loses of the club with more than 42 goals scored, more than 20 goals conceded, and less than 3 draws?",
+    "context": "CREATE TABLE table_name_30 (loses INTEGER, draws VARCHAR, goals_scored VARCHAR, goals_conceded VARCHAR)"
+  },
+  {
+    "answer": "SELECT republican AS :_jeff_beatty FROM table_name_79 WHERE lead_margin = 25 AND poll_source = \"rasmussen reports\"",
+    "question": "What percent is the lead margin of 25 that Republican: Jeff Beatty has according to poll source Rasmussen Reports?",
+    "context": "CREATE TABLE table_name_79 (republican VARCHAR, lead_margin VARCHAR, poll_source VARCHAR)"
+  },
+  {
+    "answer": "SELECT title FROM table_14330096_3 WHERE writer = \"Rob Heyland\"",
+    "question": "What's the title of the episode that Rob Heyland wrote? ",
+    "context": "CREATE TABLE table_14330096_3 (title VARCHAR, writer VARCHAR)"
+  },
+  {
+    "answer": "SELECT result FROM table_26250199_1 WHERE original_artist = \"Joan Osborne\"",
+    "question": "The original artist Joan Osborne has what result?",
+    "context": "CREATE TABLE table_26250199_1 (result VARCHAR, original_artist VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(points) FROM table_name_85 WHERE team = \"adet\" AND draw < 6",
+    "question": "What is the Highest Points for Team Adet where the Draw is less than 6?",
+    "context": "CREATE TABLE table_name_85 (points INTEGER, team VARCHAR, draw VARCHAR)"
+  },
+  {
+    "answer": "SELECT season FROM table_name_77 WHERE podiums = \"0\" AND races = \"1\" AND points = \"0\"",
+    "question": "Which Season has 0 Podiums, 1 Race, and 0 Points?",
+    "context": "CREATE TABLE table_name_77 (season VARCHAR, points VARCHAR, podiums VARCHAR, races VARCHAR)"
+  },
+  {
+    "answer": "SELECT player FROM table_name_6 WHERE round > 1 AND nationality = \"austria\"",
+    "question": "What player has a round larger than 1 in Austria?",
+    "context": "CREATE TABLE table_name_6 (player VARCHAR, round VARCHAR, nationality VARCHAR)"
+  },
+  {
+    "answer": "SELECT director_s_ FROM table_name_92 WHERE title = \"star wars episode ii: attack of the clones\"",
+    "question": "Director for Star Wars Episode II: attack of the clones?",
+    "context": "CREATE TABLE table_name_92 (director_s_ VARCHAR, title VARCHAR)"
+  },
+  {
+    "answer": "SELECT to_par FROM table_name_92 WHERE player = \"tom kite\"",
+    "question": "What to par has tom kite as the player?",
+    "context": "CREATE TABLE table_name_92 (to_par VARCHAR, player VARCHAR)"
+  },
+  {
+    "answer": "SELECT T1.state_province_county FROM Addresses AS T1 JOIN Staff AS T2 ON T1.address_id = T2.staff_address_id GROUP BY T1.state_province_county HAVING COUNT(*) BETWEEN 2 AND 4",
+    "question": "List the states which have between 2 to 4 staffs living there.",
+    "context": "CREATE TABLE Addresses (state_province_county VARCHAR, address_id VARCHAR); CREATE TABLE Staff (staff_address_id VARCHAR)"
+  },
+  {
+    "answer": "SELECT record FROM table_name_12 WHERE attendance = \"2,500\"",
+    "question": "What is the record from the 2,500 in attendance?",
+    "context": "CREATE TABLE table_name_12 (record VARCHAR, attendance VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_58 WHERE record = \"19-11\"",
+    "question": "On what date was the record 19-11?",
+    "context": "CREATE TABLE table_name_58 (date VARCHAR, record VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_39 WHERE date = \"april 8\"",
+    "question": "What was the score on April 8?",
+    "context": "CREATE TABLE table_name_39 (score VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT stadium FROM table_name_66 WHERE club = \"f.c. igea virtus barcellona\"",
+    "question": "What's the name of the stadium when the club was F.C. Igea Virtus Barcellona?",
+    "context": "CREATE TABLE table_name_66 (stadium VARCHAR, club VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(wins) FROM table_name_25 WHERE country = \"new zealand\" AND last_title > 1968",
+    "question": "Which Wins has a Country of new zealand and a Last title larger than 1968?",
+    "context": "CREATE TABLE table_name_25 (wins INTEGER, country VARCHAR, last_title VARCHAR)"
+  },
+  {
+    "answer": "SELECT tag_team FROM table_name_10 WHERE time = \"03:34\"",
+    "question": "Name the Tag Team with a Time of 03:34?",
+    "context": "CREATE TABLE table_name_10 (tag_team VARCHAR, time VARCHAR)"
+  },
+  {
+    "answer": "SELECT declination___j2000__ FROM table_name_90 WHERE ngc_number > 3593",
+    "question": "what is the declination (j2000) when the ngc number is higher than 3593?",
+    "context": "CREATE TABLE table_name_90 (declination___j2000__ VARCHAR, ngc_number INTEGER)"
+  },
+  {
+    "answer": "SELECT title__english_ FROM table_1481865_1 WHERE title__original_ = \"Die Qual der Wahl\"",
+    "question": "What is the English title when the original title is Die Qual Der Wahl?",
+    "context": "CREATE TABLE table_1481865_1 (title__english_ VARCHAR, title__original_ VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(grid) FROM table_name_34 WHERE laps > 69",
+    "question": "What is the grid total for cars with over 69 laps?",
+    "context": "CREATE TABLE table_name_34 (grid VARCHAR, laps INTEGER)"
+  },
+  {
+    "answer": "SELECT MAX(no_of_episodes) FROM table_17697980_1 WHERE year = \"1989\"",
+    "question": "What is the largest number of episodes for a 1989 season dvd release? ",
+    "context": "CREATE TABLE table_17697980_1 (no_of_episodes INTEGER, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_60 WHERE date = \"may 4\"",
+    "question": "Which Score has a Date of may 4?",
+    "context": "CREATE TABLE table_name_60 (score VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_67 WHERE course = \"la granja de san ildefonso to alto de navacerrada\"",
+    "question": "What is the date for the La Granja de San Ildefonso to Alto de Navacerrada course?",
+    "context": "CREATE TABLE table_name_67 (date VARCHAR, course VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_56 WHERE opponent = \"luxembourg\"",
+    "question": "What day did Yugoslavia play Luxembourg?",
+    "context": "CREATE TABLE table_name_56 (date VARCHAR, opponent VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(attendance) FROM table_name_96 WHERE leading_scorer = \"tim duncan (24)\" AND home = \"spurs\"",
+    "question": "How many people attended the game where the leading scorer was Tim Duncan (24), and the home team was the Spurs?",
+    "context": "CREATE TABLE table_name_96 (attendance INTEGER, leading_scorer VARCHAR, home VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(attendance) FROM table_name_92 WHERE opponent = \"buffalo bills\" AND week > 14",
+    "question": "What is the highest number of people in attendance in the game against the Buffalo Bills in a week later than 14?",
+    "context": "CREATE TABLE table_name_92 (attendance INTEGER, opponent VARCHAR, week VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(points) FROM table_name_5 WHERE february < 1",
+    "question": "How many Points a February smaller than 1 have?",
+    "context": "CREATE TABLE table_name_5 (points INTEGER, february INTEGER)"
+  },
+  {
+    "answer": "SELECT series FROM table_name_59 WHERE opponent = \"new york rangers\" AND score = \"3\u20132 ot\"",
+    "question": "Which Series has an Opponent of new york rangers, and a Score of 3\u20132 ot?",
+    "context": "CREATE TABLE table_name_59 (series VARCHAR, opponent VARCHAR, score VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(order) FROM table_name_55 WHERE weeks < 15 AND majors < 1",
+    "question": "What was the highest order amount in weeks prier to 15 and a major less than 1?",
+    "context": "CREATE TABLE table_name_55 (order INTEGER, weeks VARCHAR, majors VARCHAR)"
+  },
+  {
+    "answer": "SELECT score_in_the_final FROM table_2820584_3 WHERE partner = \"Fred McNair\"",
+    "question": "What was the score in the final played with Fred McNair as partner?",
+    "context": "CREATE TABLE table_2820584_3 (score_in_the_final VARCHAR, partner VARCHAR)"
+  },
+  {
+    "answer": "SELECT score_in_the_final FROM table_22597626_2 WHERE partner = \"Woodforde\"",
+    "question": "What is the final score if the partner is Woodforde?",
+    "context": "CREATE TABLE table_22597626_2 (score_in_the_final VARCHAR, partner VARCHAR)"
+  },
+  {
+    "answer": "SELECT SUM(lane) FROM table_name_95 WHERE time = \"1:57.71\"",
+    "question": "What lane has a time of 1:57.71?",
+    "context": "CREATE TABLE table_name_95 (lane INTEGER, time VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(seats) FROM table_name_72 WHERE d\u00e1il = \"6th\"",
+    "question": "How many seats does the 6th Dail have?",
+    "context": "CREATE TABLE table_name_72 (seats VARCHAR, d\u00e1il VARCHAR)"
+  },
+  {
+    "answer": "SELECT country FROM table_name_10 WHERE driver = \"john nielsen\"",
+    "question": "what country is john nielsen from",
+    "context": "CREATE TABLE table_name_10 (country VARCHAR, driver VARCHAR)"
+  },
+  {
+    "answer": "SELECT T2.name FROM game AS T1 JOIN stadium AS T2 ON T1.stadium_id = T2.id JOIN injury_accident AS T3 ON T1.id = T3.game_id WHERE T3.player = 'Walter Samuel' INTERSECT SELECT T2.name FROM game AS T1 JOIN stadium AS T2 ON T1.stadium_id = T2.id JOIN injury_accident AS T3 ON T1.id = T3.game_id WHERE T3.player = 'Thiago Motta'",
+    "question": "List the name of the stadium where both the player 'Walter Samuel' and the player 'Thiago Motta' got injured.",
+    "context": "CREATE TABLE stadium (name VARCHAR, id VARCHAR); CREATE TABLE game (stadium_id VARCHAR, id VARCHAR); CREATE TABLE injury_accident (game_id VARCHAR, player VARCHAR)"
+  },
+  {
+    "answer": "SELECT weight FROM table_name_52 WHERE diameter = \"14mm\"",
+    "question": "How much does the coin with a 14mm diameter weigh?",
+    "context": "CREATE TABLE table_name_52 (weight VARCHAR, diameter VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_12 WHERE time = \"18:00\" AND set_3 = \"13\u201325\"",
+    "question": "What is the score with a time at 18:00 and a score for set 3 of 13\u201325?",
+    "context": "CREATE TABLE table_name_12 (score VARCHAR, time VARCHAR, set_3 VARCHAR)"
+  },
+  {
+    "answer": "SELECT AVG(year) FROM table_name_73 WHERE chassis = \"veritas rs\" AND points > 0",
+    "question": "What is the average Year with a Veritas rs chassis and more than 0 points?",
+    "context": "CREATE TABLE table_name_73 (year INTEGER, chassis VARCHAR, points VARCHAR)"
+  },
+  {
+    "answer": "SELECT conv FROM table_name_37 WHERE player = \"dick hyland\"",
+    "question": "What was Dick Hyland's conv?",
+    "context": "CREATE TABLE table_name_37 (conv VARCHAR, player VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(points) FROM table_18594107_2 WHERE scored = 14",
+    "question": "How many points when the score is 14?",
+    "context": "CREATE TABLE table_18594107_2 (points INTEGER, scored VARCHAR)"
+  },
+  {
+    "answer": "SELECT result FROM table_name_65 WHERE notes = \"quarter-finals\" AND event = \"adcc 2001 absolute\"",
+    "question": "Name the result with notes of quarter-finals and event of adcc 2001 absolute",
+    "context": "CREATE TABLE table_name_65 (result VARCHAR, notes VARCHAR, event VARCHAR)"
+  },
+  {
+    "answer": "SELECT winner FROM table_name_61 WHERE circuit = \"phillip island grand prix circuit\"",
+    "question": "Which driver won the Phillip Island Grand Prix Circuit?",
+    "context": "CREATE TABLE table_name_61 (winner VARCHAR, circuit VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(points) FROM table_name_62 WHERE draw = 6 AND rank > 10",
+    "question": "What is the lowest points with 6 draws and lower than rank 10?",
+    "context": "CREATE TABLE table_name_62 (points INTEGER, draw VARCHAR, rank VARCHAR)"
+  },
+  {
+    "answer": "SELECT wu_xing___\u4e94\u884c__ FROM table_name_80 WHERE korean___rr__ = \"\uc784 (im)\"",
+    "question": "What is Wu Xing (\u4e94\u884c) with Korean (RR) of \uc784 (im)?",
+    "context": "CREATE TABLE table_name_80 (wu_xing___\u4e94\u884c__ VARCHAR, korean___rr__ VARCHAR)"
+  },
+  {
+    "answer": "SELECT year FROM table_name_25 WHERE laps < 160 AND rank = \"26\"",
+    "question": "What year had less than 160 laps and a rank of 26?",
+    "context": "CREATE TABLE table_name_25 (year VARCHAR, laps VARCHAR, rank VARCHAR)"
+  },
+  {
+    "answer": "SELECT years FROM table_name_90 WHERE area = \"upper hutt\" AND authority = \"private\"",
+    "question": "What years is the private school in upper hutt?",
+    "context": "CREATE TABLE table_name_90 (years VARCHAR, area VARCHAR, authority VARCHAR)"
+  },
+  {
+    "answer": "SELECT document_id FROM Documents WHERE document_type_code = \"CV\" EXCEPT SELECT document_id FROM Documents_with_expenses",
+    "question": "Show ids for all documents in type CV without expense budgets.",
+    "context": "CREATE TABLE Documents_with_expenses (document_id VARCHAR, document_type_code VARCHAR); CREATE TABLE Documents (document_id VARCHAR, document_type_code VARCHAR)"
+  },
+  {
+    "answer": "SELECT SUM(round) FROM table_name_39 WHERE name = \"fred smoot\" AND pick > 14",
+    "question": "What is the sum of the round of Fred Smoot, who has a pick number greater than 14?",
+    "context": "CREATE TABLE table_name_39 (round INTEGER, name VARCHAR, pick VARCHAR)"
+  },
+  {
+    "answer": "SELECT champion FROM table_name_90 WHERE runner_up = \"jimmy connors\" AND year < 1978",
+    "question": "Who was the champion earlier than 1978 when the runner-up was Jimmy Connors?",
+    "context": "CREATE TABLE table_name_90 (champion VARCHAR, runner_up VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT country FROM table_name_59 WHERE year_s__won = \"1986\"",
+    "question": "Which country won in 1986?",
+    "context": "CREATE TABLE table_name_59 (country VARCHAR, year_s__won VARCHAR)"
+  },
+  {
+    "answer": "SELECT position FROM table_name_5 WHERE nationality = \"usa\" AND team = \"\u00edr\" AND season = \"2010-11\"",
+    "question": "What position did the 2010-11 USA \u00edr player have?",
+    "context": "CREATE TABLE table_name_5 (position VARCHAR, season VARCHAR, nationality VARCHAR, team VARCHAR)"
+  },
+  {
+    "answer": "SELECT director FROM table_name_97 WHERE gross__worldwide_ = \"$30,471\"",
+    "question": "Which director had a worldwide gross of $30,471?",
+    "context": "CREATE TABLE table_name_97 (director VARCHAR, gross__worldwide_ VARCHAR)"
+  },
+  {
+    "answer": "SELECT SUM(area_km_2) FROM table_name_70 WHERE pop_density_people_km_2 > 91 AND member_state = \"italy\" AND population_in_millions < 58.8",
+    "question": "What is the area km2 of the area with a pop density people/km2 larger than 91, is a member state of Italy, and had less than 58.8 population in millions?",
+    "context": "CREATE TABLE table_name_70 (area_km_2 INTEGER, population_in_millions VARCHAR, pop_density_people_km_2 VARCHAR, member_state VARCHAR)"
+  },
+  {
+    "answer": "SELECT competition FROM table_name_5 WHERE date = \"june 19, 2004\"",
+    "question": "What competition has June 19, 2004 as the date?",
+    "context": "CREATE TABLE table_name_5 (competition VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(rank) FROM table_name_35 WHERE time = \"8:23.02\"",
+    "question": "What is the Rank of the rower with a Time of 8:23.02?",
+    "context": "CREATE TABLE table_name_35 (rank VARCHAR, time VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_25 WHERE date = \"january 16, 2010\"",
+    "question": "What was the score on January 16, 2010?",
+    "context": "CREATE TABLE table_name_25 (score VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(played) FROM table_name_69 WHERE lost > 2 AND team = \"palmeiras\" AND drawn < 1",
+    "question": "What is the highest number played with more than 2 lost for Palmeiras and less than 1 draw?",
+    "context": "CREATE TABLE table_name_69 (played INTEGER, drawn VARCHAR, lost VARCHAR, team VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_67 WHERE partner = \"alexandra fusai\"",
+    "question": "what is the score when the partner is alexandra fusai?",
+    "context": "CREATE TABLE table_name_67 (score VARCHAR, partner VARCHAR)"
+  },
+  {
+    "answer": "SELECT claim_status_description FROM claims_processing_stages WHERE claim_status_name = \"Open\"",
+    "question": "What is the description of the claim status \"Open\"?",
+    "context": "CREATE TABLE claims_processing_stages (claim_status_description VARCHAR, claim_status_name VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(population__2011_census_) FROM table_2801442_1 WHERE code = \"GP\"",
+    "question": "How many people lived in the district with a code GP in 2011?",
+    "context": "CREATE TABLE table_2801442_1 (population__2011_census_ INTEGER, code VARCHAR)"
+  },
+  {
+    "answer": "SELECT SUM(no_result) FROM table_name_63 WHERE matches > 16 AND wins < 46",
+    "question": "How many total No Results occured when the team had less than 46 wins and more than 16 matches?",
+    "context": "CREATE TABLE table_name_63 (no_result INTEGER, matches VARCHAR, wins VARCHAR)"
+  },
+  {
+    "answer": "SELECT visitor FROM table_name_96 WHERE date = \"march 21\"",
+    "question": "Who was the visitor on march 21?",
+    "context": "CREATE TABLE table_name_96 (visitor VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT length FROM table_name_25 WHERE junctions = \"i-35 us 83\" AND route_name = \"us 83 bus.\"",
+    "question": "What is the length of the highway with junctions i-35 us 83 and named us 83 bus.?",
+    "context": "CREATE TABLE table_name_25 (length VARCHAR, junctions VARCHAR, route_name VARCHAR)"
+  },
+  {
+    "answer": "SELECT record FROM table_11964047_10 WHERE home = \"Los Angeles Lakers\"",
+    "question": "What is the record for the game at home Los Angeles Lakers?",
+    "context": "CREATE TABLE table_11964047_10 (record VARCHAR, home VARCHAR)"
+  },
+  {
+    "answer": "SELECT locomotive FROM table_name_74 WHERE gauge = \"standard\" AND serial_no = \"83-1015\"",
+    "question": "What is the locomotive with a standard gauge and a serial number of 83-1015?",
+    "context": "CREATE TABLE table_name_74 (locomotive VARCHAR, gauge VARCHAR, serial_no VARCHAR)"
+  },
+  {
+    "answer": "SELECT scorers FROM table_name_64 WHERE opponent = \"neuch\u00e2tel xamax\" AND date = \"10 december 1985\"",
+    "question": "Who were the scorers in the game against neuch\u00e2tel xamax played on 10 December 1985?",
+    "context": "CREATE TABLE table_name_64 (scorers VARCHAR, opponent VARCHAR, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(grid) FROM table_17244483_1 WHERE driver = \"Scott Dixon\"",
+    "question": "Scott Dixon had how many Grid positions?",
+    "context": "CREATE TABLE table_17244483_1 (grid VARCHAR, driver VARCHAR)"
+  },
+  {
+    "answer": "SELECT mens_singles FROM table_14903491_1 WHERE year = 1989",
+    "question": "Name the mens singles for 1989",
+    "context": "CREATE TABLE table_14903491_1 (mens_singles VARCHAR, year VARCHAR)"
+  },
+  {
+    "answer": "SELECT field FROM table_name_43 WHERE result = \"w 12-11\"",
+    "question": "Say the field with a result of w 12-11",
+    "context": "CREATE TABLE table_name_43 (field VARCHAR, result VARCHAR)"
+  },
+  {
+    "answer": "SELECT leader_battle FROM table_25920798_2 WHERE vote = \"4-3\"",
+    "question": "Name the leader battle for 4-3 vote",
+    "context": "CREATE TABLE table_25920798_2 (leader_battle VARCHAR, vote VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(goals_for) FROM table_name_40 WHERE draws = 3 AND losses > 18 AND played < 38",
+    "question": "What is the total number of goals when there are 3 draws, more than 18 losses, and played is smaller than 38?",
+    "context": "CREATE TABLE table_name_40 (goals_for VARCHAR, played VARCHAR, draws VARCHAR, losses VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(population__2000_) FROM table_2004733_2 WHERE area__in_km_2__ = \"1.2530\"",
+    "question": "How many people lived in the city which has 1.2530 km\u00b2 in the year 2000?",
+    "context": "CREATE TABLE table_2004733_2 (population__2000_ INTEGER, area__in_km_2__ VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(entries) FROM table_26455614_1 WHERE winner = \"Paris Saint-Germain\"",
+    "question": "What is the fewest recorded entrants against paris saint-germain?",
+    "context": "CREATE TABLE table_26455614_1 (entries INTEGER, winner VARCHAR)"
+  },
+  {
+    "answer": "SELECT date FROM table_name_60 WHERE winning_constructor = \"bugatti\" AND winning_driver = \"stanislas czaykowski\"",
+    "question": "Tell me the date for bugatti fpr stanislas czaykowski",
+    "context": "CREATE TABLE table_name_60 (date VARCHAR, winning_constructor VARCHAR, winning_driver VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(overall) FROM table_name_50 WHERE pick = 20",
+    "question": "what is the lowest overall when the pick is 20?",
+    "context": "CREATE TABLE table_name_50 (overall INTEGER, pick VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(total) FROM table_name_1 WHERE country = \"united states\" AND year_s__won = \"2000 , 2005 , 2006\"",
+    "question": "What is United States total in the year(s) won of 2000 , 2005 , 2006?",
+    "context": "CREATE TABLE table_name_1 (total INTEGER, country VARCHAR, year_s__won VARCHAR)"
+  },
+  {
+    "answer": "SELECT density__hab_km\u00b2_ FROM table_name_72 WHERE city_district = \"san sebasti\u00e1n\"",
+    "question": "What is the density of San Sebasti\u00e1n?",
+    "context": "CREATE TABLE table_name_72 (density__hab_km\u00b2_ VARCHAR, city_district VARCHAR)"
+  },
+  {
+    "answer": "SELECT geo_id FROM table_name_83 WHERE longitude = -102.693028",
+    "question": "What GEO ID has a longitude of -102.693028?",
+    "context": "CREATE TABLE table_name_83 (geo_id VARCHAR, longitude VARCHAR)"
+  },
+  {
+    "answer": "SELECT AVG(game) FROM table_name_91 WHERE date = \"december 6\"",
+    "question": "What is the average game that has December 6 as the date?",
+    "context": "CREATE TABLE table_name_91 (game INTEGER, date VARCHAR)"
+  },
+  {
+    "answer": "SELECT score FROM table_name_42 WHERE away_team = \"arsenal\"",
+    "question": "What is the score for the game in which Arsenal was the away team?",
+    "context": "CREATE TABLE table_name_42 (score VARCHAR, away_team VARCHAR)"
+  },
+  {
+    "answer": "SELECT built FROM table_name_61 WHERE name = \"sargent bridge\"",
+    "question": "When was the sargent bridge built?",
+    "context": "CREATE TABLE table_name_61 (built VARCHAR, name VARCHAR)"
+  },
+  {
+    "answer": "SELECT film_title_used_in_nomination FROM table_name_79 WHERE language_s_ = \"dutch\" AND original_title = \"rosie\"",
+    "question": "What was the title used for Rosie, the film nominated for the dutch language?",
+    "context": "CREATE TABLE table_name_79 (film_title_used_in_nomination VARCHAR, language_s_ VARCHAR, original_title VARCHAR)"
+  },
+  {
+    "answer": "SELECT SUM(played) FROM table_name_2 WHERE club = \"barcelona b\" AND wins < 11",
+    "question": "What is the number played for the Barcelona B club, with wins under 11?",
+    "context": "CREATE TABLE table_name_2 (played INTEGER, club VARCHAR, wins VARCHAR)"
+  },
+  {
+    "answer": "SELECT runner_up FROM table_1507431_1 WHERE no = 2",
+    "question": "Who are all runner-ups for No. 2?",
+    "context": "CREATE TABLE table_1507431_1 (runner_up VARCHAR, no VARCHAR)"
+  },
+  {
+    "answer": "SELECT owner FROM table_name_35 WHERE winner = \"meridiana\"",
+    "question": "what is the winner of meridiana",
+    "context": "CREATE TABLE table_name_35 (owner VARCHAR, winner VARCHAR)"
+  },
+  {
+    "answer": "SELECT blocks_per_game FROM table_25774493_3 WHERE field_goal_percentage = \".594 (2nd)\"",
+    "question": "What were the blocks per game in the selection where the field goal percentage was .594 (2nd)?",
+    "context": "CREATE TABLE table_25774493_3 (blocks_per_game VARCHAR, field_goal_percentage VARCHAR)"
+  },
+  {
+    "answer": "SELECT MAX(kerry_number) FROM table_1733457_1 WHERE others_number = 47",
+    "question": "Name the maximum kerry # for where others is 47",
+    "context": "CREATE TABLE table_1733457_1 (kerry_number INTEGER, others_number VARCHAR)"
+  },
+  {
+    "answer": "SELECT time FROM table_name_35 WHERE score = \"3-2\"",
+    "question": "What time was the match played with a score of 3-2?",
+    "context": "CREATE TABLE table_name_35 (time VARCHAR, score VARCHAR)"
+  },
+  {
+    "answer": "SELECT position FROM table_name_32 WHERE competition = \"european race walking cup\"",
+    "question": "Which Position has a Competition of european race walking cup?",
+    "context": "CREATE TABLE table_name_32 (position VARCHAR, competition VARCHAR)"
+  },
+  {
+    "answer": "SELECT captain FROM table_name_28 WHERE coach = \"giles white\"",
+    "question": "Who is the captain of the team coached by Giles White?",
+    "context": "CREATE TABLE table_name_28 (captain VARCHAR, coach VARCHAR)"
+  },
+  {
+    "answer": "SELECT T2.lot_details FROM INVESTORS AS T1 JOIN LOTS AS T2 ON T1.investor_id = T2.investor_id WHERE T1.Investor_details = \"l\"",
+    "question": "Return the lot details of lots that belong to investors with details \"l\"?",
+    "context": "CREATE TABLE LOTS (lot_details VARCHAR, investor_id VARCHAR); CREATE TABLE INVESTORS (investor_id VARCHAR, Investor_details VARCHAR)"
+  },
+  {
+    "answer": "SELECT MIN(black_caribbean_population) FROM table_19149550_7 WHERE black_african_population < 10552.0",
+    "question": "What is the black caribbean population when the black African population is less than 10552.0?",
+    "context": "CREATE TABLE table_19149550_7 (black_caribbean_population INTEGER, black_african_population INTEGER)"
+  },
+  {
+    "answer": "SELECT Carrier FROM phone GROUP BY Carrier ORDER BY COUNT(*) DESC LIMIT 1",
+    "question": "Show the most frequently used carrier of the phones.",
+    "context": "CREATE TABLE phone (Carrier VARCHAR)"
+  },
+  {
+    "answer": "SELECT club__city_town_ FROM table_14181578_1 WHERE goals_for_against = \"14-2\"",
+    "question": "who is the the\u00a0club (city/town)\u00a0with\u00a0goals for/against\u00a0being 14-2",
+    "context": "CREATE TABLE table_14181578_1 (club__city_town_ VARCHAR, goals_for_against VARCHAR)"
+  },
+  {
+    "answer": "SELECT player FROM table_name_56 WHERE country = \"united states\" AND money___$__ > 387 AND score = 75 - 74 - 74 - 70 = 293",
+    "question": "What is Player, when Country is \"United States\", when Money ( $ ) is greater than 387, and when Score is \"75-74-74-70=293\"?",
+    "context": "CREATE TABLE table_name_56 (player VARCHAR, country VARCHAR, money___$__ VARCHAR, score VARCHAR)"
+  },
+  {
+    "answer": "SELECT tyre FROM table_name_51 WHERE rounds = \"14-15\" AND engine = \"ford cosworth dfv 3.0 v8\" AND chassis = \"m23\"",
+    "question": "When the engine Ford Cosworth DFV 3.0 v8 has a chassis of m23 and in rounds 14-15, what is its Tyre?",
+    "context": "CREATE TABLE table_name_51 (tyre VARCHAR, chassis VARCHAR, rounds VARCHAR, engine VARCHAR)"
+  },
+  {
+    "answer": "SELECT DISTINCT cName FROM tryout ORDER BY cName",
+    "question": "Find the name of different colleges involved in the tryout in alphabetical order.",
+    "context": "CREATE TABLE tryout (cName VARCHAR)"
+  },
+  {
+    "answer": "SELECT past_habitual FROM table_16337329_5 WHERE probable_future = \"\u0917\u0930\u094d\u091b\u0938\u094d garchas 'you (will) do'\"",
+    "question": "Name the past habitual for \u0917\u0930\u094d\u091b\u0938\u094d garchas 'you (will) do'",
+    "context": "CREATE TABLE table_16337329_5 (past_habitual VARCHAR, probable_future VARCHAR)"
+  },
+  {
+    "answer": "SELECT result FROM table_name_36 WHERE home_captain = \"courtney walsh\"",
+    "question": "What is the result of Courtney Walsh ?",
+    "context": "CREATE TABLE table_name_36 (result VARCHAR, home_captain VARCHAR)"
+  },
+  {
+    "answer": "SELECT country FROM table_name_93 WHERE notes = \"1 vcd\" AND release_title = \"martial law: substitutes\"",
+    "question": "Which country had a release of 1 VCD titled Martial Law: Substitutes?",
+    "context": "CREATE TABLE table_name_93 (country VARCHAR, notes VARCHAR, release_title VARCHAR)"
+  },
+  {
+    "answer": "SELECT COUNT(crowd) FROM table_name_97 WHERE venue = \"victoria park\"",
+    "question": "How many people were in the crowd at Victoria Park?",
+    "context": "CREATE TABLE table_name_97 (crowd VARCHAR, venue VARCHAR)"
+  }
+]

@@ -1,0 +1,10 @@
+#,Paper,File,Venue,Sensors,Code,Weights,Links
+1,Pulse-PPG: Open-Source Field-Trained PPG Foundation Model,pulse_ppg.pdf,UbiComp 2025,PPG,Yes,Yes (Zenodo),https://github.com/maxxu05/pulseppg
+2,NormWear: Foundation Model for Multivariate Wearable Sensing,normwear.pdf,arXiv 2024,"PPG, ECG, EEG, GSR, IMU",Yes,Yes (GitHub Releases),https://github.com/Mobile-Sensing-and-UbiComp-Laboratory/NormWear
+3,SSL-Wearables: Self-supervised Learning Using 700K Person-days,ssl_wearables_700k.pdf,npj Digital Medicine 2024,Accelerometer,Yes,Yes (PyTorch Hub),https://github.com/OxWearables/ssl-wearables
+4,SensorLM: Learning the Language of Wearable Sensors,sensorlm.pdf,NeurIPS 2025,"PPG, ACC, EDA, Temp, Alt",Yes,No,https://github.com/Google-Health/consumer-health-research/tree/main/sensorlm
+5,SensorLLM: Aligning LLMs with Motion Sensors for HAR,sensorllm.pdf,EMNLP 2025,"Accelerometer, Gyroscope",Yes,No,https://github.com/cruiseresearchgroup/SensorLLM
+6,Health-LLM: LLMs for Health Prediction via Wearable Sensor Data,health_llm.pdf,CHIL 2024,All (as text),Yes,No,https://github.com/mitmedialab/Health-LLM
+7,Wearable Accelerometer FM via Knowledge Distillation (Apple),wearable_accel_knowledge_distillation.pdf,arXiv 2025,"PPG, Accelerometer",No,No,
+8,ConSensus: Multi-Agent Collaboration for Multimodal Sensing,multimodal_agent.pdf,arXiv 2026,"ACC, ECG, EMG, EDA, Temp, Resp",No,No,
+9,Are LLMs Actually Useful for Time Series Forecasting?,LLM_forecast.pdf,NeurIPS 2024,General time series,Yes,No,https://github.com/BennyTMT/LLMsForTimeSeries

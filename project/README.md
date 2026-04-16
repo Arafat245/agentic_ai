@@ -29,6 +29,224 @@ Binary classification: predict whether a social interaction occurred (1) or not 
 
 **BA** = Balanced Accuracy. All metrics macro-averaged across 38 LOSO-CV folds. Random guess baseline: BA = 0.50.
 
+## How to Reproduce the Best ReAct Result (BA = 0.5695)
+
+This section documents the full pipeline to reproduce the best ReAct variant (**LR+RF**), step by step. All paths below are relative to the project root (`/mnt/sdb/arafat/agentic_ai/project/`).
+
+### Overview
+
+The ReAct pipeline has four sequential stages:
+
+1. **Extract 107 hand-crafted features** from raw sensor data (ACC, PPG, Light)
+2. **Generate per-modality text descriptions** (used as the Light tool input)
+3. **Train ReAct agent with LR+RF tools** and evaluate with LOSO-CV
+4. **Compute final metrics** from per-sample predictions
+
+Each stage reads outputs from the previous one.
+
+---
+
+### Stage 1 — Feature Extraction
+
+**Script**: `temp_exps/phase1_data_pipeline.py`
+
+**Input files**:
+- `labels_for_non_acoustic_model.pkl` — 33,727 labels with columns `P_ID`, `category`, `Sensor_start_time`
+- `Processed data/{P_ID}/Smartwatch_AccelerometerDatum.pkl` — ACC raw (X, Y, Z, T)
+- `Processed data/{P_ID}/Smartwatch_PPG_Health_SDK.pkl` — PPG raw (PPG Green, T)
+- `Processed data/{P_ID}/Smartwatch_LightDatum.pkl` — Light raw (Light, T)
+
+**What it does**:
+- For each label, extracts the 16-second window starting at `Sensor_start_time` from each sensor file
+- Computes 107 features: time-domain, frequency-domain, band-power, spectral, HRV (PPG via NeuroKit2), cross-axis correlations
+
+**Output**:
+- `temp_exps/all_subjects_features.csv` — 33,727 rows × (107 features + `P_ID` + `category` + `Sensor_start_time`)
+
+**Sample output row**:
+```
+P_ID=PA01, category=0, acc_x_band_high=0.123, acc_z_zcr=0.175,
+ppg_hrv_pnn50=0.792, light_log_mean=3.16, ...
+```
+
+**Run**:
+```bash
+python3 temp_exps/phase1_data_pipeline.py
+```
+
+---
+
+### Stage 2 — Generate Per-Modality Text Descriptions
+
+**Script**: `consensus_experiments/code/phase6_modality_texts.py`
+
+**Input files**:
+- `temp_exps/all_subjects_features.csv` (from Stage 1)
+
+**What it does**:
+- Converts the numeric features of each modality into natural-language paragraphs
+- Produces three text columns: `text_acc`, `text_ppg`, `text_light` (the ReAct agent uses `text_light` when it calls `get_light_text`)
+
+**Output**:
+- `temp_exps/modality_text_features.csv` — 33,727 rows × (`P_ID`, `category`, `text_acc`, `text_ppg`, `text_light`)
+
+**Sample `text_light` output**:
+```
+"The ambient light during this 16-second window had a log-mean of 3.16
+(moderate indoor light). Light standard deviation (log) was 0.54,
+suggesting stable lighting. 8 notable changes observed."
+```
+
+**Run**:
+```bash
+python3 consensus_experiments/code/phase6_modality_texts.py
+```
+
+---
+
+### Stage 3 — ReAct Agent with LR+RF Tools
+
+**Script**: `consensus_experiments/code/phase9_react_v2.py` (runs the `lr_rf` variant)
+
+**Input files**:
+- `temp_exps/all_subjects_features.csv` — features (Stage 1)
+- `temp_exps/modality_text_features.csv` — text (Stage 2)
+- `.env` — must contain `OPENAI_API_KEY` (GPT-4o-mini is used as the agent LLM)
+
+**What it does (per LOSO fold, 38 folds total)**:
+1. Hold out 1 subject as test, train on remaining 37 subjects
+2. **Train tools** on 37-subject training set:
+   - `lr_predict`: Logistic Regression (`class_weight='balanced'`, `C=1.0`) on 30 top features
+   - `rf_predict`: Random Forest (`n_estimators=200`, `max_depth=20`, `class_weight='balanced'`)
+3. Subsample 25 positive + 25 negative = **50 test samples per subject** for efficiency
+4. For each test sample, run the ReAct loop (max 3 steps):
+   - **Step 0**: Agent calls `lr_predict` → receives LR probability
+   - **Step 1**: If LR probability > 0.60 → agent predicts directly. Otherwise agent calls `rf_predict`
+   - **Step 2**: Agent commits to a final prediction (`interaction` or `no_interaction`)
+5. Save trace and prediction for each sample
+
+**ReAct System Prompt (simplified)**:
+```
+You are an AI agent detecting social interactions from smartwatch sensor data.
+Tools:
+  1. lr_predict — Logistic Regression with probability (best ML baseline)
+  2. rf_predict — Random Forest with probability (different error pattern than LR)
+
+Strategy:
+  - ALWAYS call lr_predict first
+  - If LR probability > 0.60, TRUST it and predict
+  - If LR is uncertain (0.50–0.60), call rf_predict to verify
+  - Only override LR if RF STRONGLY disagrees
+  - Max 3 tool calls
+
+Respond in JSON: {"tool_call", "reasoning", "confidence", "prediction"}
+```
+
+**Sample ReAct trace (for subject PA01, one sample)**:
+
+*Step 0 — Agent calls `lr_predict`*:
+```json
+{
+  "tool_call": "lr_predict",
+  "reasoning": "Starting with the most accurate tool, lr_predict, to assess the smartwatch sample.",
+  "confidence": 0.0,
+  "prediction": null
+}
+```
+*Tool result*: `"LR predicts: interaction (probability: 0.596). no_interaction=0.404, interaction=0.596"`
+
+*Step 1 — LR uncertain (0.50–0.60), agent calls `rf_predict`*:
+```json
+{
+  "tool_call": "rf_predict",
+  "reasoning": "The LR probability is between 0.50 and 0.60, indicating uncertainty. I will call rf_predict to verify.",
+  "confidence": 0.596,
+  "prediction": null
+}
+```
+*Tool result*: `"Random Forest predicts: no_interaction (probability: 0.647). no_interaction=0.647, interaction=0.353"`
+
+*Step 2 — Final decision*:
+```json
+{
+  "tool_call": null,
+  "reasoning": "LR predicts interaction with 0.596, RF predicts no_interaction with 0.647. RF strongly disagrees with LR and has higher confidence, so I trust RF.",
+  "confidence": 0.647,
+  "prediction": "no_interaction"
+}
+```
+
+**Output files**:
+- `temp_exps/results_react_lr_rf.csv` — per-subject LOSO metrics (38 rows, one per subject)
+- `temp_exps/react_lr_rf_per_sample.csv` — per-sample predictions and full JSON traces (~1,900 rows)
+
+**Sample row of `results_react_lr_rf.csv`**:
+```
+subject=PA01, accuracy=0.46, balanced_accuracy=0.46, f1=0.4489, precision=0.4583,
+recall=0.44, auc=, n_test=50, n_pos=25, avg_steps=2.58
+```
+
+**Sample row of `react_lr_rf_per_sample.csv`**:
+```
+P_ID=PA01, true_label=0, prediction=0, confidence=0.647, n_steps=3,
+trace=[{"step":0, "tool_call":"lr_predict", ...}, {...}, {...}]
+```
+
+**Run**:
+```bash
+cd consensus_experiments/code
+python3 phase9_react_v2.py
+```
+This produces three ReAct variants; the `lr_rf` variant is the best.
+
+---
+
+### Stage 4 — Final Metrics (Aggregated Across 38 Subjects)
+
+**Input**: `temp_exps/results_react_lr_rf.csv`
+
+**Aggregation**: Macro-average metrics across 38 LOSO folds (each row is one subject).
+
+**Final output — the best ReAct result**:
+| Metric | Value |
+|--------|-------|
+| Balanced Accuracy | **0.5695** |
+| Accuracy | 0.5695 |
+| F1 | 0.4898 |
+| Precision | 0.6019 |
+| Recall | 0.4389 |
+| Avg. tool calls per sample | 2.57 |
+
+**Quick aggregation snippet**:
+```python
+import pandas as pd
+df = pd.read_csv('temp_exps/results_react_lr_rf.csv')
+print(df[['balanced_accuracy','f1','precision','recall']].mean())
+```
+
+---
+
+### Summary of File Flow
+
+```
+Raw sensor .pkl files
+         │
+         ▼  [Stage 1] phase1_data_pipeline.py
+all_subjects_features.csv  (107 features × 33,727 rows)
+         │
+         ▼  [Stage 2] phase6_modality_texts.py
+modality_text_features.csv  (text per modality)
+         │
+         ▼  [Stage 3] phase9_react_v2.py (lr_rf variant)
+results_react_lr_rf.csv          (per-subject metrics)
+react_lr_rf_per_sample.csv       (per-sample traces)
+         │
+         ▼  [Stage 4] aggregation
+Final: BA = 0.5695
+```
+
+---
+
 ## Analysis
 
 ### Key Findings

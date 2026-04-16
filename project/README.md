@@ -20,9 +20,9 @@ Binary classification: predict whether a social interaction occurred (1) or not 
 | Deep Learning | TCN | 0.5163 | 0.3424 | 0.9500 | 0.4803 |
 | Deep Learning | LSTM | 0.5252 | 0.3466 | 0.9128 | 0.4785 |
 | Deep Learning | Transformer | 0.5506 | 0.3621 | 0.7988 | 0.4736 |
-| LLM (3B) | Llama-3.2-3B (Light Agent) | 0.5479 | 0.5463 | 0.7726 | 0.6244 |
-| LLM (7B) | Qwen2.5-7B (Light Agent) | 0.5347 | 0.5149 | 0.6726 | 0.5662 |
-| LLM (1B) | OLMo-1B (Light Agent) | 0.5353 | 0.5328 | 0.7579 | 0.5950 |
+| LLM (3B) | Llama-3.2-3B | 0.5479 | 0.5463 | 0.7726 | 0.6244 |
+| LLM (7B) | Qwen2.5-7B | 0.5347 | 0.5149 | 0.6726 | 0.5662 |
+| LLM (1B) | OLMo-1B | 0.5353 | 0.5328 | 0.7579 | 0.5950 |
 | Agentic | **ReAct** | **0.5695** | **0.6019** | **0.4389** | **0.4898** |
 
 **BA** = Balanced Accuracy. All metrics macro-averaged across 38 LOSO-CV folds. Random guess baseline: BA = 0.50.

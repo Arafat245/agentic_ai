@@ -25,22 +25,23 @@ Binary classification: predict whether a social interaction occurred (1) or not 
 | LLM (3B) | Llama-3.2-3B | 0.5479 | 0.5463 | 0.7726 | 0.6244 |
 | LLM (7B) | Qwen2.5-7B | 0.5347 | 0.5149 | 0.6726 | 0.5662 |
 | LLM (1B) | OLMo-1B | 0.5353 | 0.5328 | 0.7579 | 0.5950 |
-| Agentic | **ReAct** | **0.5695** | **0.6019** | **0.4389** | **0.4898** |
+| Agentic | **ReAct** | **0.5695** | **0.6005** | **0.4432** | **0.4918** |
 
 **BA** = Balanced Accuracy. All metrics macro-averaged across 38 LOSO-CV folds. Random guess baseline: BA = 0.50.
 
 ## How to Reproduce the Best ReAct Result (BA = 0.5695)
 
-This section documents the full pipeline to reproduce the best ReAct variant (**LR+RF**), step by step. All paths below are relative to the project root (`/mnt/sdb/arafat/agentic_ai/project/`).
+This section documents the full pipeline to reproduce the best ReAct variant (**LR + RF + Transformer + Light**), step by step. All paths below are relative to the project root (`/mnt/sdb/arafat/agentic_ai/project/`).
 
 ### Overview
 
-The ReAct pipeline has four sequential stages:
+The ReAct pipeline has five sequential stages:
 
 1. **Extract 107 hand-crafted features** from raw sensor data (ACC, PPG, Light)
 2. **Generate per-modality text descriptions** (used as the Light tool input)
-3. **Train ReAct agent with LR+RF tools** and evaluate with LOSO-CV
-4. **Compute final metrics** from per-sample predictions
+3. **Train and save Transformer predictions** (used as one of the ReAct tools)
+4. **Train ReAct agent with LR + RF + Transformer + Light tools** and evaluate with LOSO-CV
+5. **Compute final metrics** from per-sample predictions
 
 Each stage reads outputs from the previous one.
 
@@ -104,39 +105,71 @@ python3 consensus_experiments/code/phase6_modality_texts.py
 
 ---
 
-### Stage 3 — ReAct Agent with LR+RF Tools
+### Stage 3 — Train and Save Transformer Predictions
 
-**Script**: `consensus_experiments/code/phase9_react_v2.py` (runs the `lr_rf` variant)
+**Script**: `consensus_experiments/code/phase8_dl_models.py` (Transformer variant)
+
+**Input files**:
+- `temp_exps/all_subjects_features.csv` (features)
+- Raw sensor `.pkl` files (for constructing time-series tensors)
+
+**What it does**:
+- Trains a 1D Transformer encoder on raw ACC/PPG/Light time series using LOSO-CV (38 folds)
+- For each held-out subject, saves the Transformer's predicted class and probability for every sample
+
+**Output**:
+- `temp_exps/dl_transformer_per_sample.csv` — columns: `P_ID`, `pred`, `prob` (one row per sample)
+
+**Sample output row**:
+```
+P_ID=PA01, pred=1, prob=0.612
+```
+
+**Run**:
+```bash
+python3 consensus_experiments/code/phase8_dl_models.py
+```
+
+---
+
+### Stage 4 — ReAct Agent with LR + RF + Transformer + Light Tools
+
+**Script**: `consensus_experiments/code/phase9_react_v2.py` (runs the `lr_rf_trans_light` variant)
 
 **Input files**:
 - `temp_exps/all_subjects_features.csv` — features (Stage 1)
 - `temp_exps/modality_text_features.csv` — text (Stage 2)
+- `temp_exps/dl_transformer_per_sample.csv` — Transformer predictions (Stage 3)
 - `.env` — must contain `OPENAI_API_KEY` (GPT-4o-mini is used as the agent LLM)
 
 **What it does (per LOSO fold, 38 folds total)**:
 1. Hold out 1 subject as test, train on remaining 37 subjects
-2. **Train tools** on 37-subject training set:
+2. **Train ML tools** on 37-subject training set:
    - `lr_predict`: Logistic Regression (`class_weight='balanced'`, `C=1.0`) on 30 top features
    - `rf_predict`: Random Forest (`n_estimators=200`, `max_depth=20`, `class_weight='balanced'`)
-3. Subsample 25 positive + 25 negative = **50 test samples per subject** for efficiency
-4. For each test sample, run the ReAct loop (max 3 steps):
+3. **Load Transformer predictions** from the saved lookup (Stage 3)
+4. Subsample 25 positive + 25 negative = **50 test samples per subject** for efficiency
+5. For each test sample, run the ReAct loop (max 3 steps):
    - **Step 0**: Agent calls `lr_predict` → receives LR probability
-   - **Step 1**: If LR probability > 0.60 → agent predicts directly. Otherwise agent calls `rf_predict`
+   - **Step 1**: If LR probability > 0.60 → agent predicts directly. Otherwise agent calls `rf_predict`, `transformer_predict`, or `get_light_text` to corroborate
    - **Step 2**: Agent commits to a final prediction (`interaction` or `no_interaction`)
-5. Save trace and prediction for each sample
+6. Save trace and prediction for each sample
 
 **ReAct System Prompt (simplified)**:
 ```
 You are an AI agent detecting social interactions from smartwatch sensor data.
 Tools:
-  1. lr_predict — Logistic Regression with probability (best ML baseline)
-  2. rf_predict — Random Forest with probability (different error pattern than LR)
+  1. lr_predict          — Logistic Regression with probability (best ML baseline)
+  2. rf_predict          — Random Forest with probability (different error pattern than LR)
+  3. transformer_predict — Transformer deep-learning prediction with probability
+  4. get_light_text      — Ambient light sensor description in natural language
 
 Strategy:
   - ALWAYS call lr_predict first
   - If LR probability > 0.60, TRUST it and predict
-  - If LR is uncertain (0.50–0.60), call rf_predict to verify
-  - Only override LR if RF STRONGLY disagrees
+  - If LR is uncertain (0.50–0.60), call ONE more tool (rf_predict, transformer_predict,
+    or get_light_text) to verify, then decide
+  - Only override LR if another tool STRONGLY disagrees
   - Max 3 tool calls
 
 Respond in JSON: {"tool_call", "reasoning", "confidence", "prediction"}
@@ -153,42 +186,42 @@ Respond in JSON: {"tool_call", "reasoning", "confidence", "prediction"}
   "prediction": null
 }
 ```
-*Tool result*: `"LR predicts: interaction (probability: 0.596). no_interaction=0.404, interaction=0.596"`
+*Tool result*: `"LR predicts: interaction (probability: 0.563). no_interaction=0.437, interaction=0.563"`
 
-*Step 1 — LR uncertain (0.50–0.60), agent calls `rf_predict`*:
+*Step 1 — LR uncertain (0.50–0.60), agent calls `transformer_predict`*:
 ```json
 {
-  "tool_call": "rf_predict",
-  "reasoning": "The LR probability is between 0.50 and 0.60, indicating uncertainty. I will call rf_predict to verify.",
-  "confidence": 0.596,
+  "tool_call": "transformer_predict",
+  "reasoning": "The LR probability is between 0.50 and 0.60, indicating uncertainty. I will call transformer_predict to corroborate using the DL model.",
+  "confidence": 0.563,
   "prediction": null
 }
 ```
-*Tool result*: `"Random Forest predicts: no_interaction (probability: 0.647). no_interaction=0.647, interaction=0.353"`
+*Tool result*: `"Transformer (DL) predicts: interaction (probability: 0.612)"`
 
 *Step 2 — Final decision*:
 ```json
 {
   "tool_call": null,
-  "reasoning": "LR predicts interaction with 0.596, RF predicts no_interaction with 0.647. RF strongly disagrees with LR and has higher confidence, so I trust RF.",
-  "confidence": 0.647,
-  "prediction": "no_interaction"
+  "reasoning": "Both LR (0.563) and Transformer (0.612) agree on interaction. I am confident in the prediction.",
+  "confidence": 0.612,
+  "prediction": "interaction"
 }
 ```
 
 **Output files**:
-- `temp_exps/results_react_lr_rf.csv` — per-subject LOSO metrics (38 rows, one per subject)
-- `temp_exps/react_lr_rf_per_sample.csv` — per-sample predictions and full JSON traces (~1,900 rows)
+- `temp_exps/results_react_lr_rf_trans_light.csv` — per-subject LOSO metrics (38 rows, one per subject)
+- `temp_exps/react_lr_rf_trans_light_per_sample.csv` — per-sample predictions and full JSON traces (~1,900 rows)
 
-**Sample row of `results_react_lr_rf.csv`**:
+**Sample row of `results_react_lr_rf_trans_light.csv`**:
 ```
-subject=PA01, accuracy=0.46, balanced_accuracy=0.46, f1=0.4489, precision=0.4583,
-recall=0.44, auc=, n_test=50, n_pos=25, avg_steps=2.58
+subject=PA01, accuracy=0.46, balanced_accuracy=0.46, f1=0.4490, precision=0.4583,
+recall=0.44, auc=, n_test=50, n_pos=25, avg_steps=2.59
 ```
 
-**Sample row of `react_lr_rf_per_sample.csv`**:
+**Sample row of `react_lr_rf_trans_light_per_sample.csv`**:
 ```
-P_ID=PA01, true_label=0, prediction=0, confidence=0.647, n_steps=3,
+P_ID=PA01, true_label=1, prediction=1, confidence=0.612, n_steps=3,
 trace=[{"step":0, "tool_call":"lr_predict", ...}, {...}, {...}]
 ```
 
@@ -197,13 +230,13 @@ trace=[{"step":0, "tool_call":"lr_predict", ...}, {...}, {...}]
 cd consensus_experiments/code
 python3 phase9_react_v2.py
 ```
-This produces three ReAct variants; the `lr_rf` variant is the best.
+This script runs three ReAct variants sequentially; the `lr_rf_trans_light` variant is the best.
 
 ---
 
-### Stage 4 — Final Metrics (Aggregated Across 38 Subjects)
+### Stage 5 — Final Metrics (Aggregated Across 38 Subjects)
 
-**Input**: `temp_exps/results_react_lr_rf.csv`
+**Input**: `temp_exps/results_react_lr_rf_trans_light.csv`
 
 **Aggregation**: Macro-average metrics across 38 LOSO folds (each row is one subject).
 
@@ -212,15 +245,15 @@ This produces three ReAct variants; the `lr_rf` variant is the best.
 |--------|-------|
 | Balanced Accuracy | **0.5695** |
 | Accuracy | 0.5695 |
-| F1 | 0.4898 |
-| Precision | 0.6019 |
-| Recall | 0.4389 |
-| Avg. tool calls per sample | 2.57 |
+| F1 | 0.4918 |
+| Precision | 0.6005 |
+| Recall | 0.4432 |
+| Avg. tool calls per sample | 2.59 |
 
 **Quick aggregation snippet**:
 ```python
 import pandas as pd
-df = pd.read_csv('temp_exps/results_react_lr_rf.csv')
+df = pd.read_csv('temp_exps/results_react_lr_rf_trans_light.csv')
 print(df[['balanced_accuracy','f1','precision','recall']].mean())
 ```
 
@@ -234,14 +267,21 @@ Raw sensor .pkl files
          ▼  [Stage 1] phase1_data_pipeline.py
 all_subjects_features.csv  (107 features × 33,727 rows)
          │
-         ▼  [Stage 2] phase6_modality_texts.py
-modality_text_features.csv  (text per modality)
+         ├─▶  [Stage 2] phase6_modality_texts.py
+         │        │
+         │        ▼
+         │   modality_text_features.csv  (text per modality)
          │
-         ▼  [Stage 3] phase9_react_v2.py (lr_rf variant)
-results_react_lr_rf.csv          (per-subject metrics)
-react_lr_rf_per_sample.csv       (per-sample traces)
+         ├─▶  [Stage 3] phase8_dl_models.py (Transformer)
+         │        │
+         │        ▼
+         │   dl_transformer_per_sample.csv  (pred, prob per sample)
          │
-         ▼  [Stage 4] aggregation
+         ▼  [Stage 4] phase9_react_v2.py (lr_rf_trans_light variant)
+results_react_lr_rf_trans_light.csv        (per-subject metrics)
+react_lr_rf_trans_light_per_sample.csv     (per-sample traces)
+         │
+         ▼  [Stage 5] aggregation
 Final: BA = 0.5695
 ```
 

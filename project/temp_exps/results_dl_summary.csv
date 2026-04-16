@@ -1,0 +1,4 @@
+Model,accuracy,balanced_accuracy,f1,precision,recall,auc
+TCN,0.3769,0.5163,0.4803,0.3424,0.9500,0.5951
+LSTM,0.3998,0.5252,0.4785,0.3466,0.9128,0.5769
+Transformer,0.4690,0.5506,0.4736,0.3621,0.7988,0.6033

@@ -1,0 +1,2 @@
+accuracy,balanced_accuracy,f1,precision,recall,auc,subject,n_test,n_pos,avg_steps
+0.5,0.5,0.13793103448275862,0.5,0.08,,PA01,50,25,1.48

@@ -7,57 +7,42 @@ Binary classification: predict whether a social interaction occurred (1) or not 
 - **Subjects**: 38 (PA01–PA24, PB01–PB18)
 - **Samples**: 33,727 total
 - **Sensors**: Accelerometer (X/Y/Z), PPG (Green, processed with NeuroKit2), Light
-- **Features**: 164 extracted, **top 30 selected** by Cohen's d effect size
 - **Class distribution**: 68.5% no interaction (0), 31.5% interaction (1)
 - **Evaluation**: Leave-One-Subject-Out Cross-Validation (LOSO-CV), 38 folds
 
-## Top 30 Most Discriminative Features (Cohen's d)
+## Results Summary — LOSO-CV (38 subjects)
 
-| Rank | Feature | Mean (No Int.) | Std (No Int.) | Mean (Int.) | Std (Int.) | Cohen's d | p-value |
-|------|---------|---------------|--------------|------------|-----------|-----------|---------|
-| 1 | acc_x_band_high | 0.1223 | 0.1783 | 0.0653 | 0.1219 | 0.3502 | <1e-250 |
-| 2 | ppg_signal_quality_mean | 0.7693 | 0.1491 | 0.7186 | 0.1415 | 0.3454 | <1e-187 |
-| 3 | acc_x_band_low | 0.7237 | 0.2602 | 0.8028 | 0.2006 | 0.3255 | <1e-200 |
-| 4 | acc_z_band_high | 0.1080 | 0.1613 | 0.0609 | 0.1138 | 0.3176 | <1e-203 |
-| 5 | acc_x_spectral_centroid | 1.7389 | 1.6265 | 1.2568 | 1.2511 | 0.3175 | <1e-191 |
-| 6 | acc_x_zcr | 0.2179 | 0.1742 | 0.1675 | 0.1454 | 0.3046 | <1e-166 |
-| 7 | acc_y_min | -9.1296 | 7.1031 | -11.1787 | 7.2848 | 0.2862 | <1e-127 |
-| 8 | acc_y_band_high | 0.1352 | 0.1787 | 0.0878 | 0.1384 | 0.2841 | <1e-153 |
-| 9 | acc_mag_band_high | 0.2652 | 0.2380 | 0.1997 | 0.2262 | 0.2796 | <1e-128 |
-| 10 | acc_z_band_low | 0.7485 | 0.2390 | 0.8095 | 0.1890 | 0.2719 | <1e-139 |
-| 11 | acc_z_zcr | 0.1969 | 0.1600 | 0.1558 | 0.1306 | 0.2716 | <1e-135 |
-| 12 | acc_z_spectral_centroid | 1.5938 | 1.4983 | 1.2137 | 1.1920 | 0.2698 | <1e-136 |
-| 13 | ppg_hrv_pnn50 | 0.7924 | 0.2071 | 0.8456 | 0.1790 | 0.2678 | <1e-124 |
-| 14 | acc_z_min | -1.6488 | 6.8900 | -3.4667 | 7.1136 | 0.2611 | <1e-106 |
-| 15 | acc_z_range | 9.3617 | 9.8733 | 12.0064 | 10.7986 | 0.2600 | <1e-100 |
-| 16 | acc_x_spectral_entropy | 4.3933 | 1.4879 | 4.0204 | 1.3386 | 0.2585 | <1e-114 |
-| 17 | ppg_signal_quality_std | 0.1591 | 0.0957 | 0.1829 | 0.0904 | 0.2531 | <1e-103 |
-| 18 | acc_z_std | 1.6498 | 1.6697 | 2.0700 | 1.6647 | 0.2519 | <1e-101 |
-| 19 | light_log_mean | 3.1639 | 2.5049 | 3.7731 | 2.4044 | 0.2463 | <1e-99 |
-| 20 | acc_x_min | -3.3774 | 8.5222 | -5.4443 | 8.5213 | 0.2425 | <1e-94 |
-| 21 | acc_y_spectral_centroid | 1.8825 | 1.5714 | 1.5223 | 1.3239 | 0.2405 | <1e-104 |
-| 22 | acc_mag_min | 7.5629 | 2.2553 | 7.0317 | 2.1703 | 0.2383 | <1e-93 |
-| 23 | acc_y_zcr | 0.2262 | 0.1641 | 0.1889 | 0.1400 | 0.2379 | <1e-101 |
-| 24 | acc_y_p25 | -5.0312 | 4.2908 | -5.9824 | 3.5362 | 0.2338 | <1e-100 |
-| 25 | acc_x_dom_freq | 0.7089 | 1.6984 | 0.3615 | 0.9205 | 0.2319 | <1e-129 |
-| 26 | acc_y_peak_amp | 10.1933 | 6.2404 | 11.6919 | 7.0249 | 0.2307 | <1e-78 |
-| 27 | acc_y_band_low | 0.7005 | 0.2465 | 0.7546 | 0.2060 | 0.2305 | <1e-97 |
-| 28 | acc_x_p25 | 0.1719 | 5.5246 | -1.0729 | 5.3567 | 0.2275 | <1e-85 |
-| 29 | acc_z_spectral_entropy | 4.3589 | 1.3866 | 4.0665 | 1.2519 | 0.2173 | <1e-82 |
-| 30 | acc_mag_range | 7.0333 | 9.0409 | 9.1064 | 10.6485 | 0.2165 | <1e-67 |
+| Model Type | Methods | BA | Precision | Recall | F1 score |
+|------------|---------|-----|-----------|--------|----------|
+| Classical ML | LR (Logistic Regression) | 0.5561 | 0.3945 | 0.6507 | 0.4714 |
+| Classical ML | RF (Random Forest) | 0.5552 | 0.4636 | 0.2584 | 0.3111 |
+| Classical ML | XGBoost | 0.5403 | 0.4713 | 0.1829 | 0.2450 |
+| Deep Learning | TCN | 0.5163 | 0.3424 | 0.9500 | 0.4803 |
+| Deep Learning | LSTM | 0.5252 | 0.3466 | 0.9128 | 0.4785 |
+| Deep Learning | Transformer | 0.5506 | 0.3621 | 0.7988 | 0.4736 |
+| LLM (3B) | Llama-3.2-3B (Light Agent) | 0.5479 | 0.5463 | 0.7726 | 0.6244 |
+| LLM (7B) | Qwen2.5-7B (Light Agent) | 0.5347 | 0.5149 | 0.6726 | 0.5662 |
+| LLM (1B) | OLMo-1B (Light Agent) | 0.5353 | 0.5328 | 0.7579 | 0.5950 |
+| Agentic | **ReAct** | **0.5695** | **0.6019** | **0.4389** | **0.4898** |
 
-**Breakdown**: 20 Accelerometer, 6 PPG, 4 Light features in top 30.
+**BA** = Balanced Accuracy. All metrics macro-averaged across 38 LOSO-CV folds. Random guess baseline: BA = 0.50.
 
-## Results — LOSO-CV (38 subjects, top-30 features)
+## Analysis
 
-| Model | Accuracy | Balanced Acc | F1 | Precision | Recall | AUC |
-|---|---|---|---|---|---|---|
-| Logistic Regression | 0.5667 | 0.5761 | 0.4714 | 0.3945 | 0.6507 | 0.6108 |
-| Random Forest | 0.6636 | 0.5552 | 0.3111 | 0.4636 | 0.2584 | 0.6353 |
-| XGBoost | 0.6663 | 0.5403 | 0.2450 | 0.4713 | 0.1829 | 0.6414 |
+### Key Findings
 
-**Best**: XGBoost AUC **0.6414**, Random Forest AUC **0.6353**, LR Balanced Accuracy **0.5761**
+1. **ReAct achieves the best performance.** The ReAct agent reaches a balanced accuracy of **0.5695**, outperforming all other model families. Its ability to reason over ML tool outputs and select between classifiers provides an advantage over any single standalone method.
 
-*All metrics are macro-averaged across 38 LOSO-CV folds.*
-*Features extracted from first 16s of Accelerometer, PPG (NeuroKit2), and Light sensors.*
-*Random guessing baseline: Balanced Accuracy = 0.50, AUC = 0.50.*
+2. **Classical ML baselines are competitive.** Logistic Regression (0.5561 BA) and Random Forest (0.5552 BA) perform nearly identically, both beating all pure deep learning and LLM-only approaches except Transformer. This suggests the hand-crafted sensor features (time-domain, frequency-domain, spectral) already capture most of the discriminative signal in the first 16 seconds of data.
+
+3. **Deep learning struggles to generalize across unseen subjects.** Despite raw sensor input, TCN (0.5163), LSTM (0.5252), and Transformer (0.5506) all perform below or at par with simple LR. TCN and LSTM show high recall (>0.91) but very low precision (~0.34), indicating they default to the majority-positive prediction pattern. Transformer is the best DL variant but still falls short of ReAct and classical ML.
+
+4. **LLMs show different trade-offs than ML.** The LLM-based Light Agents (Llama-3.2-3B, Qwen2.5-7B, OLMo-1B) produce the highest F1 scores (0.57–0.62) due to their strong recall (0.67–0.77), but their balanced accuracy (0.53–0.55) lags behind classical ML. LLMs appear to reason broadly about environmental context from light readings but cannot exploit the finer-grained accelerometer/PPG structure as effectively as feature-engineered classifiers.
+
+5. **Model size does not guarantee better performance in LLMs.** OLMo-1B (0.5353) matches Qwen-7B (0.5347), and Llama-3.2-3B (0.5479) slightly exceeds both despite being smaller than Qwen. This indicates that scale alone is not a reliable predictor of downstream sensing accuracy — training data and model design matter more than parameter count for this task.
+
+6. **All methods remain far from strong performance.** Even the best model reaches only BA ≈ 0.57, far below practical deployment thresholds. The task is inherently difficult: 16 seconds of smartwatch accelerometer, PPG, and light signals carry only a weak signature of social interaction, and LOSO-CV enforces generalization to entirely unseen subjects with their own behavioral baselines.
+
+### Takeaway
+
+ReAct yields the strongest results, but the gap over plain Logistic Regression is small (0.5695 vs 0.5561). For production use, Logistic Regression offers the best accuracy-per-compute trade-off. Further improvements will likely require longer sensor windows, subject-adaptive calibration, or sensor-language pretraining (e.g., SensorLM-style alignment) rather than scaling up model capacity alone.

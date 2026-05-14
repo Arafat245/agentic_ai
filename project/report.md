@@ -1,4 +1,4 @@
-# Agentic AI-Based Social Interactions from Smartwatch Sensors
+# Agentic AI-Based Social Interaction Detection from Smartwatch Sensors
 
 ## Motivation
 

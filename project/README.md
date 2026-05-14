@@ -1,5 +1,7 @@
 # Social Interaction Detection from Smartwatch Sensor Data
 
+📄 **Report**: A short write-up covering motivation, methods, evaluation, and conclusions is available in [report.md](report.md).
+
 🎥 **Presentation Video**: [Watch on SharePoint](https://myuva-my.sharepoint.com/:v:/r/personal/jgh6ds_virginia_edu/Documents/Documents/Zoom/2026-04-16%2011.38.48%20Arafat%20Rahman%27s%20Personal%20Meeting%20Room/Agentic_video.mp4?csf=1&web=1&e=SxwTHO&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ## Task

@@ -13,8 +13,8 @@
 #   5. Verifies the tunnel works from the outside
 #
 # Usage:
-#   chmod +x test_ngrok.sh
-#   ./test_ngrok.sh
+#   chmod +x check_ngrok_tunnel.sh
+#   ./check_ngrok_tunnel.sh
 #
 # To clean up manually if the script is interrupted:
 #   kill $(cat /tmp/ngrok_test_server.pid 2>/dev/null) 2>/dev/null

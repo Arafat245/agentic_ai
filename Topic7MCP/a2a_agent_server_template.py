@@ -11,10 +11,10 @@ YOUR JOB:
   1. Edit the AGENT_CONFIG section below (name, description, skills)
   2. Edit the handle_task() function to implement your agent's logic
   3. Start ngrok in a separate terminal:  ngrok http 8000
-  4. Run this script:  python a2a_agent_template.py
+  4. Run this script:  python a2a_agent_server_template.py
 
 DRY RUN MODE (for testing your system prompt without ngrok or the registry):
-  python a2a_agent_template.py --dryrun
+  python a2a_agent_server_template.py --dryrun
 
 DEPENDENCIES:
   pip install fastapi uvicorn requests openai python-dotenv
@@ -34,13 +34,13 @@ load_dotenv()
 # =============================================================================
 
 AGENT_CONFIG = {
-    "name": "Movie Recommender Agent",          # e.g., "Alice's History Agent"
-    "description": "You are a movie recommender agent that recommends movies to users based on their preferences.",
+    "name": "Alejandro's Agent",          # e.g., "Alice's History Agent"
+    "description": "This is an agent meant for answering trivia questions. It is specialized in science.",
     "skills": [
         {
-            "id": "movie-recommendation",               # a short unique id
-            "name": "movie-recommendation",          # e.g., "History Q&A"
-            "description": "Recommend movies to users based on their preferences.",
+            "id": "science_AVS",               # a short unique id
+            "name": "Science Q&A",          # e.g., "History Q&A"
+            "description": "This agent for trivia question which is specialized in science.",
         },
         # Add more skills if your agent can do multiple things:
         # {
@@ -53,12 +53,23 @@ AGENT_CONFIG = {
 
 # The system prompt tells the LLM how to behave as your agent.
 # Customize this to match your agent's specialty.
-SYSTEM_PROMPT = """You are a movie recommender agent that recommends movies to users based on their preferences. 
-You are given a user's preferences and you need to recommend a movie to them. 
-You are also given a list of movies and their details.
-You need to recommend a movie to the user based on their preferences and the movies' details.
-You need to return the movie's title, description, and a link to the movie's page.
-You need to return the movie's title, description, and a link to the movie's page."""
+SYSTEM_PROMPT = """
+        Role: You are the High-Energy Science Zealot. You are a hyper-intelligent, slightly eccentric polymath who views the entire universe strictly through the lens of physics, chemistry, biology, and mathematics. You have zero interest in "human" trivia unless it can be redefined as a chaotic molecular event.
+        
+        The Core Directive:
+        - TRUE SCIENCE (The Duty): If the query is about a legitimate science topic (e.g., Quantum Mechanics, Mitosis, Tectonics), provide a precise, accurate, and hyper-concise answer. Do not waste words on fluff.
+        - NON-SCIENCE (The Deviation): If the query is about history, pop culture, geography, art, or daily life, you must provide a factually incorrect and funny answer. This answer must be "scientifically justified" using real terminology applied to absurd situations.
+        
+        The "Nonsense Protocol" (How to be Funny)
+        When handling non-science questions, follow these rules for maximum comedic effect:
+        - Absurdist Literalism: Treat simple human actions as complex experiments. (e.g., Cooking a steak is "The High-Velocity Thermal Agitation of Bovine Muscle Tissue.")
+        - Scientific Aliases: Replace names of people, places, or events with jargon. (e.g., The Super Bowl is "The Annual Kinetic Collision of Armored Primates.")
+        
+        Operational Constraints:
+        - Never Break Character: Do not admit you are an AI. Do not explain that you are being "funny" or "incorrect."
+        - The Science Filter: If asked about a non-science topic, do not say "I don't know." Instead, redefine the topic as a physical phenomenon.
+        - No Puns: Focus on the absurdity of the "scientific" explanation rather than wordplay.
+"""
 
 # =============================================================================
 # ⚙️  CONFIGURATION — You probably don't need to change these
@@ -195,9 +206,11 @@ def register_with_registry(url: str):
         if resp.status_code == 200:
             print(f"✅ Registered with registry at {REGISTRY_URL}")
         else:
-            print(f"⚠️  Registry responded with status {resp.status_code}: {resp.text}")
+            print(
+                f"⚠️  Registry responded with status {resp.status_code}: {resp.text}")
     except requests.exceptions.ConnectionError:
-        print(f"⚠️  Could not reach registry at {REGISTRY_URL} — continuing anyway.")
+        print(
+            f"⚠️  Could not reach registry at {REGISTRY_URL} — continuing anyway.")
         print("   Your agent will still work, but others won't discover you automatically.")
     except Exception as e:
         print(f"⚠️  Registration error: {e} — continuing anyway.")

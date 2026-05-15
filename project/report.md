@@ -21,7 +21,11 @@ The accelerometer is sampled at about 50 Hz and PPG at about 25 Hz. PPG often ha
 1. *Classical ML* - Logistic Regression, Random Forest, and XGBoost trained on the 107 features. Each model is retrained inside every LOSO fold. Hyperparameters stay fixed across folds.
 2. *Deep learning* - TCN, LSTM, and a small 1D Transformer encoder trained directly on the raw multi-channel time series. We use light data augmentation, including random scaling and time shift, to reduce subject memorization.
 3. *LLM zero/few-shot* - Llama-3.2-3B, Qwen2.5-7B, and OLMo-1B prompted with natural-language descriptions of per-modality features. The prompt format is the same across models so performance differences are more likely to reflect the models rather than the wording.
-4. *Agentic ReAct* - A GPT-4o-mini agent that can call up to three of four tools for each sample: `lr_predict`, `rf_predict`, `transformer_predict`, and `get_light_text`. The agent decides when to stop and make a prediction. The ML tools are retrained inside every LOSO fold. The Transformer output is precomputed per fold and then looked up. The agent sees only tool outputs, not raw features, so it works by combining model predictions rather than reclassifying the sample itself.
+4. *Agentic ReAct* - A GPT-4o-mini agent that can call up to three of four tools for each sample: `lr_predict`, `rf_predict`, `transformer_predict`, and `get_light_text`. The agent decides when to stop and make a prediction. The ML tools are retrained inside every LOSO fold. The Transformer output is precomputed per fold and then looked up. The agent sees only tool outputs, not raw features, so it works by combining model predictions rather than reclassifying the sample itself. The overall ReAct control loop is illustrated in Figure 1.
+
+![ReAct agent loop used to combine per-modality predictors before making a final decision.](ReAct.png)
+
+*Figure 1. ReAct agent loop used to combine per-modality predictors before making a final decision.*
 
 **Evaluation.** We use leave-one-subject-out cross-validation throughout. No subject appears in both train and test within a fold. We macro-average metrics across the 38 folds, and we also track per-fold variation because the cohort is small enough that averages can hide important differences between subjects.
 

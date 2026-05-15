@@ -2,7 +2,7 @@
 Autonomous citation-neighborhood research agent.
 
 Usage:
-    python3 mcp_citation_network_report.py ARXIV:2210.03629
+    python3 mcp_exD_citation_network_report.py ARXIV:2210.03629
 
 The agent fetches all data directly via MCP — no LLM in the decision loop.
 GPT-4o mini is only called once, at the end, to write the markdown report.

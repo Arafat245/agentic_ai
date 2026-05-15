@@ -195,7 +195,7 @@ def save_chat(history: list) -> str:
         role = msg.get("role", "unknown").upper()
         content = msg.get("content", "")
         lines.append(f"[{role}]\n{content}\n")
-    path = "mcp_research_chat_export.txt"
+    path = "mcp_exC_research_chat_export.txt"
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
     return path

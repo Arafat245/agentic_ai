@@ -1,0 +1,4 @@
+Table schema:
+CREATE TABLE head (age INTEGER, name VARCHAR, ...)
+Question: How many heads of departments are older than 56?
+SQL: SELECT COUNT(*) FROM head WHERE age > 56

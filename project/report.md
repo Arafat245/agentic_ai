@@ -76,7 +76,7 @@ The ReAct pipeline performs best, but the gain is modest. It does not add new in
 The best next steps are not bigger models but better signal. Useful directions include longer windows, light per-subject calibration, sensor-language pretraining that captures the structure of accelerometer and PPG data, and a distilled local controller that can run the ReAct policy on-device without an API round trip. None of these changes the core result: audio-free social interaction detection is difficult. Still, each one targets a specific bottleneck seen in the results above.
 
 ## Acknowledgement
-We used GenAI a lot while working for this class project. We also acknowledge that we learned a lot of things related to LLM while working on the course project, especially how LLM can be used for complex predictive tasks.
+We used GenAI a lot while working for this class project. We also acknowledge that we learned a lot of things related to LLM while working on the course project, especially how LLM can be used for complex predictive tasks. We also spent a lot of time on this project. For example, only to conduct the experiment presented in "Another Small Experiment" section, we spent more than 12 hours. We also brainstormed multiple times to develop better models.
 
 ## References
 Ahmed, M. S., Petz, K. D., French, N., Lakhtakia, T., Sangani, A., Rucker, M., Chen, X., Teachman, B. A., & Barnes, L. E. (2026). SocialPulse: On-Device Detection of Social Interactions in Naturalistic Settings Using Smartwatch Multimodal Sensing (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2602.22085 

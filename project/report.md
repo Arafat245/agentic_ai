@@ -48,7 +48,7 @@ The results across all 38 LOSO-CV folds are shown below. Because the classes are
 | LLM (1B) | OLMo-1B | 0.5353 | 0.5328 | 0.7579 | 0.5950 |
 | Agentic | **ReAct** | **0.5695** | **0.6005** | **0.4432** | **0.4918** |
 |------------|---------|-----|-----------|--------|----------|
-| Ahmed et al., 2026| recall/sensitivity < 15% in all non-acoustic multi-modal combination
+| Ahmed et al., 2026| Deep learning | 52.13 | 54.31 | 14.86 | 50.13 | 
 
 Several patterns stand out. ReAct has the best balanced accuracy, but it only beats plain Logistic Regression by about 1.3 points. The deep models tend to overpredict the positive class. TCN and LSTM both reach recall above 0.91, but their precision is close to 0.34, which suggests collapse rather than useful discrimination. The LLM-based light agents produce the highest F1 scores because they predict the positive class aggressively, but their balanced accuracy stays below the classical baselines. Model size is not a clear advantage among the LLMs. The 1B OLMo model performs about the same as the 7B Qwen model. That suggests the main issue is calibration in an unfamiliar sensor domain, not raw model capacity.
 

@@ -46,9 +46,8 @@ The results across all 38 LOSO-CV folds are shown below. Because the classes are
 | LLM (3B) | Llama-3.2-3B | 0.5479 | 0.5463 | 0.7726 | 0.6244 |
 | LLM (7B) | Qwen2.5-7B | 0.5347 | 0.5149 | 0.6726 | 0.5662 |
 | LLM (1B) | OLMo-1B | 0.5353 | 0.5328 | 0.7579 | 0.5950 |
+| **Ahmed et al., 2026**| Deep learning | 52.13 | 54.31 | 14.86 | 50.13 | 
 | **Agentic** | **ReAct** | **0.5695** | **0.6005** | **0.4432** | **0.4918** 
-|------------|---------|-----|-----------|--------|----------|
-| Ahmed et al., 2026| Deep learning | 52.13 | 54.31 | 14.86 | 50.13 | 
 
 Several patterns stand out. ReAct has the best balanced accuracy, but it only beats plain Logistic Regression by about 1.3 points. The deep models tend to overpredict the positive class. TCN and LSTM both reach recall above 0.91, but their precision is close to 0.34, which suggests collapse rather than useful discrimination. The LLM-based light agents produce the highest F1 scores because they predict the positive class aggressively, but their balanced accuracy stays below the classical baselines. Model size is not a clear advantage among the LLMs. The 1B OLMo model performs about the same as the 7B Qwen model. That suggests the main issue is calibration in an unfamiliar sensor domain, not raw model capacity.
 
@@ -58,7 +57,9 @@ Overall, every approach falls into a narrow band between 0.51 and 0.57 balanced 
 
 ## Conclusions
 
-The main takeaway is simple: 16 seconds of accelerometer, PPG, and light data provide only a weak signal for social interaction when the model must generalize to a new person. Most of the variation in these sensors comes from differences between people, such as resting heart rate, workspace conditions, and how they wear or move their wrist. A 16-second window is usually too short to smooth those differences out. Longer windows or a short per-subject enrollment step would likely help, but both would change the deployment tradeoff.
+The main takeaway is that non-acoustic smartwatch data can identify social interactions to an extent. In the exploration, though the balanced accuracy was low, the 3B LLM achieved a sensitivity of 77.26%, substantially outperforming the non-acoustic models reported by Ahmed et al. (2026), where sensitivity was below 15%. In addition, the agentic approach achieved a balanced accuracy of 56.95%, approximately 4 percentage points higher than the best-performing non-acoustic baseline in Ahmed et al. (2026). Given that the model was evaluated on more than 33K samples, this improvement is noteworthy. However, we acknowledge there is a need for significant improvement, given that the balanced accuracy is still only 56.95%.
+
+Another takeaway is simple: 16 seconds of accelerometer, PPG, and light data provide only a weak signal for social interaction when the model must generalize to a new person. Most of the variation in these sensors comes from differences between people, such as resting heart rate, workspace conditions, and how they wear or move their wrist. A 16-second window is usually too short to smooth those differences out. Longer windows or a short per-subject enrollment step would likely help, but both would change the deployment tradeoff.
 
 Within that limit, the ranking makes sense. Hand-crafted features plus Logistic Regression are still hard to beat. The signal that does exist seems to be captured mostly by simple linear structure in the right features. Bigger deep models do not help much. The dataset is small for their capacity, and LOSO-CV punishes any subject-specific shortcuts they learn. The LLMs are interesting, but they are poorly calibrated. They can talk fluently about light and motion descriptions, but they lean too often toward the positive class. That is an important warning for anyone using off-the-shelf LLMs as zero-shot sensor classifiers.
 

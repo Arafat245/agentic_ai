@@ -55,7 +55,7 @@ Variation across held-out subjects is also important. ReAct reaches 0.71 balance
 
 Overall, every approach falls into a narrow band between 0.51 and 0.57 balanced accuracy. That is better than random, but far below the roughly 0.90 reported for SocialPulse with audio. The gap fits the basic intuition: speech is a direct cue for interaction, while motion and physiology provide only weak indirect cues.
 
-## Another Experiment
+## Another Small Experiment
 
 We also explored whether SensorLM-inspired (Zhang et al., 2025) captions from non-acoustic smartwatch sensing could produce meaningful embeddings for interaction prediction. First, we generated sensor-specific captions from accelerometer, gravity, PPG, light, and step data. Feature extraction relied on established libraries: NeuroKit2 for PPG processing and HRV-related features, and scikit-digital-health for motion and signal summaries. We then created concise captions for each sensor and merged them into a single non-acoustic sensing description for each data collection window of 16 seconds. Each caption was embedded using the Qwen3-Embedding-4B model. Finally, the resulting embeddings were used to train a fully connected neural network to classify whether the window corresponded to an interaction or a non-interaction. We observed a little improvement in the performance over the Agentic model, specifically, the balanced accuracy was 57.23%. Though the performance is much higher (e.g., our model's sensitivity was 78.75%) than that of Ahmed et al. (2026), there is a need for a significant improvement, since the specificity (35.71%) was pretty low. We hope to keep working on it.
 

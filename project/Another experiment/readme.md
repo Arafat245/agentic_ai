@@ -1,0 +1,1 @@
+These notebooks contains the main codes used to develop the model, generate captions, and embeddings. These notebooks were large and I presented only the codes here which was written while working on the course project.

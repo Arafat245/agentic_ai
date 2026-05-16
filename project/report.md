@@ -4,7 +4,9 @@
 
 Social interaction is an important sign of well-being. Regular positive contact can improve mood and make daily life feel more meaningful. In contrast, withdrawal and avoidance often appear alongside anxiety and depression. If a smartwatch could detect when someone is interacting with others, it could support context-aware systems that respond in real time. It could log patterns, prompt reflection, or deliver light-touch support. This is also useful in clinical research. Passive measures of social engagement are already used as digital phenotypes in studies of depression, post-traumatic stress, and early dementia. A wrist-based detector that works without a microphone would be easier to deploy and easier for participants to accept.
 
-Most earlier work on this task relies on audio. SocialPulse (Ahmed et al., 2026), for example, reports about 90% balanced accuracy by detecting the watch wearer's foreground speech from 15-second audio windows. Audio, however, is the most privacy-sensitive signal on the device. Audio models also use more compute than other watch sensors. Many users are likely to opt out of microphone access, which limits who can benefit from the system. That raises a practical question: how much social-interaction signal remains if we remove the microphone and keep only lower-cost, more privacy-friendly sensors?
+Most earlier work on this task relies on audio. SocialPulse (Ahmed et al., 2026), which is the most recent work (to our best knowledge) on predicting interaction through a smartwatch, for example, reports about 90% balanced accuracy by detecting the watch wearer's foreground speech from 15-second audio windows. Audio, however, is the most privacy-sensitive signal on the device. Audio models also use more compute than other watch sensors. Many users are likely to opt out of microphone access, which limits who can benefit from the system. That raises a practical question: how much social-interaction signal remains if we remove the microphone and keep only lower-cost, more privacy-friendly sensors?
+
+This question is further motivated by the performance of prior non-acoustic models. In Ahmed et al. (2026), all non-acoustic multimodal combinations achieved recall/sensitivity below 15%, meaning that the models detected fewer than one in five social-interaction windows. Such low sensitivity is insufficient for practical real-time systems and raises an important methodological question: can non-acoustic interaction detection be substantially improved?
 
 This project tests that question. We use only accelerometer, PPG, and ambient light data, and we use only the first 16 seconds of each 90-second window. We compare conventional machine learning, deep learning, large language models, and an agentic ReAct pipeline on the same task. The 16-second limit matches the latency needs of an always-on system that should react during or near a conversation, not long after it ends.
 
@@ -33,12 +35,20 @@ The accelerometer is sampled at about 50 Hz and PPG at about 25 Hz. PPG often ha
 
 The results across all 38 LOSO-CV folds are shown below. Because the classes are imbalanced, balanced accuracy is the most useful summary metric.
 
-| Family | Best model | Balanced Accuracy | F1 |
-|---|---|---|---|
-| Classical ML | Logistic Regression | 0.5561 | 0.4714 |
-| Deep learning | Transformer | 0.5506 | 0.4736 |
-| LLM | Llama-3.2-3B | 0.5479 | 0.6244 |
-| Agentic | **ReAct (LR + RF + Transformer + Light)** | **0.5695** | **0.4918** |
+| Model Type | Methods | BA | Precision | Recall | F1 score |
+|------------|---------|-----|-----------|--------|----------|
+| Classical ML | LR (Logistic Regression) | 0.5561 | 0.3945 | 0.6507 | 0.4714 |
+| Classical ML | RF (Random Forest) | 0.5552 | 0.4636 | 0.2584 | 0.3111 |
+| Classical ML | XGBoost | 0.5403 | 0.4713 | 0.1829 | 0.2450 |
+| Deep Learning | TCN | 0.5163 | 0.3424 | 0.9500 | 0.4803 |
+| Deep Learning | LSTM | 0.5252 | 0.3466 | 0.9128 | 0.4785 |
+| Deep Learning | Transformer | 0.5506 | 0.3621 | 0.7988 | 0.4736 |
+| LLM (3B) | Llama-3.2-3B | 0.5479 | 0.5463 | 0.7726 | 0.6244 |
+| LLM (7B) | Qwen2.5-7B | 0.5347 | 0.5149 | 0.6726 | 0.5662 |
+| LLM (1B) | OLMo-1B | 0.5353 | 0.5328 | 0.7579 | 0.5950 |
+| Agentic | **ReAct** | **0.5695** | **0.6005** | **0.4432** | **0.4918** |
+|------------|---------|-----|-----------|--------|----------|
+| Ahmed et al., 2026| recall/sensitivity < 15% in all non-acoustic multi-modal combination
 
 Several patterns stand out. ReAct has the best balanced accuracy, but it only beats plain Logistic Regression by about 1.3 points. The deep models tend to overpredict the positive class. TCN and LSTM both reach recall above 0.91, but their precision is close to 0.34, which suggests collapse rather than useful discrimination. The LLM-based light agents produce the highest F1 scores because they predict the positive class aggressively, but their balanced accuracy stays below the classical baselines. Model size is not a clear advantage among the LLMs. The 1B OLMo model performs about the same as the 7B Qwen model. That suggests the main issue is calibration in an unfamiliar sensor domain, not raw model capacity.
 
@@ -55,3 +65,6 @@ Within that limit, the ranking makes sense. Hand-crafted features plus Logistic 
 The ReAct pipeline performs best, but the gain is modest. It does not add new information. Instead, it combines existing predictors and decides which tool to trust for a given sample. The agent traces suggest a sensible pattern: it leans on the Transformer when PPG looks noisy, on Random Forest when accelerometer band-power features are in the middle range, and on the light tool to break ties in evening windows. It also stops early in about 41% of cases, which helps control tool-call cost. The improvement over Logistic Regression is small but consistent, which suggests that meta-reasoning over several weak predictors is worth exploring even when none of them is strong on its own.
 
 The best next steps are not bigger models but better signal. Useful directions include longer windows, light per-subject calibration, sensor-language pretraining that captures the structure of accelerometer and PPG data, and a distilled local controller that can run the ReAct policy on-device without an API round trip. None of these changes the core result: audio-free social interaction detection is difficult. Still, each one targets a specific bottleneck seen in the results above.
+
+## References
+Ahmed, M. S., Petz, K. D., French, N., Lakhtakia, T., Sangani, A., Rucker, M., Chen, X., Teachman, B. A., & Barnes, L. E. (2026). SocialPulse: On-Device Detection of Social Interactions in Naturalistic Settings Using Smartwatch Multimodal Sensing (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2602.22085 

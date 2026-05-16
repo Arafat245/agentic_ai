@@ -55,6 +55,10 @@ Variation across held-out subjects is also important. ReAct reaches 0.71 balance
 
 Overall, every approach falls into a narrow band between 0.51 and 0.57 balanced accuracy. That is better than random, but far below the roughly 0.90 reported for SocialPulse with audio. The gap fits the basic intuition: speech is a direct cue for interaction, while motion and physiology provide only weak indirect cues.
 
+## Another Small Experiment
+
+We also explored whether SensorLM-inspired (Zhang et al., 2025) captions from non-acoustic smartwatch sensing could produce meaningful embeddings for interaction prediction. First, we generated sensor-specific captions from accelerometer, gravity, PPG, light, and step data. Feature extraction relied on established libraries: NeuroKit2 for PPG processing and HRV-related features, and scikit-digital-health for motion and signal summaries. We then created concise captions for each sensor and merged them into a single non-acoustic sensing description for each data collection window of 16 seconds. Each caption was embedded using the Qwen3-Embedding-4B model. Finally, the resulting embeddings were used to train a fully connected neural network to classify whether the window corresponded to an interaction or a non-interaction. We observed a little improvement in the performance over the Agentic model, specifically, the balanced accuracy was 57.23%. Though the performance is much higher (e.g., our model's sensitivity was 78.75%) than that of Ahmed et al. (2026), there is a need for a significant improvement, since the specificity (35.71%) was pretty low. We hope to keep working on it.
+
 ## Conclusions
 
 The main takeaway is that non-acoustic smartwatch data can identify social interactions to an extent. In the exploration, though the balanced accuracy was low, the 3B LLM achieved a sensitivity of 77.26%, substantially outperforming the non-acoustic models reported by Ahmed et al. (2026), where sensitivity was below 15%. In addition, the agentic approach achieved a balanced accuracy of 56.95%, approximately 4 percentage points higher than the best-performing non-acoustic baseline in Ahmed et al. (2026). Given that the model was evaluated on more than 33K samples, this improvement is noteworthy. However, we acknowledge there is a need for significant improvement, given that the balanced accuracy is still only 56.95%.
@@ -67,5 +71,10 @@ The ReAct pipeline performs best, but the gain is modest. It does not add new in
 
 The best next steps are not bigger models but better signal. Useful directions include longer windows, light per-subject calibration, sensor-language pretraining that captures the structure of accelerometer and PPG data, and a distilled local controller that can run the ReAct policy on-device without an API round trip. None of these changes the core result: audio-free social interaction detection is difficult. Still, each one targets a specific bottleneck seen in the results above.
 
+## Acknowledgement
+We used GenAI a lot while working for this class project.
+
 ## References
 Ahmed, M. S., Petz, K. D., French, N., Lakhtakia, T., Sangani, A., Rucker, M., Chen, X., Teachman, B. A., & Barnes, L. E. (2026). SocialPulse: On-Device Detection of Social Interactions in Naturalistic Settings Using Smartwatch Multimodal Sensing (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2602.22085 
+
+Zhang, Y., Ayush, K., Qiao, S., Heydari, A. A., Narayanswamy, G., Xu, M. A., Metwally, A. A., Xu, S., Garrison, J., Xu, X., Althoff, T., Liu, Y., Kohli, P., Zhan, J., Malhotra, M., Patel, S., Mascolo, C., Liu, X., McDuff, D., & Yang, Y. (2025). SensorLM: Learning the Language of Wearable Sensors (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2506.09108 
